@@ -1,5 +1,34 @@
-@import './layout/header.scss';
-@import './layout/footer.scss';
+// 引入 字體
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
 
+//引入 BS5 icon
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
-@import './pages/index.scss';
+@import "bootstrap/scss/functions";
+
+//  自訂義 變數
+@import "./helper/variables";
+@import "./helper/variables-dark";
+
+// 載入 bootstrap (整包)
+@import "bootstrap/scss/bootstrap";
+
+// 引入 文字的通用樣式 的響應式變化
+@import "./helper/utils";
+
+//  建站工具
+@import "./helper/mixin";
+
+//  全站設定
+@import "./base/base";
+@import "./base/font";
+
+// 元件 (ex：按鈕、卡片)
+@import "./components/list";
+
+//  通用版型
+@import "./layout/header.scss";
+@import "./layout/footer.scss";
+
+//  pages
+@import "./pages/index.scss";

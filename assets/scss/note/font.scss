@@ -1,0 +1,38 @@
+//以下 僅供 切版過程 參考使用
+//請勿加入到 all.css 檔案中做引入！
+
+// font-size 字體大小
+$font-size-base: 1rem !default; //`16px`
+$font-size-sm: $font-size-base * 0.875 !default; // 14
+$font-size-lg: $font-size-base * 1.125 !default; // 18
+
+$h1-font-size: $font-size-base * 3 !default; // 48
+$h2-font-size: $font-size-base * 2.5 !default; // 40
+$h3-font-size: $font-size-base * 2 !default; // 32
+$h4-font-size: $font-size-base * 1.875 !default; // 28
+$h5-font-size: $font-size-base * 1.5 !default; // 24
+$h6-font-size: $font-size-base * 1.25 !default; // 20
+
+// font-weight 字重規範
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
+
+// line-height 行高規範
+$line-height-base: 1.5 !default;
+$line-height-sm: 1.25 !default;
+$line-height-lg: 2 !default;
+
+// letter-spacing
+// bs5 沒有內建規範，請參考檔案 scss/base/font.scss
+
+//標題 行高+字重
+$headings-font-weight: 500 !default;
+$headings-line-height: 1.2 !default;
+
+// 按鈕 文字設定
+$btn-font-weight: $font-weight-semibold !default; //600

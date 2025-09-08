@@ -1,0 +1,16 @@
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  letter-spacing: 0.8px;
+}
+
+//  相當於 bs5 的 .img-fluid
+img {
+  max-width: 100%;
+  height: auto;
+  //  vertical-align: middle; BS5 已包含此樣式。
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+}

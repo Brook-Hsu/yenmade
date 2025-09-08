@@ -1,0 +1,39 @@
+// 字距 letter-spacing
+h1,
+.h1 {
+  font-weight: $font-weight-semibold;
+  letter-spacing: 4.8px;
+}
+
+h2,
+.h2 {
+  letter-spacing: 2px;
+}
+
+h3,
+.h3 {
+  letter-spacing: 6.4px;
+}
+
+h6,
+.h6 {
+  letter-spacing: 2px;
+}
+
+.letter-spacing-sm {
+  letter-spacing: 0.7px;
+}
+
+.letter-spacing-lg {
+  letter-spacing: 0.54px;
+}
+
+.btn-font-sm {
+  font-weight: $font-weight-semibold;
+  letter-spacing: 2.8px;
+}
+
+.btn-font-lg {
+  font-weight: $font-weight-semibold;
+  letter-spacing: 3.2px;
+}
