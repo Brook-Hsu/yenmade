@@ -518,6 +518,8 @@ $spacers: (
   // 32
   6: $spacer * 3,
   // 48
+  8: $spacer * 5,
+  // 80
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -715,6 +717,7 @@ $font-family-code: var(--#{$prefix}font-monospace) !default;
 // $font-size-base affects the font size of the body text
 $font-size-root: null !default;
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-xs: $font-size-base * 0.75; // 12
 $font-size-sm: $font-size-base * 0.875 !default; // 14
 // $font-size-lg: $font-size-base * 1.25 !default;
 $font-size-lg: $font-size-base * 1.125 !default; // 18
@@ -749,12 +752,16 @@ $h6-font-size: $font-size-base * 1.25 !default;
 
 // scss-docs-start font-sizes
 $font-sizes: (
+  0: $font-size-base,
   1: $h1-font-size,
   2: $h2-font-size,
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
   6: $h6-font-size,
+  7: $font-size-lg,
+  8: $font-size-sm,
+  9: $font-size-xs,
 ) !default;
 // scss-docs-end font-sizes
 

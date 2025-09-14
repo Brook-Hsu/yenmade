@@ -1,5 +1,5 @@
 // 引入 字體
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap");
 
 //引入 BS5 icon
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
@@ -29,6 +29,7 @@
 //  通用版型
 @import "./layout/header.scss";
 @import "./layout/footer.scss";
+@import "./layout/shopping.scss";
 
 //  pages
 @import "./pages/index.scss";
