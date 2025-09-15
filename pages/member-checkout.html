@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>member checkout</title>
+</head>
+<body>
+    <%- include('./layout/header'); -%>
+    <div class="container">
+        <img class="d-block mx-auto mb-4" src="../assets/images/logo/Type=Logo_Horizontal.svg" alt="logo">
+    <!-- 購物車卡片 -->
+  <div class="cart-card border rounded-3 mb-4">
+    <div class="px-3 py-2 table-title border-bottom fw-semibold">購物車</div>
+
+    <div class="p-3">
+      <!-- 表頭 -->
+      <div class="row fw-semibold text-secondary border-bottom pb-2">
+        <div class="col-4">商品明細</div>
+        <div class="col-2 text-center">商品單價</div>
+        <div class="col-3 text-center">商品數量</div>
+        <div class="col-3 text-end">金額小計</div>
+      </div>
+
+      <!-- 商品 1 -->
+      <div class="row align-items-center py-3 border-bottom">
+        <div class="col-4">
+          <div class="d-flex gap-3">
+            <div class="bg-light border rounded" style="width:72px;height:72px;"></div>
+            <div>
+              <div class="fw-semibold">棒棒老醬蘿葡</div>
+              <div class="text-muted small">慢醃大罐 500ml</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 text-center">NT$500</div>
+        <div class="col-3">
+          <div class="input-group input-group-sm mx-auto" style="width:140px;">
+            <button class="btn btn-outline-secondary" type="button" data-qty="minus">−</button>
+            <input type="number" class="form-control text-center" min="1" value="1">
+            <button class="btn btn-outline-secondary" type="button" data-qty="plus">＋</button>
+          </div>
+        </div>
+        <div class="col-3 text-end fw-semibold">NT$500</div>
+      </div>
+
+      <!-- 商品 2 -->
+      <div class="row align-items-center py-3">
+        <div class="col-4">
+          <div class="d-flex gap-3">
+            <div class="bg-light border rounded" style="width:72px;height:72px;"></div>
+            <div>
+              <div class="fw-semibold">煙燻蒜香小黃瓜</div>
+              <div class="text-muted small">慢醃迷你 200ml</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2 text-center">NT$250</div>
+        <div class="col-3">
+          <div class="input-group input-group-sm mx-auto" style="width:140px;">
+            <button class="btn btn-outline-secondary" type="button" data-qty="minus">−</button>
+            <input type="number" class="form-control text-center" min="1" value="2">
+            <button class="btn btn-outline-secondary" type="button" data-qty="plus">＋</button>
+          </div>
+        </div>
+        <div class="col-3 text-end fw-semibold">NT$500</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 優惠券卡片 -->
+  <div class="border rounded-3 mb-4">
+    <div class="px-3 py-2 table-title border-bottom fw-semibold">優惠券</div>
+    <div class="p-4 text-center">
+      <div class="d-flex justify-content-center">
+        <div class="input-group" style="max-width:520px;">
+          <input type="text" class="form-control" placeholder="酷好酷滿">
+          <button class="btn btn-color px-4">送出</button>
+        </div>
+      </div>
+
+      <div class="mt-4 text-success fw-semibold">已套用優惠券</div>
+      <div class="text-muted">享訂單滿$699免運折扣</div>
+      <a href="#" class="d-inline-block mt-2 text-decoration-none">查看優惠券 ＞</a>
+    </div>
+  </div>
+
+
+<!-- 配送及付款 -->
+<div class="border rounded-3 mb-4">
+  <div class="px-3 py-2 table-title border-bottom fw-semibold">配送及付款</div>
+
+  <div class="p-3">
+
+    <!-- 配送方式 -->
+    <div class="badge bg-body-tertiary text-dark fw-semibold mb-3">配送方式</div>
+
+    <div class="row g-3">
+      <div class="col-12 col-md-6 col-lg-3">
+        <input class="btn-check" type="radio" name="shipping" id="ship1">
+        <label class="btn btn-outline-secondary w-100 text-start py-2" for="ship1">超商店到店</label>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <input class="btn-check" type="radio" name="shipping" id="ship2" checked>
+        <label class="btn btn-outline-secondary w-100 text-start py-2" for="ship2">貨運物流</label>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <input class="btn-check" type="radio" name="shipping" id="ship3">
+        <label class="btn btn-outline-secondary w-100 text-start py-2" for="ship3">白貓宅配</label>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <input class="btn-check" type="radio" name="shipping" id="ship4">
+        <label class="btn btn-outline-secondary w-100 text-start py-2" for="ship4">郵局宅配</label>
+      </div>
+      </div>
+    
+
+    <hr class="my-4">
+
+    <!-- 付款方式 -->
+    <div class="badge bg-body-tertiary text-dark fw-semibold mb-3">付款方式</div>
+
+    <div class="vstack gap-3">
+      <div>
+        <input class="btn-check" type="radio" name="pay" id="pay1" checked>
+        <label class="btn btn-outline-secondary w-100 text-start py-3" for="pay1">貨到付款</label>
+      </div>
+      <div>
+        <input class="btn-check" type="radio" name="pay" id="pay2">
+        <label class="btn btn-outline-secondary w-100 text-start py-3" for="pay2">LINE PAY</label>
+      </div>
+      <div>
+        <input class="btn-check" type="radio" name="pay" id="pay3">
+        <label class="btn btn-outline-secondary w-100 text-start py-3" for="pay3">信用卡</label>
+      </div>
+      <div>
+        <input class="btn-check" type="radio" name="pay" id="pay4">
+        <label class="btn btn-outline-secondary w-100 text-start py-3" for="pay4">超商代碼繳費</label>
+      </div>
+      <div>
+        <input class="btn-check" type="radio" name="pay" id="pay5">
+        <label class="btn btn-outline-secondary w-100 text-start py-3" for="pay5">ATM 轉帳</label>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 簡單的加減數量 JS（可放到頁尾） -->
+<script>
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-qty]');
+    if (!btn) return;
+    const group = btn.closest('.input-group');
+    const input = group.querySelector('input[type="number"]');
+    const min = parseInt(input.min || '1', 10);
+    let val = parseInt(input.value || '1', 10);
+
+    if (btn.dataset.qty === 'plus') val++;
+    if (btn.dataset.qty === 'minus') val = Math.max(min, val - 1);
+
+    input.value = val;
+    input.dispatchEvent(new Event('change')); // 之後要即時計價可監聽此事件
+  });
+  
+</script>
+ <%- include('./layout/footer'); -%>
+<script type="module" src="../main.js"></script>
+</body>
+</html>
