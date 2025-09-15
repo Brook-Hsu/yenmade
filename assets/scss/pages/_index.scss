@@ -1,3 +1,81 @@
-.index-title {
-  font-size: 100px;
+body{
+    font-family: 'Noto Serif TC', serif;  
 }
+
+.container-1076 {
+  max-width: 1076px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mt-120 {
+  margin-top: 120px !important;
+}
+
+.mb-80{
+    margin-bottom: 80px;
+}
+
+.mb-96{
+    margin-bottom: 96px;
+}
+
+.mb-184{
+    margin-bottom: 184px;
+}
+
+.col-7 img {
+    max-width: 746px;
+    height: auto;
+}
+
+.text-neutral-600 {
+  color: $neutral-600;
+}
+
+.section-title {
+  .line {
+    border-top: 1px solid $primary-500 !important;
+  }
+  .title {
+    margin: 0 24px;
+  }
+}
+
+.icon-24 {
+  font-size: 24px;
+}
+
+.illustration-salt {
+  width: 160px;
+  height: 190px;
+  position: absolute;
+  bottom: -200px;
+  right: -102px;
+  
+}
+
+.illustration-cut {
+  width: 140px;  
+  height: 187px;
+  position: absolute;
+  left: -135px;   
+  bottom: -200px;  
+}
+
+.illustration-glass {
+  width: 280px;  
+  height: 153px;
+  position: absolute;
+  bottom: -150px;
+  right: -102px;
+}
+
+.illustration-plate {
+  width: 146px; 
+  height: 177px; 
+  position: absolute;
+  left: -400px;   
+  bottom: -70px; 
+}
+
