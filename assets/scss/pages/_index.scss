@@ -1,9 +1,11 @@
 .container-1076 {
   max-width: 1076px;
-  margin-left: auto;
-  margin-right: auto;
+  // margin-left: auto;
+  // margin-right: auto;
 }
-
+.card-bg-no {
+  background-color: unset;
+}
 .mt-120 {
   margin-top: 120px !important;
 }
@@ -21,7 +23,7 @@
   height: auto;
 }
 
-.section-title {
+.section-title3 {
   .line {
     border-top: 1px solid $primary-500 !important;
   }
@@ -90,12 +92,12 @@
   padding-left: 312px;
   padding-right: 312px;
 }
-.ps-32 {
-  padding-left: 32px;
-}
-.pe-32 {
-  padding-right: 32px;
-}
+// .ps-32 {
+//   padding-left: 32px;
+// }
+// .pe-32 {
+//   padding-right: 32px;
+// }
 .pe-120 {
   padding-right: 120px;
 }
@@ -121,14 +123,9 @@
   width: 300px;
 }
 
-.review-cards .card {
-  width: 100%;
-  margin: 0;
-}
-
-.text-14 {
-  font-size: 14px;
-}
+// .text-14 {
+//   font-size: 14px;
+// }
 
 .ms--100 {
   margin-left: -100px;
@@ -139,9 +136,9 @@
 .mt--80 {
   margin-top: -80px;
 }
-.me-1690 {
-  margin-right: 1690px;
-}
+// .me-1690 {
+//   margin-right: 1690px;
+// }
 .ms-200 {
   margin-left: 200px;
 }
@@ -155,14 +152,14 @@
   margin-top: -90px;
 }
 
-.section-title {
-  text-align: center;
-  color: #bb9a88;
-  font-weight: 500; /* 500 */
-  font-size: 40px; /* 40px */
-  line-height: 1.2; /* 120% */
-  letter-spacing: 0.1em; /* 10% */
-  margin: 0 0 8px;
+.section-title4 {
+  // text-align: center;
+  // color: #bb9a88;
+  // font-weight: 500; /* 500 */
+  // font-size: 40px; /* 40px */
+  // line-height: 1.2; /* 120% */
+  // letter-spacing: 0.1em; /* 10% */
+  // margin: 0 0 8px;
   white-space: nowrap; /* 避免被自動斷成兩行 */
 }
 
@@ -173,35 +170,40 @@
 
 /* 上面那行「外食族」 */
 .meta-name .role {
-  display: inline-block;
   white-space: nowrap;
   font-weight: 500;
-  font-size: 12px; /* Size: 12px */
+  // font-size: 12px; /* Size: 12px */
   line-height: 1; /* Line height: 100% */
   letter-spacing: 0.09em; /* Letter spacing: 9% */
-  color: #bb9a88; /* Secondary/500 */
-  padding-top: 8px;
+  // color: #bb9a88; /* Secondary/500 */
+  // padding-top: 8px;
   padding-left: 2px; /* 依視覺微調 */
-  display: inline-block; /* 保險：讓它當成一塊 */
+  // display: inline-block; /* 保險：讓它當成一塊 */
 }
 
 /* 下面那行「阿傑」 */
 .meta-name .name {
-  display: block;
+  // display: block;
   font-weight: 500;
-  font-size: 16px;
+  // font-size: 16px;
   line-height: 1;
   letter-spacing: 0.09em; /* 同 9% */
-  color: #bb9a88; /* 若也要同色，改成 #BB9A88 即可 */
+  // color: #bb9a88; /* 若也要同色，改成 #BB9A88 即可 */
 }
+
+.carousel-dark {
+  --bs-carousel-control-icon-filter: invert(0) grayscale(0);
+}
+
 #reviewCarousel .carousel-control-prev .bi,
 #reviewCarousel .carousel-control-next .bi {
-  color: #bb9a88 !important; /* 指定米駝色 */
-  opacity: 0.5;
+  color: $secondary-500; /* 指定米駝色 */
+
   transition: opacity 0.25s ease, color 0.25s ease, transform 0.15s ease;
 }
+
 .review-card {
-  border: 1px solid #bb9a88; /* 外框顏色 */
+  // border: 1px solid #bb9a88; /* 外框顏色 */
   border-bottom-width: 8px; /* 底邊加粗 */
   border-radius: 0.25rem; /* 需要圓角可調 */
 }
@@ -218,15 +220,15 @@
   background-image: url(/yenmade/assets/images/Hero_bg_pc.png);
   background-position: center;
   @include background-image;
-  min-height: 100vh;
+  // min-height: 100vh;
   padding-top: 384px;
   padding-bottom: 72px;
 }
 
-.py-12 {
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
+// .py-12 {
+//   padding-top: 12px;
+//   padding-bottom: 12px;
+// }
 
 .mb-100 {
   margin-bottom: 100px;
@@ -239,11 +241,11 @@
 /* 新味登場區塊*/
 /* 新味登場區塊 - 搭配 Bootstrap 5 */
 .new-flavors {
-  position: relative;
-  min-height: 100vh;
-  background-color: $primary-600; /* 底部35%的背景顏色 */
-  display: flex;
-  align-items: center;
+  // position: relative;
+  // min-height: 100vh;
+  // background-color: $primary-600; /* 底部35%的背景顏色 */
+  // display: flex;
+  // align-items: center;
 
   &::before {
     content: "";
@@ -287,9 +289,9 @@
     margin-top: 184px;
   }
 
-  .mb-48 {
-    margin-bottom: 48px;
-  }
+  // .mb-48 {
+  //   margin-bottom: 48px;
+  // }
 
   .mb-288 {
     margin-bottom: 288px;
@@ -300,9 +302,9 @@
     margin-bottom: 120px;
   }
 
-  .pb-12 {
-    padding-bottom: 12px;
-  }
+  // .pb-12 {
+  //   padding-bottom: 12px;
+  // }
 
   // .p1 {
   //   font-size: 18px;

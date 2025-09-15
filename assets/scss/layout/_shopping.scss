@@ -13,16 +13,3 @@
     height: calc(100vh - 288px);
   }
 }
-
-.btn-sm {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-right: 24px;
-  padding-left: 24px;
-}
-
-.btn.btn-outline-secondary-600 {
-  &:hover {
-    color: $white;
-  }
-}
