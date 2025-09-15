@@ -1,6 +1,138 @@
-<!--
-<h1 class="header">header</h1>
-<a href="index.html">index</a>
-<a href="about.html">about</a>
-<a href="contact.html">contact</a>
--->
+<header>
+  <nav
+    class="navbar navbar-expand-lg navbar-dark fixed-top position-absolute py-5"
+  >
+    <div class="container px-4">
+      <a class="navbar-brand p-0 me-lg-45" href="index.html">
+        <img
+          class="svg-white logo-size"
+          src="/assets/images/logo/Type=Logo_Horizontal.svg"
+          alt="yenmade's logo"
+        />
+      </a>
+      <button
+        class="navbar-toggler border-0 py-2"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+      >
+        <i class="bi bi-list fs-5"></i>
+      </button>
+      <div
+        class="offcanvas offcanvas-end offcanvas-space offcanvas-bg"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+        data-bs-scroll="true"
+        data-bs-backdrop="false"
+      >
+        <div class="offcanvas-header px-4 py-5">
+          <button
+            type="button"
+            class="btn-close svg-white"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div
+          class="offcanvas-body justify-content-lg-center px-6 px-md-8 px-lg-0"
+        >
+          <div class="d-flex flex-column">
+            <form class="mt-3 mb-4 position-relative d-lg-none" role="search">
+              <input
+                class="form-control form-search bg-white-alpha border-0 p-3 text-white"
+                type="search"
+                placeholder="找商品"
+                aria-label="Search"
+              />
+              <button
+                class="btn text-white position-absolute top-50 end-0 translate-middle-y me-3"
+                type="submit"
+              >
+                <i class="bi bi-search fs-5 align-bottom"></i>
+              </button>
+            </form>
+            <ul class="navbar-nav flex-grow-1 pe-3">
+              <li class="nav-item text-center">
+                <a
+                  class="nav-link py-3 py-lg-0 px-lg-4 border-md-bottom border-white active"
+                  aria-current="page"
+                  href="#"
+                  ><span class="btn-font-lg">所有商品</span></a
+                >
+              </li>
+              <li class="nav-item text-center">
+                <a
+                  class="nav-link py-3 py-lg-0 px-lg-4 border-md-bottom border-white"
+                  href="#"
+                  ><span class="btn-font-lg">關於我們</span></a
+                >
+              </li>
+              <li class="nav-item text-center">
+                <a
+                  class="nav-link py-3 py-lg-0 px-lg-4 border-md-bottom border-white"
+                  href="#"
+                  ><span class="btn-font-lg">部落格</span></a
+                >
+              </li>
+              <li class="nav-item text-center border-0">
+                <a class="nav-link py-3 py-lg-0 px-lg-4" href="#"
+                  ><span class="btn-font-lg">常見問題</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="offcanvas-footer d-lg-none">
+          <div class="container mb-6">
+            <div class="d-flex justify-content-between mt-auto nav-btn">
+              <a
+                class="btn btn-outline-light border-0 border-end btn-font-lg w-50 px-3 py-2"
+              >
+                <i class="bi bi-person-circle me-2"></i>
+                <span>登入/註冊</span>
+              </a>
+              <a
+                class="btn btn-outline-light border-0 btn-font-lg w-50 px-3 py-2"
+              >
+                <i class="bi bi-cart3 me-2"></i>
+                <span>購物車</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-none d-lg-block position-relative">
+        <div class="d-lg-flex align-items-lg-center">
+          <button
+            class="btn text-white"
+            type="submit"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample"
+          >
+            <i class="bi bi-search fs-6 align-bottom"></i>
+          </button>
+          <a href="" class="text-white d-none d-lg-inline p-2 ms-3">
+            <i class="bi bi-person-circle fs-5"></i>
+          </a>
+          <a href="" class="text-white d-none d-lg-inline p-2 ms-3">
+            <i class="bi bi-cart3 fs-5"></i>
+          </a>
+        </div>
+        <div class="position-absolute start-75 end-0">
+          <div class="collapse" id="collapseExample">
+            <form class="position-relative" role="search">
+              <input
+                class="form-control form-search bg-white-alpha border-0 p-3 text-white"
+                type="search"
+                placeholder="找商品"
+                aria-label="Search"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
