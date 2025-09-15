@@ -1,4 +1,89 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.logo-size {
+  height: 40px;
+}
+
+.offcanvas.offcanvas-space {
+  width: 100vw;
+  border: 0;
+}
+.offcanvas.offcanvas-bg {
+  background: none;
+  inset: 0; // top:0, right:0, bottom:0, left:0
+  z-index: 1000;
+  // 用來做半透明+模糊的層
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba($dark, 0.6); // 黑色 + 60% 透明度
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); // Safari 支援
+    z-index: -1; // 保證不會蓋到文字
+    @include rwd-lg {
+      display: none;
+    }
+  }
+}
+
+.bg-white-alpha {
+  background: rgba($color: $white, $alpha: 0.15);
+}
+
+.form-control.form-search:focus {
+  background-color: rgba($color: $white, $alpha: 0.15);
+}
+.border-md-bottom {
+  border-bottom: 1px solid $white;
+  @include rwd-lg {
+    border-bottom: 0px;
+    border-right: 1px solid $white;
+  }
+}
+.navbar-nav {
+  .nav-item {
+    .nav-link &:hover {
+      background-color: rgba($color: $white, $alpha: 0.15);
+    }
+    &:active {
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+.nav-btn {
+  .btn.btn-outline-light {
+    &:hover {
+      border: 1px solid $white;
+    }
+  }
+}
+
+.me-lg-45 {
+  @include rwd-lg {
+    margin-right: 45px;
+  }
+}
+
+.border-lg-right {
+  @include rwd-lg {
+    border: 1px solid $white;
+  }
+  &:hover {
+    color: $tertiary-500;
+  }
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: rgba($color: $tertiary-500, $alpha: 0.75);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: $tertiary-500;
+}
+
+a .bi:hover,
+a .bi:focus {
+  color: $tertiary-500;
 }
