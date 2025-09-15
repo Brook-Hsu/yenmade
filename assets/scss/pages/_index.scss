@@ -1,3 +1,142 @@
+/*
 .index-title {
   font-size: 100px;
+}
+  */
+
+
+
+  /* hero區塊 */
+
+.hero {
+  background-image: url(/yenmade/assets/images/Hero_bg_pc.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding-top: 384px;
+  padding-bottom: 72px;
+
+ 
+}
+
+.py-12{
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.mb-100{
+  margin-bottom: 100px;
+}
+
+.mb-224{
+  margin-bottom: 224px;
+}
+
+
+/* 新味登場區塊*/
+/* 新味登場區塊 - 搭配 Bootstrap 5 */
+.new-flavors {
+  position: relative;
+  min-height: 100vh;
+  background-color: $primary-600; /* 底部35%的背景顏色 */
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 65%;
+    background-image: url('/yenmade/assets/images/New_bg_img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+
+  // 確保容器內容在背景之上
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  
+
+  // 卡片特殊樣式
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: visible; // 允許圖片溢出
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    
+    // 卡片內容區域
+    .card-body {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+    //間距
+    .mt-184{
+      margin-top: 184px;
+    }
+
+    
+
+    .mb-48{
+      margin-bottom: 48px;
+    }
+
+    .mb-288{
+      margin-bottom: 288px;
+    }
+
+    .my-120{
+      margin-top: 120px;
+      margin-bottom: 120px;
+    }
+
+    .pb-12{
+      padding-bottom: 12px;
+    }
+
+    .p1{
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 3%;
+    }
+
+    .p2{
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 5%;
+    }
+
+    .p3{
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 5%;
+    }
+
+  
+ 
+
+
+
+  // 響應式調整
+  @media (max-width: 768px) {
+    min-height: auto;
+    padding: 60px 0;
+
+    &::before {
+      height: 50%;
+    }
+  }
 }
