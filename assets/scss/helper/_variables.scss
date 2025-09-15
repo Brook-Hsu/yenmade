@@ -333,13 +333,13 @@ $neutral-50: #fafafa;
 $neutral-100: #f5f5f5;
 $neutral-200: #e5e5e5;
 $neutral-300: #d4d4d4;
-$neutral-400: #c9aea0;
-$neutral-500: #bb9a88;
-$neutral-600: #997e6f;
-$neutral-700: #776256;
-$neutral-800: #55453c;
-$neutral-900: #332923;
-$neutral-950: #221b17;
+$neutral-400: #a3a3a3;
+$neutral-500: #737373;
+$neutral-600: #525252;
+$neutral-700: #404040;
+$neutral-800: #262626;
+$neutral-900: #171717;
+$neutral-950: #0a0a0a;
 
 // 自訂義 顏色 -end
 
@@ -518,6 +518,8 @@ $spacers: (
   // 32
   6: $spacer * 3,
   // 48
+  8: $spacer * 5,
+  // 80
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -715,6 +717,7 @@ $font-family-code: var(--#{$prefix}font-monospace) !default;
 // $font-size-base affects the font size of the body text
 $font-size-root: null !default;
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-xs: $font-size-base * 0.75; // 12
 $font-size-sm: $font-size-base * 0.875 !default; // 14
 // $font-size-lg: $font-size-base * 1.25 !default;
 $font-size-lg: $font-size-base * 1.125 !default; // 18
@@ -749,12 +752,16 @@ $h6-font-size: $font-size-base * 1.25 !default;
 
 // scss-docs-start font-sizes
 $font-sizes: (
+  0: $font-size-base,
   1: $h1-font-size,
   2: $h2-font-size,
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
   6: $h6-font-size,
+  7: $font-size-lg,
+  8: $font-size-sm,
+  9: $font-size-xs,
 ) !default;
 // scss-docs-end font-sizes
 

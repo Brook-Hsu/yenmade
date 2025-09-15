@@ -2,38 +2,40 @@
 h1,
 .h1 {
   font-weight: $font-weight-semibold;
-  letter-spacing: 4.8px;
+  letter-spacing: 0.1em;
 }
 
 h2,
 .h2 {
-  letter-spacing: 2px;
+  letter-spacing: 0.05em;
 }
 
 h3,
 .h3 {
-  letter-spacing: 6.4px;
+  letter-spacing: 0.2em;
 }
 
 h6,
 .h6 {
-  letter-spacing: 2px;
+  letter-spacing: 0.1em;
 }
 
 .letter-spacing-sm {
-  letter-spacing: 0.7px;
+  letter-spacing: 0.05em;
 }
 
 .letter-spacing-lg {
-  letter-spacing: 0.54px;
+  letter-spacing: 0.03em;
 }
 
 .btn-font-sm {
+  font-size: $font-size-sm;
   font-weight: $font-weight-semibold;
-  letter-spacing: 2.8px;
+  letter-spacing: 0.2em;
 }
 
 .btn-font-lg {
+  font-size: $font-size-base;
   font-weight: $font-weight-semibold;
-  letter-spacing: 3.2px;
+  letter-spacing: 0.2em;
 }
