@@ -126,6 +126,12 @@
 // .text-14 {
 //   font-size: 14px;
 // }
+.ms--200 {
+  margin-left: -200px;
+}
+.me--200 {
+  margin-right: -200px;
+}
 
 .ms--100 {
   margin-left: -100px;
@@ -141,6 +147,15 @@
 // }
 .ms-200 {
   margin-left: 200px;
+}
+.mt--200 {
+  margin-top: -200px;
+}
+.mt--170 {
+  margin-top: -170px;
+}
+.mt--150 {
+  margin-top: -150px;
 }
 .mt--120 {
   margin-top: -120px;
@@ -195,11 +210,18 @@
   --bs-carousel-control-icon-filter: invert(0) grayscale(0);
 }
 
+
 #reviewCarousel .carousel-control-prev .bi,
 #reviewCarousel .carousel-control-next .bi {
-  color: $secondary-500; /* 指定米駝色 */
+  color: $secondary-500;
+  opacity: 1;
+  transition: opacity .25s ease, color .25s ease, transform .15s ease;
+}
 
-  transition: opacity 0.25s ease, color 0.25s ease, transform 0.15s ease;
+#reviewCarousel .carousel-control-prev .bi:hover,
+#reviewCarousel .carousel-control-next .bi:hover {
+  opacity: 1;
+  transform: scale(1.08);
 }
 
 .review-card {
