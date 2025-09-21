@@ -1,5 +1,5 @@
 <header>
-  <nav class="navbar navbar-expand-lg py-5">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-5">
     <div class="container px-4">
       <a class="navbar-brand p-0 me-lg-45" href="index.html">
         <img
@@ -15,37 +15,35 @@
         data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar"
       >
-        <i class="bi bi-list fs-5"></i>
+        <i class="bi bi-list fs-5 text-neutral-600"></i>
       </button>
       <div
-        class="offcanvas offcanvas-end offcanvas-space offcanvas-bg-dark"
+        class="offcanvas offcanvas-end offcanvas-space offcanvas-bg"
         tabindex="-1"
         id="offcanvasNavbar"
         aria-labelledby="offcanvasNavbarLabel"
         data-bs-scroll="true"
         data-bs-backdrop="false"
       >
-        <div class="offcanvas-header px-4 py-5">
+        <div class="offcanvas-header px-4 py-5 mb-2">
           <button
             type="button"
-            class="btn-close svg-dark"
+            class="btn-close svg-white"
             data-bs-dismiss="offcanvas"
             aria-label="Close"
           ></button>
         </div>
-        <div
-          class="offcanvas-body justify-content-lg-center px-6 px-md-8 px-lg-0"
-        >
+        <div class="offcanvas-body px-6 px-md-8 px-lg-0">
           <div class="d-flex flex-column">
-            <form class="mt-3 mb-4 position-relative d-lg-none" role="search">
+            <form class="mb-4 position-relative d-lg-none" role="search">
               <input
-                class="form-control form-search bg-dark-alpha border-0 p-3 text-neutral-600 fs-lg-7"
+                class="form-control form-search bg-white-alpha border-0 p-3 text-neutral-600 fs-lg-7"
                 type="search"
                 placeholder="找商品"
                 aria-label="Search"
               />
               <button
-                class="btn text-neutral-600 position-absolute top-50 end-0 translate-middle-y me-3"
+                class="btn text-white position-absolute top-50 end-0 translate-middle-y me-3"
                 type="submit"
               >
                 <i class="bi bi-search fs-5 align-bottom"></i>
@@ -54,29 +52,31 @@
             <ul class="navbar-nav flex-grow-1 pe-3">
               <li class="nav-item text-center">
                 <a
-                  class="nav-link py-3 py-lg-0 px-lg-4 border-md-bottom border-neutral-600"
+                  class="nav-link text-white text-lg-neutral-600 py-3 py-lg-0 px-lg-4 border-md-bottom border-neutral-600 active"
                   aria-current="page"
                   href="#"
-                  ><span class="btn-font-lg text-neutral-600">所有商品</span></a
+                  ><span class="btn-font-lg">所有商品</span></a
                 >
               </li>
               <li class="nav-item text-center">
                 <a
-                  class="nav-link py-3 py-lg-0 px-lg-4 border-md-bottom border-neutral-600"
+                  class="nav-link text-white text-lg-neutral-600 py-3 py-lg-0 px-lg-4 border-md-bottom border-neutral-600"
                   href="#"
-                  ><span class="btn-font-lg text-neutral-600">關於我們</span></a
+                  ><span class="btn-font-lg">關於我們</span></a
                 >
               </li>
               <li class="nav-item text-center">
                 <a
-                  class="nav-link py-3 py-lg-0 px-lg-4 border-md-bottom border-neutral-600"
+                  class="nav-link text-white text-lg-neutral-600 py-3 py-lg-0 px-lg-4 border-md-bottom border-neutral-600"
                   href="#"
-                  ><span class="btn-font-lg text-neutral-600">部落格</span></a
+                  ><span class="btn-font-lg">部落格</span></a
                 >
               </li>
               <li class="nav-item text-center border-0">
-                <a class="nav-link py-3 py-lg-0 px-lg-4" href="#"
-                  ><span class="btn-font-lg text-neutral-600">常見問題</span></a
+                <a
+                  class="nav-link text-white text-lg-neutral-600 py-3 py-lg-0 px-lg-4"
+                  href="#"
+                  ><span class="btn-font-lg">常見問題</span></a
                 >
               </li>
             </ul>
@@ -86,13 +86,13 @@
           <div class="container mb-6">
             <div class="d-flex justify-content-between mt-auto nav-btn">
               <a
-                class="btn btn-outline-neutral-600 border-0 border-end border-neutral-600 btn-font-lg w-50 px-3 py-2"
+                class="btn btn-outline-light border-0 border-end btn-font-lg w-50 px-3 py-2"
               >
                 <i class="bi bi-person-circle me-2"></i>
                 <span>登入/註冊</span>
               </a>
               <a
-                class="btn btn-outline-neutral-600 border-0 btn-font-lg w-50 px-3 py-2"
+                class="btn btn-outline-light border-0 btn-font-lg w-50 px-3 py-2"
               >
                 <i class="bi bi-cart3 me-2"></i>
                 <span>購物車</span>
@@ -101,9 +101,20 @@
           </div>
         </div>
       </div>
+
       <!-- 搜尋/帳號/購物車按鈕 -->
       <div class="d-none d-lg-block position-relative">
         <div class="d-lg-flex align-items-lg-center">
+          <div class="collapse" id="collapseSearch">
+            <form role="button">
+              <input
+                type="search"
+                class="form-control border-0 border-bottom bg-white-alpha"
+                id="exampleFormControlInput1"
+                placeholder="找商品"
+              />
+            </form>
+          </div>
           <button
             class="btn text-neutral-600"
             type="button"
@@ -114,26 +125,14 @@
           >
             <i class="bi bi-search fs-6 align-bottom"></i>
           </button>
-          <a href="" class="text-neutral-600 d-none d-lg-inline p-2 ms-3">
+
+          <a href="" class="d-none d-lg-inline text-neutral-600 p-2 ms-3">
             <i class="bi bi-person-circle fs-5"></i>
           </a>
-          <a href="" class="text-neutral-600 d-none d-lg-inline p-2 ms-3">
+
+          <a href="" class="d-none d-lg-inline text-neutral-600 p-2 ms-3">
             <i class="bi bi-cart3 fs-5"></i>
           </a>
-        </div>
-        <!-- 搜尋框 (在左邊展開) -->
-        <div
-          class="collapse position-absolute top-0 end-100 z-1001"
-          id="collapseSearch"
-        >
-          <form class="search-width" role="search">
-            <input
-              class="form-control form-search border-0 border-bottom p-3 text-neutral-600 fs-lg-7"
-              type="search"
-              placeholder="找商品"
-              aria-label="Search"
-            />
-          </form>
         </div>
       </div>
     </div>

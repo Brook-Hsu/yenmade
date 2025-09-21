@@ -31,8 +31,14 @@ $secondary-950: #221b17;
 $secondary: $secondary-500;
 
 // tertiary
+$tertiary-100: #f7f5e7;
+$tertiary-300: #efebd0;
 $tertiary-500: #ddd292;
+$tertiary-600: #cebf67;
 $tertiary-700: #beab3b;
+$tertiary-800: #98892f;
+$tertiary-900: #726723;
+$tertiary-950: #4c4418;
 
 // neutral
 $neutral-50: #fafafa;
@@ -47,6 +53,8 @@ $neutral-800: #262626;
 $neutral-900: #171717;
 $neutral-950: #0a0a0a;
 
+$error: #fa635b;
+$danger: $error;
 // 自訂義 顏色變數 -end
 
 //bs5 js map
@@ -76,7 +84,7 @@ $theme-colors: (
   "secondary-800": $secondary-800,
   "secondary-900": $secondary-900,
   "secondary-950": $secondary-950,
-  "secondary": $secondary-500,
+  "secondary": $secondary,
 
   "success": $success,
   "info": $info,

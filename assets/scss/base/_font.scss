@@ -39,3 +39,13 @@ h6,
   font-weight: $font-weight-semibold;
   letter-spacing: 0.2em;
 }
+
+.text-lg-neutral-600 {
+  @include rwd-lg {
+    color: $neutral-600 !important;
+  }
+  &:hover,
+  &:focus {
+    color: $tertiary-700 !important;
+  }
+}
