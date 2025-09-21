@@ -17,15 +17,25 @@ $h6-font-size: $font-size-base * 1.25 !default; // 20
 //  font map
 $font-sizes: (
   0: $font-size-base,
+  //16
   1: $h1-font-size,
+  //48
   2: $h2-font-size,
+  //40
   3: $h3-font-size,
+  //32
   4: $h4-font-size,
+  //28
   5: $h5-font-size,
+  //244
   6: $h6-font-size,
+  //20
   7: $font-size-lg,
+  //18
   8: $font-size-sm,
+  //14
   9: $font-size-xs,
+  //12
 ) !default;
 
 // font-weight 字重規範

@@ -24,14 +24,33 @@
     }
   }
 }
+.offcanvas.offcanvas-bg-dark {
+  background: none;
+  inset: 0; // top:0, right:0, bottom:0, left:0
+  z-index: 1000;
+  // 用來做半透明+模糊的層
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba($neutral-100, 0.6); // 黑色 + 60% 透明度
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); // Safari 支援
+    z-index: -1; // 保證不會蓋到文字
+    @include rwd-lg {
+      display: none;
+    }
+  }
+}
 
 .bg-white-alpha {
-  background: rgba($color: $white, $alpha: 0.15);
+  background: rgba($color: $white, $alpha: 0.75);
 }
 
 .form-control.form-search:focus {
-  background-color: rgba($color: $white, $alpha: 0.15);
+  background-color: rgba($color: $white, $alpha: 1);
 }
+
 .border-md-bottom {
   border-bottom: 1px solid $white;
   @include rwd-lg {
@@ -58,6 +77,16 @@
   }
 }
 
+.nav-link:hover,
+.nav-link:focus {
+  color: rgba($color: $tertiary-500, $alpha: 0.75);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: $tertiary-500;
+}
+
 .me-lg-45 {
   @include rwd-lg {
     margin-right: 45px;
@@ -73,17 +102,15 @@
   }
 }
 
-.nav-link:hover,
-.nav-link:focus {
-  color: rgba($color: $tertiary-500, $alpha: 0.75);
-}
-
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link.show {
-  color: $tertiary-500;
-}
-
 a .bi:hover,
 a .bi:focus {
   color: $tertiary-500;
+}
+
+.search-width {
+  width: 250px;
+}
+
+.z-1001 {
+  z-index: 1001;
 }

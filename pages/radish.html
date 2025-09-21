@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>product</title>
+    <link rel="stylesheet" href="/assets/scss/pages/_radish.scss" />
+  </head>
+  <body>
+    <!-- header -->
+    <%- include('./layout/headerDark'); -%>
+    <main class="container">
+      <div class="px-6 py-4">
+        <nav style="--bs-breadcrumb-divider: '〉'" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#" class="text-decoration-no py-9">
+                <i class="bi bi-house-door fs-8"></i>
+              </a>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+              <a href="" class="text-decoration-no fs-8 py-9">所有商品</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              <a href="" class="text-decoration-no fs-8 py-9">檸檬老醬蘿蔔</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <%- include('./layout/footer'); -%>
+    <!-- js 引入 -->
+    <%- include('./layout/script'); -%>
+  </body>
+</html>
