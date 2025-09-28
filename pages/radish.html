@@ -4,34 +4,648 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>product</title>
-    <link rel="stylesheet" href="/assets/scss/pages/_radish.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <!-- header -->
     <%- include('./layout/headerDark'); -%>
     <main class="container mt-105">
-      <div class="px-6 py-4">
-        <nav style="--bs-breadcrumb-divider: '〉'" aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a href="#" class="text-decoration-no py-9">
-                <i class="bi bi-house-door fs-8"></i>
-              </a>
-            </li>
-            <li class="breadcrumb-item" aria-current="page">
-              <a href="" class="text-decoration-no fs-8 py-9">所有商品</a>
-            </li>
-            <li class="breadcrumb-item active" aria-current="page">
-              <a href="" class="text-decoration-no fs-8 py-9">檸檬老醬蘿蔔</a>
-            </li>
-          </ol>
-        </nav>
+      <!-- 麵包屑 -->
+      <div class="d-none d-sm-block">
+        <div class="px-0 px-md-4 px-lg-6 py-3">
+          <nav style="--bs-breadcrumb-divider: '〉'" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item breadcrumb-link">
+                <a href="#" class="text-decoration-no py-9">
+                  <i class="bi bi-house-door fs-8"></i>
+                </a>
+              </li>
+              <li class="breadcrumb-item breadcrumb-link" aria-current="page">
+                <a href="" class="text-decoration-no fs-8 py-9">所有商品</a>
+              </li>
+              <li
+                class="breadcrumb-item breadcrumb-link active"
+                aria-current="page"
+              >
+                <a href="" class="text-decoration-no fs-8 py-9">檸檬老醬蘿蔔</a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <!-- 商品簡介 -->
+      <div class="row justify-content-center">
+        <div class="col-md-5 d-none d-md-block">
+          <img
+            src="/assets/images/product/檸檬老醬蘿蔔.png"
+            alt="檸檬老醬蘿蔔"
+          />
+        </div>
+        <div class="col-md-5">
+          <h1 class="h5 fs-md-3 mb-4">檸檬老醬蘿蔔</h1>
+          <div class="mb-4">
+            <p class="fs-8 text-neutral-600">
+              嚴選爽脆白蘿蔔，融合新鮮檸檬的清香與老薑的暖香，經細心醃漬，使酸、甜、微辣層次分明。入口先是檸檬的清爽酸甜，隨後薑香緩緩散開，最後是蘿蔔的脆口回甘，適合佐餐或作為開胃小菜。
+            </p>
+          </div>
+          <div class="d-md-none product-mx-mobile mb-4 mx-md-0">
+            <img
+              src="/assets/images/product/檸檬老醬蘿蔔.png"
+              alt="檸檬老醬蘿蔔"
+            />
+          </div>
+          <div class="row d-md-none d-lg-flex">
+            <!-- 商品容量大小的選擇按鈕 -->
+            <div class="col-6">
+              <button
+                type="button"
+                class="w-100 border-1 border-primary-600 bg-white py-2 px-9"
+              >
+                <div class="text-center text-primary-600">
+                  <p class="btn-font-lg ls-10 mb-0">
+                    200ml <span class="d-md-inline-block">慢醃迷你</span>
+                  </p>
+                  <p class="btn-font-sm ls-10 mb-0">NTD$300</p>
+                </div>
+              </button>
+            </div>
+            <div class="col-6">
+              <button
+                type="button"
+                class="w-100 border-1 border-primary-600 bg-white py-2 px-9"
+              >
+                <div class="text-center text-primary-600">
+                  <p class="btn-font-lg ls-10 mb-0">
+                    500ml <span class="d-md-inline-block">慢醃大罐</span>
+                  </p>
+                  <p class="btn-font-sm ls-10 mb-0">NTD$500</p>
+                </div>
+              </button>
+            </div>
+            <!-- 購買數量的控制按鈕 -->
+            <div class="col-12 my-9">
+              <div
+                class="input-group btn border-1 border-primary-600 bg-white p-2"
+              >
+                <div class="d-flex justify-content-between">
+                  <button type="button" class="btn border-0 p-9">
+                    <i class="bi bi-dash-lg fs-6"></i>
+                  </button>
+                  <div class="d-flex flex-column justify-content-center">
+                    <input
+                      type="text"
+                      class="form-control border-0 text-center text-dark fw-semibold p-0"
+                      value="2"
+                      id="buyNumber"
+                    />
+
+                    <p class="form-text text-center fs-9 ls-10 m-0">數量充足</p>
+                  </div>
+                  <button type="button" class="btn border-0 p-9">
+                    <i class="bi bi-plus-lg fs-6"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 加入購物車 -->
+            <div class="col-12">
+              <button type="button" class="btn btn-dark w-100 py-3">
+                <p class="m-auto ls-10">
+                  NTD$<span>600</span>
+                  <span class="mx-3">－</span>
+                  加入購物車
+                </p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 按鈕們 - 只在平板大小時出現 -->
+      <div class="d-none d-md-flex d-lg-none row justify-content-center mt-4">
+        <!-- 商品容量大小的選擇按鈕 -->
+        <div class="col-5">
+          <button
+            type="button"
+            class="w-100 border-1 border-primary-600 bg-white py-2 px-9"
+          >
+            <div class="text-center text-primary-600">
+              <p class="btn-font-lg ls-10 mb-0">
+                200ml <span class="d-md-inline-block">慢醃迷你</span>
+              </p>
+              <p class="btn-font-sm ls-10 mb-0">NTD$300</p>
+            </div>
+          </button>
+        </div>
+        <div class="col-5">
+          <button
+            type="button"
+            class="w-100 border-1 border-primary-600 bg-white py-2 px-9"
+          >
+            <div class="text-center text-primary-600">
+              <p class="btn-font-lg ls-10 mb-0">
+                500ml <span class="d-md-inline-block">慢醃大罐</span>
+              </p>
+              <p class="btn-font-sm ls-10 mb-0">NTD$500</p>
+            </div>
+          </button>
+        </div>
+        <!-- 購買數量的控制按鈕 -->
+        <div class="col-10 my-9">
+          <div class="input-group btn border-1 border-primary-600 bg-white p-2">
+            <div class="d-flex justify-content-between">
+              <button type="button" class="btn border-0 p-9">
+                <i class="bi bi-dash-lg fs-6"></i>
+              </button>
+              <div class="d-flex flex-column justify-content-center">
+                <input
+                  type="text"
+                  class="form-control border-0 text-center text-dark fw-semibold p-0"
+                  value="2"
+                  id="buyNumber"
+                />
+
+                <p class="form-text text-center fs-9 ls-10 m-0">數量充足</p>
+              </div>
+              <button type="button" class="btn border-0 p-9">
+                <i class="bi bi-plus-lg fs-6"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-10">
+          <button type="button" class="btn btn-dark w-100 py-3">
+            <p class="m-auto ls-10">
+              NTD$<span>600</span>
+              <span class="mx-3">－</span>
+              加入購物車
+            </p>
+          </button>
+        </div>
+      </div>
+      <!-- 詳細說明 -->
+      <div class="row justify-content-center">
+        <div class="col-md-10 py-8 product-mx-mobile mx-md-0">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item bg-primary-50 mb-4">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button
+                  class="product-accordion accordion-button bg-transparent collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  <p class="btn-font-lg m-0">產品成分</p>
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <div class="fs-8 fw-bold ls-10 text-neutral-600">
+                    白蘿蔔、新鮮檸檬汁、老薑、冰糖、食鹽、醋（釀造醋）
+                    <br /><br />
+                    <span class="fw-bolder">過敏原資訊</span>
+                    <br />
+                    本產品不含常見過敏原（如小麥、堅果、牛奶、蛋類等），但製程環境可能接觸含有大豆、芝麻的食品，對相關食材過敏者請留意。
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-primary-50 mb-4">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button
+                  class="product-accordion accordion-button bg-transparent collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  <p class="btn-font-lg m-0">產品產地</p>
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <ul class="fs-8 fw-bold ls-10 text-neutral-600">
+                    <li class="mb-2">白蘿蔔：台灣</li>
+                    <li class="mb-2">檸檬：台灣南部（屏東/高雄）</li>
+                    <li>老薑：台灣中南部</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-primary-50">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button
+                  class="product-accordion accordion-button bg-transparent collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseThree"
+                >
+                  <p class="btn-font-lg m-0">退換貨注意事項</p>
+                </button>
+              </h2>
+              <div
+                id="flush-collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingThree"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <ul class="fs-8 fw-bold ls-10 text-neutral-600">
+                    <li class="mb-2">
+                      依《消費者保護法》規定，食品類商品屬於易腐敗、保存期限較短之商品，非商品瑕疵或配送錯誤恕無法辦理退換貨。
+                    </li>
+                    <li class="mb-2">
+                      若商品有瑕疵或與訂單不符，請於收到商品當日拍照存證並於24小時內聯繫客服，我們將協助您更換或退款。
+                    </li>
+                    <li>
+                      退換貨時，商品須保持完整包裝與附帶贈品，並以原包裝寄回。
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
+    <!-- 推薦搭配 輪播 -->
+    <section class="bg-neutral-100 py-8">
+      <h4 class="text-center pb-2 mb-5 ls-10">建議搭配品項</h4>
+      <div class="swiper productSwiper">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <!-- 白桃薑汁高麗菜 -->
+          <div
+            class="swiper-slide card product-card-hover bg-transparent border-0"
+          >
+            <div>
+              <img
+                src="/assets/images/product/白桃薑汁高麗菜_cutout.png"
+                class="card-img-top img-turn"
+                alt="白桃薑汁高麗菜"
+              />
+              <div class="card-body p-0 px-sm-3 py-sm-2 px-lg-4 py-lg-3">
+                <div class="text-center text-md-start">
+                  <p class="card-text fw-bold m-0">白桃薑汁高麗菜</p>
+                  <p class="fs-8 fw-bold m-0">
+                    NTD$<span class="fs-6 ms-1">200</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card border-0 overlay">
+              <div class="d-flex align-items-center h-100">
+                <p class="text-center fs-0 fs-sm-8 fs-lg-0">
+                  新鮮高麗菜搭配<br />白桃泥與老薑醬汁醃製<br />酸甜平衡、口感清脆
+                </p>
+              </div>
+              <div class="bg-primary-500 w-100">
+                <div
+                  class="d-flex justify-content-center justify-content-lg-between align-items-center"
+                >
+                  <a href="" class="stretched-link text-decoration-none">
+                    <div
+                      class="p-0 ps-sm-3 ps-xxl-4 py-sm-2 py-lg-3 d-none d-lg-block"
+                    >
+                      <p class="fs-0 text-white fw-bold m-0">白桃薑汁高麗菜</p>
+                      <p class="fs-8 text-white fw-bold m-0">
+                        NTD$<span class="fs-6 ms-1">200</span>
+                      </p>
+                    </div>
+                  </a>
+                  <button
+                    type="button"
+                    class="btn bg-transparent border-0 px-8 px-lg-4 py-3 z-3"
+                  >
+                    <i class="bi bi-cart3 text-white fs-6"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 花椒紅油蓮藕片 -->
+          <div
+            class="swiper-slide card product-card-hover bg-transparent border-0"
+          >
+            <div>
+              <img
+                src="/assets/images/product/花椒紅油蓮藕片_cutout.png"
+                class="card-img-top img-turn"
+                alt="花椒紅油蓮藕片"
+              />
+              <div class="card-body p-0 px-sm-3 py-sm-2 px-lg-4 py-lg-3">
+                <div class="text-center text-md-start">
+                  <p class="card-text fw-bold m-0">花椒紅油蓮藕片</p>
+                  <p class="fs-8 fw-bold m-0">
+                    NTD$<span class="fs-6 ms-1">350</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card border-0 overlay">
+              <div class="d-flex align-items-center h-100">
+                <p class="text-center fs-0 fs-sm-8 fs-lg-0">
+                  切片蓮藕以花椒與<br />自製紅油醃漬<br />脆嫩且微辣富層次
+                </p>
+              </div>
+              <div class="bg-primary-500 w-100">
+                <div
+                  class="d-flex justify-content-center justify-content-lg-between align-items-center"
+                >
+                  <a href="" class="stretched-link text-decoration-none">
+                    <div
+                      class="p-0 ps-sm-3 ps-xxl-4 py-sm-2 py-lg-3 d-none d-lg-block"
+                    >
+                      <p class="fs-0 text-white fw-bold m-0">花椒紅油蓮藕片</p>
+                      <p class="fs-8 text-white fw-bold m-0">
+                        NTD$<span class="fs-6 ms-1">350</span>
+                      </p>
+                    </div>
+                  </a>
+                  <button
+                    type="button"
+                    class="btn bg-transparent border-0 px-8 px-lg-4 py-3 z-3"
+                  >
+                    <i class="bi bi-cart3 text-white fs-6"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 甘酒漬紅蘿蔔 -->
+          <div
+            class="swiper-slide card product-card-hover bg-transparent border-0"
+          >
+            <div>
+              <img
+                src="/assets/images/product/甘酒漬紅蘿蔔_cutout.png"
+                class="card-img-top img-turn"
+                alt="甘酒漬紅蘿蔔"
+              />
+              <div class="card-body p-0 px-sm-3 py-sm-2 px-lg-4 py-lg-3">
+                <div class="text-center text-md-start">
+                  <p class="card-text fw-bold m-0">甘酒漬紅蘿蔔</p>
+                  <p class="fs-8 fw-bold m-0">
+                    NTD$<span class="fs-6 ms-1">200</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card border-0 overlay">
+              <div class="d-flex align-items-center h-100">
+                <p class="text-center fs-0 fs-sm-8 fs-lg-0">
+                  甘酒醃漬紅蘿蔔薄片<br />鮮甜脆口、清爽開胃
+                </p>
+              </div>
+              <div class="bg-primary-500 w-100">
+                <div
+                  class="d-flex justify-content-center justify-content-lg-between align-items-center"
+                >
+                  <a href="" class="stretched-link text-decoration-none">
+                    <div
+                      class="p-0 ps-sm-3 ps-xxl-4 py-sm-2 py-lg-3 d-none d-lg-block"
+                    >
+                      <p class="fs-0 text-white fw-bold m-0">甘酒漬紅蘿蔔</p>
+                      <p class="fs-8 text-white fw-bold m-0">
+                        NTD$<span class="fs-6 ms-1">200</span>
+                      </p>
+                    </div>
+                  </a>
+                  <button
+                    type="button"
+                    class="btn bg-transparent border-0 px-8 px-lg-4 py-3 z-3"
+                  >
+                    <i class="bi bi-cart3 text-white fs-6"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--蒜香黑豆漬豆腐乾  -->
+          <div
+            class="swiper-slide card product-card-hover bg-transparent border-0"
+          >
+            <div>
+              <img
+                src="/assets/images/product/蒜香黑豆漬豆腐乾_cutout.png"
+                class="card-img-top img-turn"
+                alt="蒜香黑豆漬豆腐乾"
+              />
+              <div class="card-body p-0 px-sm-3 py-sm-2 px-lg-4 py-lg-3">
+                <div class="text-center text-md-start">
+                  <p class="card-text fw-bold m-0">蒜香黑豆漬豆腐乾</p>
+                  <p class="fs-8 fw-bold m-0">
+                    NTD$<span class="fs-6 ms-1">300</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card border-0 overlay">
+              <div class="d-flex align-items-center h-100">
+                <p class="text-center fs-0 fs-sm-8 fs-lg-0">
+                  厚實豆干搭配蒜頭<br />與黑豆醬油慢醃入味<br />鹹香濃郁
+                </p>
+              </div>
+              <div class="bg-primary-500 w-100">
+                <div
+                  class="d-flex justify-content-center justify-content-lg-between align-items-center"
+                >
+                  <a href="" class="stretched-link text-decoration-none">
+                    <div
+                      class="p-0 ps-sm-3 ps-xxl-4 py-sm-2 py-lg-3 d-none d-lg-block"
+                    >
+                      <p class="fs-0 text-white fw-bold m-0">
+                        蒜香黑豆漬豆腐乾
+                      </p>
+                      <p class="fs-8 text-white fw-bold m-0">
+                        NTD$<span class="fs-6 ms-1">300</span>
+                      </p>
+                    </div>
+                  </a>
+                  <button
+                    type="button"
+                    class="btn bg-transparent border-0 px-8 px-lg-4 py-3 z-3"
+                  >
+                    <i class="bi bi-cart3 text-white fs-6"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 陳醋煙梅地瓜條 -->
+          <div
+            class="swiper-slide card product-card-hover bg-transparent border-0"
+          >
+            <div>
+              <img
+                src="/assets/images/product/陳醋煙梅地瓜條_cutout.png"
+                class="card-img-top img-turn"
+                alt="陳醋煙梅地瓜條"
+              />
+              <div class="card-body p-0 px-sm-3 py-sm-2 px-lg-4 py-lg-3">
+                <div class="text-center text-md-start">
+                  <p class="card-text fw-bold m-0">陳醋煙梅地瓜條</p>
+                  <p class="fs-8 fw-bold m-0">
+                    NTD$<span class="fs-6 ms-1">200</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card border-0 overlay">
+              <div class="d-flex align-items-center h-100">
+                <p class="text-center fs-0 fs-sm-8 fs-lg-0">
+                  地瓜低溫烘烤後<br />醃入老陳醋與烏梅汁<br />風味酸甜溫潤
+                </p>
+              </div>
+              <div class="bg-primary-500 w-100">
+                <div
+                  class="d-flex justify-content-center justify-content-lg-between align-items-center"
+                >
+                  <a href="" class="stretched-link text-decoration-none">
+                    <div
+                      class="p-0 ps-sm-3 ps-xxl-4 py-sm-2 py-lg-3 d-none d-lg-block"
+                    >
+                      <p class="fs-0 text-white fw-bold m-0">陳醋煙梅地瓜條</p>
+                      <p class="fs-8 text-white fw-bold m-0">
+                        NTD$<span class="fs-6 ms-1">200</span>
+                      </p>
+                    </div>
+                  </a>
+                  <button
+                    type="button"
+                    class="btn bg-transparent border-0 px-8 px-lg-4 py-3 z-3"
+                  >
+                    <i class="bi bi-cart3 text-white fs-6"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 鹽麴醃香菇 -->
+          <div
+            class="swiper-slide card product-card-hover bg-transparent border-0"
+          >
+            <div>
+              <img
+                src="/assets/images/product/鹽麴醃香菇_cutout.png"
+                class="card-img-top img-turn"
+                alt="鹽麴醃香菇"
+              />
+              <div class="card-body p-0 px-sm-3 py-sm-2 px-lg-4 py-lg-3">
+                <div class="text-center text-md-start">
+                  <p class="card-text fw-bold m-0">鹽麴醃香菇</p>
+                  <p class="fs-8 fw-bold m-0">
+                    NTD$<span class="fs-6 ms-1">300</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card border-0 overlay">
+              <div class="d-flex align-items-center h-100">
+                <p class="text-center fs-0 fs-sm-8 fs-lg-0">
+                  自製鹽麴醃漬鮮香菇<br />緩慢熟成、鮮香加倍<br />簡單又百搭
+                </p>
+              </div>
+              <div class="bg-primary-500 w-100">
+                <div
+                  class="d-flex justify-content-center justify-content-lg-between align-items-center"
+                >
+                  <a href="" class="stretched-link text-decoration-none">
+                    <div
+                      class="p-0 ps-sm-3 ps-xxl-4 py-sm-2 py-lg-3 d-none d-lg-block"
+                    >
+                      <p class="fs-0 text-white fw-bold m-0">鹽麴醃香菇</p>
+                      <p class="fs-8 text-white fw-bold m-0">
+                        NTD$<span class="fs-6 ms-1">300</span>
+                      </p>
+                    </div>
+                  </a>
+                  <button
+                    type="button"
+                    class="btn bg-transparent border-0 px-8 px-lg-4 py-3 z-3"
+                  >
+                    <i class="bi bi-cart3 text-white fs-6"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 煙燻蒜香小黃瓜 -->
+          <div
+            class="swiper-slide card product-card-hover bg-transparent border-0"
+          >
+            <div>
+              <img
+                src="/assets/images/product/煙燻蒜香小黃瓜_cutout.png"
+                class="card-img-top img-turn"
+                alt="煙燻蒜香小黃瓜"
+              />
+              <div class="card-body p-0 px-sm-3 py-sm-2 px-lg-4 py-lg-3">
+                <div class="text-center text-md-start">
+                  <p class="card-text fw-bold m-0">煙燻蒜香小黃瓜</p>
+                  <p class="fs-8 fw-bold m-0">
+                    NTD$<span class="fs-6 ms-1">250</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card border-0 overlay">
+              <div class="d-flex align-items-center h-100">
+                <p class="text-center fs-0 fs-sm-8 fs-lg-0">
+                  低溫煙燻新鮮小黃瓜<br />醃入蒜頭與香料<br />是下飯、下酒的經典搭配
+                </p>
+              </div>
+              <div class="bg-primary-500 w-100">
+                <div
+                  class="d-flex justify-content-center justify-content-lg-between align-items-center"
+                >
+                  <a href="" class="stretched-link text-decoration-none">
+                    <div
+                      class="p-0 ps-sm-3 ps-xxl-4 py-sm-2 py-lg-3 d-none d-lg-block"
+                    >
+                      <p class="fs-0 text-white fw-bold m-0">煙燻蒜香小黃瓜</p>
+                      <p class="fs-8 text-white fw-bold m-0">
+                        NTD$<span class="fs-6 ms-1">250</span>
+                      </p>
+                    </div>
+                  </a>
+                  <button
+                    type="button"
+                    class="btn bg-transparent border-0 px-8 px-lg-4 py-3 z-3"
+                  >
+                    <i class="bi bi-cart3 text-white fs-6"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="swiper-scrollbar"></div> -->
+      </div>
+    </section>
 
     <!-- footer -->
     <%- include('./layout/footer'); -%>
     <!-- js 引入 -->
     <%- include('./layout/script'); -%>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/assets/js/swiper.js"></script>
   </body>
 </html>

@@ -10,7 +10,7 @@ $font-size-lg: $font-size-base * 1.125 !default; // 18
 $h1-font-size: $font-size-base * 3 !default; // 48
 $h2-font-size: $font-size-base * 2.5 !default; // 40
 $h3-font-size: $font-size-base * 2 !default; // 32
-$h4-font-size: $font-size-base * 1.875 !default; // 28
+$h4-font-size: $font-size-base * 1.75 !default; // 28
 $h5-font-size: $font-size-base * 1.5 !default; // 24
 $h6-font-size: $font-size-base * 1.25 !default; // 20
 
@@ -27,7 +27,7 @@ $font-sizes: (
   4: $h4-font-size,
   //28
   5: $h5-font-size,
-  //244
+  //24
   6: $h6-font-size,
   //20
   7: $font-size-lg,

@@ -119,14 +119,174 @@
           >
             <i class="bi bi-search fs-6 align-bottom"></i>
           </button>
-
-          <a href="" class="d-none d-lg-inline content-dark p-2 ms-3">
+          <!-- 會員頭像 -->
+          <div class="btn-group ms-3">
+            <button
+              type="button"
+              class="d-none d-lg-inline dropdown-toggle bg-transparent border-0 p-2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="bi bi-person-circle fs-5 content-dark"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end border-0 p-0">
+              <li>
+                <a href="" class="dropdown-item btn-font-lg py-3" type="button">
+                  登入 / 註冊
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- <a href="" class="d-none d-lg-inline content-dark p-2 ms-3">
             <i class="bi bi-person-circle fs-5"></i>
-          </a>
+          </a> -->
+          <!-- 購物車 -->
+          <div class="btn-group ms-3 d-none d-lg-block">
+            <button
+              type="button"
+              class="d-none d-lg-inline dropdown-toggle bg-transparent border-0 p-2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="bi bi-cart3 fs-5 content-dark"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end p-0 px-9 carts-menu">
+              <h5 class="fw-semibold text-center mx-auto my-4">購物車</h5>
+              <li><hr class="dropdown-divider m-auto" /></li>
+              <!-- 購物 1  -->
+              <li class="row align-items-center">
+                <img
+                  src="/assets/images/product/檸檬九層塔番茄_cutout.png"
+                  alt="檸檬九層塔番茄"
+                  class="col-4"
+                />
+                <div class="col-7 p-3">
+                  <h6 class="fs-7">檸檬九層塔番茄</h6>
+                  <p class="fs-8 m-0">500ml 慢醃大罐</p>
+                  <div
+                    class="input-group btn border-0 border-primary-600 bg-white px-0 py-2 w-75"
+                  >
+                    <div class="d-flex justify-content-between">
+                      <button type="button" class="btn border-0 p-9">
+                        <i class="bi bi-dash-lg fs-6"></i>
+                      </button>
+                      <input
+                        type="text"
+                        class="form-control border-0 text-center text-dark fw-semibold p-0"
+                        value="1"
+                        id="buyNumber"
+                      />
+                      <button type="button" class="btn border-0 p-9">
+                        <i class="bi bi-plus-lg fs-6"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <h5 class="fs-8 fw-bold m-0">
+                    NTD$<span class="fs-6 ms-1">550</span>
+                  </h5>
+                </div>
 
-          <a href="" class="d-none d-lg-inline content-dark p-2 ms-3">
+                <button class="col-1 btn btn-font-lg" type="button">
+                  <i class="bi bi-x fs-5"></i>
+                </button>
+              </li>
+              <li><hr class="dropdown-divider m-auto" /></li>
+              <!-- 購物 2  -->
+              <li class="row align-items-center">
+                <img
+                  src="/assets/images/product/檸檬老醬蘿蔔_cutout.png"
+                  alt="檸檬老醬蘿蔔"
+                  class="col-4"
+                />
+                <div class="col-7 p-3">
+                  <h6 class="fs-7">檸檬老醬蘿蔔</h6>
+                  <p class="fs-8 m-0">500ml 慢醃大罐</p>
+                  <div
+                    class="input-group btn border-0 border-primary-600 bg-white px-0 py-2 w-75"
+                  >
+                    <div class="d-flex justify-content-between">
+                      <button type="button" class="btn border-0 p-9">
+                        <i class="bi bi-dash-lg fs-6"></i>
+                      </button>
+                      <input
+                        type="text"
+                        class="form-control border-0 text-center text-dark fw-semibold p-0"
+                        value="1"
+                        id="buyNumber"
+                      />
+                      <button type="button" class="btn border-0 p-9">
+                        <i class="bi bi-plus-lg fs-6"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <h5 class="fs-8 fw-bold m-0">
+                    NTD$<span class="fs-6 ms-1">500</span>
+                  </h5>
+                </div>
+
+                <button class="col-1 btn btn-font-lg" type="button">
+                  <i class="bi bi-x fs-5"></i>
+                </button>
+              </li>
+              <li><hr class="dropdown-divider m-auto" /></li>
+              <!-- 購物 3  -->
+              <li class="row align-items-center">
+                <img
+                  src="/assets/images/product/煙燻蒜香小黃瓜_cutout.png"
+                  alt="煙燻蒜香小黃瓜"
+                  class="col-4"
+                />
+                <div class="col-7 p-3">
+                  <h6 class="fs-7">煙燻蒜香小黃瓜</h6>
+                  <p class="fs-8 m-0">200ml 慢醃迷你</p>
+                  <div
+                    class="input-group btn border-0 border-primary-600 bg-white px-0 py-2 w-75"
+                  >
+                    <div class="d-flex justify-content-between">
+                      <button type="button" class="btn border-0 p-9">
+                        <i class="bi bi-dash-lg fs-6"></i>
+                      </button>
+                      <input
+                        type="text"
+                        class="form-control border-0 text-center text-dark fw-semibold p-0"
+                        value="2"
+                        id="buyNumber"
+                      />
+                      <button type="button" class="btn border-0 p-9">
+                        <i class="bi bi-plus-lg fs-6"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <h5 class="fs-8 fw-bold m-0">
+                    NTD$<span class="fs-6 ms-1">250</span>
+                  </h5>
+                </div>
+
+                <button class="col-1 btn btn-font-lg" type="button">
+                  <i class="bi bi-x fs-5"></i>
+                </button>
+              </li>
+              <li><hr class="dropdown-divider m-auto" /></li>
+              <li>
+                <div class="d-flex justify-content-between px-3 py-5">
+                  <h5>總計：</h5>
+                  <h5>NTD$ <span class="fw-semibold">1300</span></h5>
+                </div>
+              </li>
+              <li><hr class="dropdown-divider m-auto" /></li>
+              <li>
+                <button
+                  class="dropdown-item btn-font-lg text-center py-3"
+                  type="button"
+                >
+                  前往結帳
+                </button>
+              </li>
+            </ul>
+          </div>
+          <!-- <a href="" class="d-none d-lg-inline content-dark p-2 ms-3">
             <i class="bi bi-cart3 fs-5"></i>
-          </a>
+          </a> -->
         </div>
       </div>
     </div>
