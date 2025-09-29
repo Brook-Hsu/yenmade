@@ -1,6 +1,5 @@
 // 引入 字體
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap");
-/* 先改變 Bootstrap 的變數，再載入 Bootstrap */
 
 //引入 BS5 icon
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
@@ -8,6 +7,7 @@
 @import "bootstrap/scss/functions";
 
 //  自訂義 變數
+/* 先改變 Bootstrap 的變數，再載入 Bootstrap */
 @import "./helper/variables";
 @import "./helper/variables-dark";
 
@@ -35,6 +35,4 @@
 
 //  pages
 @import "./pages/index.scss";
-
-// :root { --bs-body-font-family: 'Noto Serif TC', serif; }
-// body  { font-family: var(--bs-body-font-family); }
+@import "./pages/radish.scss";
