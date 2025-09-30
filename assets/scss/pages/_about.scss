@@ -7,6 +7,18 @@
   margin-bottom: 80px
 }
 
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  display: inline-block;
+  content: var(--bs-breadcrumb-divider, '>');
+  margin: 0 0.5rem;
+}
+
+
 /*banner*/
 .about-banner {
   width: 100%;
