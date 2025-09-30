@@ -170,6 +170,7 @@
 
     /* 調整 nav-item 和 nav-link 的樣式 */
     #productsTab .nav-item {
+        margin-left: 0 !important;
         /* 在手機上取消原本的垂直間距 */
         margin-bottom: 0 !important;
         /* 確保 nav-item 不會被擠壓變形 */
@@ -236,10 +237,11 @@
     }
 
     .nav-scroll-mobile{
-        margin-left: -12px;
-        margin-right: -12px;
+        margin-left: 0;
+        margin-right: 0;
         color: $neutral-400 !important;
-        
+        flex-wrap: nowrap;
+        overflow-x: auto;
     }
 
     .nav-item-base {
