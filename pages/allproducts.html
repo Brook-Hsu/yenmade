@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>產品列表</title>
+</head>
+<body>
+    <%- include('./layout/headerDark'); -%>
+
+    <!--banner-->
+    <div class="mt-104 d-none d-lg-block">
+        <img src="/assets/images/第二階段更新/img/Banner_allproducts.png" alt="banner" class="img-fliud w-100 h-100">
+    </div>
+    <!--響應式banner-->
+    <div class="mt-148 d-lg-none">
+        <img src="/assets/images/第二階段更新/img/Banner_allproducts_mobile.png" alt="mobile banner" class="img-fliud w-100 h-100">
+    </div>
+
+   
+    <main class="container mb-160">
+         <!--breadcrumb-->
+        <div class="row d-none d-lg-block ps-1 ms-1">
+                <div class=" py-3 px-lg-6 mt-5">
+                    <nav style="--bs-breadcrumb-divider: '〉';" aria-label="breadcrumb" >
+                        <ol class="breadcrumb d-flex ">
+                            <li class="breadcrumb-item breadcrumb-link ">
+                                <a href="/yenmade/pages/index.html" class="pb-5 pe-3">
+                                    <i class="bi bi-house-door "></i>
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item breadcrumb-link active  text-decoration-none  text-neutral-600 " aria-current="page">
+                                <a href="/yenmade/pages/allproducts.html" class="text-decoration-none fs-8 pb-5">
+                                    所有商品
+                                </a>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            
+        </div>
+    
+        
+
+        <div class="row justify-content-center ">
+        <!--商品分類清單-->
+            <div class="col-md-3  col-12  text-md-neutral-600 ">
+                <ul class="fs-md-7 fs-8  mt-md-0 mt-3 nav nav-tabs border-0  d-flex flex-md-column nav-scroll-mobile ps--3 " id="productsTab" role="tablist">
+                    <li class="nav-item border-bottom  mb-md-2" role="presentation">
+                        <button  class="nav-link active  border-0   nav-item-base" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true">所有商品</button>
+                    </li>
+                    
+                    <li class="nav-item border-bottom border-0 mb-md-2 " role="presentation">
+                        <button class="nav-link   border-0  nav-item-base" id="hot-tab" data-bs-toggle="tab" data-bs-target="#hot" type="button" role="tab" aria-controls="hot" aria-selected="false">熱門商品</button>
+                    </li>
+                    
+                    <li class="nav-item border-0 border-bottom mb-md-2 " role="presentation">
+                        <button class="nav-link  border-0  nav-item-base" id="classic-tab" data-bs-toggle="tab" data-bs-target="#classic" type="button" role="tab" aria-controls="classic" aria-selected="false">經典系列</button>
+                    </li>
+                    
+                    <li class="nav-item  border-bottom border-0 mb-md-2 " role="presentation">
+                        <button class="nav-link  border-0 nav-item-base" id="cool-tab" data-bs-toggle="tab" data-bs-target="#cool" type="button" role="tab" aria-controls="cool" aria-selected="false">清爽系列</button>
+                    </li>
+                    
+                    <li class="nav-item border-0 spicy-bottom" role="presentation">
+                        <button class="nav-link   border-0  nav-item-base" id="spicy-tab" data-bs-toggle="tab" data-bs-target="#spicy" type="button" role="tab" aria-controls="spicy" aria-selected="false">勁辣系列</button>
+                    </li>
+                </ul>
+                
+
+            </div>
+        
+            <!--商品列表區域-->
+            <div class="col-12 col-md-9 mt-md-0 mt-4 ps-md-2">
+                <!--tab-->
+                <div class="tab-content ">
+                    <!--所有商品 tab-->
+                    <div class="tab-pane fade show active" role="tabpanel" id="all" aria-labelledby="all-tab">
+                        <div class="row ">
+                            <!--所有商品卡片-->
+                            <div class="col-6 col-md-4 ">
+                                <div class="card mb-3 mb-md-4 border-0 position-relative product-hover-card">
+                                    <!-- 垂直排列兩個 Badge -->
+                                    <div class="position-absolute top-0 start-0 m-2 d-flex flex-column align-items-start" style="z-index: 5;">
+                                        <span class="badge mb-2 fs-md-8 fs-9 px-2 py-1" 
+                                            style="background-color: #DDD292; color: black;">新品</span>
+                                        <span class="badge fs-md-8 fs-9 px-2 py-1" 
+                                            style="background-color: #DDD292; color: black;">熱門</span>
+                                    </div>
+                                    <img src="/assets/images/第二階段更新/img/product/檸檬老醬蘿蔔_cutout.png" alt="檸檬老醬蘿蔔" class="">
+                                    <div class="card-body  p-0 ps-md-3 pt-md-3 text-md-start text-center">
+                                        <p class="card-title mb--4">檸檬老醬蘿蔔</p>
+                                        <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                        <p class="d-inline fs-md-6 fs-8">300</p>
+                                        <a href="#" class="stretched-link"></a>
+                                        <a class="btn btn-sm d-block bg-primary-50 d-md-none pb-12 mt-2 z" href="">
+                                            <i class="bi bi-cart3 text-neutral-600 d-inline"></i>
+                                            <p class="text-neutral-600 fs-9 d-inline">加入購物車</p>
+                                        </a>
+                                    </div>
+                                    <!-- Hover 覆蓋層 -->
+                                    <div class="product-hover-content d-none d-md-flex">
+                                        <!-- 中間文字區 -->
+                                        <div class="hover-text-area">
+                                            <p>脆口白蘿蔔</p>
+                                            <p>醃入特製老滷與檸檬汁</p>
+                                            <p>清爽開胃超下飯</p>
+                                        </div>
+                                        
+                                        <!-- 底部購物區 -->
+                                        <div class="hover-cart-area">
+                                            
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div >
+                                                    <p class="card-title ">檸檬老醬蘿蔔</p>
+                                                    <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                                    <p class="d-inline fs-md-6 fs-8">300</p>
+                                                </div>
+                                                <button class="btn btn-lg" style="z-index: 40;">
+                                                    <a href="https://www.youtube.com/">       
+                                                        <i class="bi bi-cart3 text-white"></i>
+                                                    </a> 
+                                                </button>
+                                            
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- stretched-link 保持在最後，讓整張卡片可點擊 -->
+                                    <a href="/yenmade/pages/radish.html" class="stretched-link"></a>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4">
+                                <div class="card mb-3 mb-md-4 border-0 product-hover-card">
+                                    <img src="/assets/images/第二階段更新/img/product/煙燻蒜香小黃瓜_cutout.png" alt="煙燻蒜香小黃瓜" class="">
+                                    <div class="card-body p-0 ps-md-3 pt-md-3 text-md-start text-center">
+                                        <p class="card-title mb--4">煙燻蒜香小黃瓜</p>
+                                        <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                        <p class="d-inline fs-md-6 fs-8">250</p>
+                                        <a href="#" class="stretched-link"></a>
+                                        <a class="btn btn-sm d-block bg-primary-50 d-md-none pb-12 mt-2 z" href="#">
+                                            <i class="bi bi-cart3 text-neutral-600 d-inline"></i>
+                                            <p class="text-neutral-600 fs-9 d-inline">加入購物車</p>
+                                        </a>
+                                    </div>
+                                    <!-- Hover 覆蓋層 -->
+                                    <div class="product-hover-content d-none d-md-flex">
+                                        <!-- 中間文字區 -->
+                                        <div class="hover-text-area">
+                                            <p>低溫煙燻新鮮小黃瓜</p>
+                                            <p>醃入蒜頭與香料</p>
+                                            <p>是下飯、下酒的經典搭配</p>
+                                        </div>
+                                        
+                                        <!-- 底部購物區 -->
+                                        <div class="hover-cart-area">
+                                            
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div >
+                                                    <p class="card-title ">煙燻蒜香小黃瓜</p>
+                                                    <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                                    <p class="d-inline fs-md-6 fs-8">250</p>
+                                                </div>
+                                                <button class="btn btn-lg" style="z-index: 40;">
+                                                    <a href="https://www.youtube.com/">       
+                                                        <i class="bi bi-cart3 text-white"></i>
+                                                    </a> 
+                                                </button>
+                                            
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- stretched-link 保持在最後，讓整張卡片可點擊 -->
+                                    <a href="https://tw.yahoo.com/" class="stretched-link"></a>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 ">
+                                <div class="card mb-3 mb-md-4 border-0 product-hover-card">
+                                    <img src="/assets/images/第二階段更新/img/product/陳醋煙梅地瓜條_cutout.png" alt="陳醋煙梅地瓜條" class="">
+                                    <div class="card-body p-0 ps-md-3 pt-md-3 text-md-start text-center">
+                                        <p class="card-title mb--4">陳醋煙梅地瓜條</p>
+                                        <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                        <p class="d-inline fs-md-6 fs-8">219</p>
+                                        <a href="#" class="stretched-link"></a>
+                                        <a class="btn btn-sm d-block bg-primary-50 d-md-none pb-12 mt-2 z" href="#">
+                                            <i class="bi bi-cart3 text-neutral-600 d-inline"></i>
+                                            <p class="text-neutral-600 fs-9 d-inline">加入購物車</p>
+                                        </a>
+                                    </div>
+                                    <!-- Hover 覆蓋層 -->
+                                    <div class="product-hover-content d-none d-md-flex">
+                                        <!-- 中間文字區 -->
+                                        <div class="hover-text-area">
+                                            <p>地瓜低溫烘烤後</p>
+                                            <p>醃入老陳醋與烏梅汁</p>
+                                            <p>風味酸甜溫潤</p>
+                                        </div>
+                                        
+                                        <!-- 底部購物區 -->
+                                        <div class="hover-cart-area">
+                                            
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div >
+                                                    <p class="card-title ">陳醋煙梅地瓜條</p>
+                                                    <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                                    <p class="d-inline fs-md-6 fs-8">219</p>
+                                                </div>
+                                                <button class="btn btn-lg" style="z-index: 40;">
+                                                    <a href="https://www.youtube.com/">       
+                                                        <i class="bi bi-cart3 text-white"></i>
+                                                    </a> 
+                                                </button>
+                                            
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- stretched-link 保持在最後，讓整張卡片可點擊 -->
+                                    <a href="https://tw.yahoo.com/" class="stretched-link"></a>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 ">
+                                <div class="card mb-3 mb-md-4 border-0 product-hover-card">
+                                    <img src="/assets/images/第二階段更新/img/product/蒜香黑豆漬豆腐乾_cutout.png" alt="蒜香黑豆漬豆腐乾" class="">
+                                    <div class="card-body p-0 ps-md-3 pt-md-3 text-md-start text-center">
+                                        <p class="card-title mb--4">蒜香黑豆漬豆腐乾</p>
+                                        <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                        <p class="d-inline fs-md-6 fs-8">300</p>
+                                        <a href="#" class="stretched-link"></a>
+                                        <a class="btn btn-sm d-block bg-primary-50 d-md-none pb-12 mt-2 z" href="#">
+                                            <i class="bi bi-cart3 text-neutral-600 d-inline"></i>
+                                            <p class="text-neutral-600 fs-9 d-inline">加入購物車</p>
+                                        </a>
+                                    </div>
+                                    <!-- Hover 覆蓋層 -->
+                                    <div class="product-hover-content d-none d-md-flex">
+                                        <!-- 中間文字區 -->
+                                        <div class="hover-text-area">
+                                            <p>厚實豆干搭配蒜頭</p>
+                                            <p>與黑豆醬油慢醃入味</p>
+                                            <p>鹹香濃郁</p>
+                                        </div>
+                                        
+                                        <!-- 底部購物區 -->
+                                        <div class="hover-cart-area">
+                                            
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div >
+                                                    <p class="card-title ">蒜香黑豆漬豆腐乾</p>
+                                                    <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                                    <p class="d-inline fs-md-6 fs-8">300</p>
+                                                </div>
+                                                <button class="btn btn-lg" style="z-index: 40;">
+                                                    <a href="https://www.youtube.com/">       
+                                                        <i class="bi bi-cart3 text-white"></i>
+                                                    </a> 
+                                                </button>
+                                            
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- stretched-link 保持在最後，讓整張卡片可點擊 -->
+                                    <a href="https://tw.yahoo.com/" class="stretched-link"></a>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 ">
+                                <div class="card mb-3 mb-md-4 border-0 product-hover-card">
+                                    <img src="/assets/images/第二階段更新/img/product/鹽麴醃香菇_cutout.png" alt="鹽麴醃香菇" class="">
+                                    <div class="card-body p-0 ps-md-3 pt-md-3 text-md-start text-center">
+                                        <p class="card-title mb--4">鹽麴醃香菇</p>
+                                        <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                        <p class="d-inline fs-md-6 fs-8">300</p>
+                                        <a href="#" class="stretched-link"></a>
+                                        <a class="btn btn-sm d-block bg-primary-50 d-md-none pb-12 mt-2 z" href="#">
+                                            <i class="bi bi-cart3 text-neutral-600 d-inline"></i>
+                                            <p class="text-neutral-600 fs-9 d-inline">加入購物車</p>
+                                        </a>
+                                    </div>
+                                    <!-- Hover 覆蓋層 -->
+                                    <div class="product-hover-content d-none d-md-flex">
+                                        <!-- 中間文字區 -->
+                                        <div class="hover-text-area">
+                                            <p>自製鹽麴醃漬鮮香菇</p>
+                                            <p>緩慢熟成、鮮香加倍</p>
+                                            <p>簡單又百搭</p>
+                                        </div>
+                                        
+                                        <!-- 底部購物區 -->
+                                        <div class="hover-cart-area">
+                                            
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div >
+                                                    <p class="card-title ">鹽麴醃香菇</p>
+                                                    <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                                    <p class="d-inline fs-md-6 fs-8">300</p>
+                                                </div>
+                                                <button class="btn btn-lg" style="z-index: 40;">
+                                                    <a href="https://www.youtube.com/">       
+                                                        <i class="bi bi-cart3 text-white"></i>
+                                                    </a> 
+                                                </button>
+                                            
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- stretched-link 保持在最後，讓整張卡片可點擊 -->
+                                    <a href="https://tw.yahoo.com/" class="stretched-link"></a>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4">
+                                <div class="card mb-3 mb-md-4 border-0 card-hover position-relative product-hover-card">
+                                    <span class="badge position-absolute top-0 start-0 m-2 fs-md-8 fs-9 px-2 py-1" 
+                                        style="background-color: #DDD292; color: black; z-index: 5;">熱門
+                                    </span>
+                                    <img src="/assets/images/第二階段更新/img/product/蘋果醋百香果甜椒_cutout.png" alt="蘋果醋百香果甜椒" class="">
+                                    <div class="card-body p-0 ps-md-3 pt-md-3 text-md-start text-center">
+                                        <p class="card-title mb--4">蘋果醋百香果甜椒</p>
+                                        <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                        <p class="d-inline fs-md-6 fs-8">299</p>
+                                        <a class="btn btn-sm d-block bg-primary-50 d-md-none pb-12 mt-2 z" href="https://www.youtube.com/">
+                                            <i class="bi bi-cart3 text-neutral-600 d-inline"></i>
+                                            <p class="text-neutral-600 fs-9 d-inline">加入購物車</p>
+                                        </a>
+                                    </div>
+
+                                    <!-- Hover 覆蓋層 -->
+                                    <div class="product-hover-content d-none d-md-flex">
+                                       
+                                        <!-- 中間文字區 -->
+                                        <div class="hover-text-area">
+                                            <p>彩色甜椒條浸泡在</p>
+                                            <p>蘋果醋與百香果汁中</p>
+                                            <p>酸甜濃郁，顏色明亮</p>
+                                        </div>
+                                        
+                                        <!-- 底部購物區 -->
+                                        <div class="hover-cart-area">
+                                            
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div >
+                                                    <p class="card-title ">蘋果醋百香果甜椒</p>
+                                                    <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                                    <p class="d-inline fs-md-6 fs-8">299</p>
+                                                </div>
+                                                <button class="btn btn-lg" style="z-index: 40;">
+                                                    <a href="https://www.youtube.com/">       
+                                                        <i class="bi bi-cart3 text-white"></i>
+                                                    </a> 
+                                                </button>
+                                            
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- stretched-link 保持在最後，讓整張卡片可點擊 -->
+                                    <a href="https://tw.yahoo.com/" class="stretched-link"></a>
+
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 ">
+                                <div class="card mb-3 mb-md-4 border-0 product-hover-card">
+                                    <img src="/assets/images/第二階段更新/img/product/檸檬九層塔番茄_cutout.png" alt="檸檬九層塔番茄" class="">
+                                    <div class="card-body p-0 ps-md-3 pt-md-3 text-md-start text-center">
+                                        <p class="card-title mb--4">檸檬九層塔番茄</p>
+                                        <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                        <p class="d-inline fs-md-6 fs-8">429</p>
+                                        <a href="#" class="stretched-link"></a>
+                                        <a class="btn btn-sm d-block bg-primary-50 d-md-none pb-12 mt-2 z" href="#">
+                                            <i class="bi bi-cart3 text-neutral-600 d-inline"></i>
+                                            <p class="text-neutral-600 fs-9 d-inline">加入購物車</p>
+                                        </a>
+                                    </div>
+                                    <!-- Hover 覆蓋層 -->
+                                    <div class="product-hover-content d-none d-md-flex">
+                                        <!-- 中間文字區 -->
+                                        <div class="hover-text-area">
+                                            <p>去皮小番茄</p>
+                                            <p>浸漬檸檬汁與九層塔</p>
+                                            <p>酸香爽口</p>
+                                        </div>
+                                        
+                                        <!-- 底部購物區 -->
+                                        <div class="hover-cart-area">
+                                            
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div >
+                                                    <p class="card-title ">檸檬九層塔番茄</p>
+                                                    <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                                    <p class="d-inline fs-md-6 fs-8">429</p>
+                                                </div>
+                                                <button class="btn btn-lg" style="z-index: 40;">
+                                                    <a href="https://www.youtube.com/">       
+                                                        <i class="bi bi-cart3 text-white"></i>
+                                                    </a> 
+                                                </button>
+                                            
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- stretched-link 保持在最後，讓整張卡片可點擊 -->
+                                    <a href="https://tw.yahoo.com/" class="stretched-link"></a>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 ">
+                                <div class="card mb-3 mb-md-4 border-0 product-hover-card">
+                                    <img src="/assets/images/第二階段更新/img/product/白桃薑汁高麗菜_cutout.png" alt="白桃薑汁高麗菜" class="">
+                                    <div class="card-body p-0 ps-md-3 pt-md-3 text-md-start text-center">
+                                        <p class="card-title mb--4">白桃薑汁高麗菜</p>
+                                        <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                        <p class="d-inline fs-md-6 fs-8">399</p>
+                                        <a href="#" class="stretched-link"></a>
+                                        <a class="btn btn-sm d-block bg-primary-50 d-md-none pb-12 mt-2 z" href="#">
+                                            <i class="bi bi-cart3 text-neutral-600 d-inline"></i>
+                                            <p class="text-neutral-600 fs-9 d-inline">加入購物車</p>
+                                        </a>
+                                    </div>
+                                    <!-- Hover 覆蓋層 -->
+                                    <div class="product-hover-content d-none d-md-flex">
+                                        <!-- 中間文字區 -->
+                                        <div class="hover-text-area">
+                                            <p>新鮮高麗菜搭配</p>
+                                            <p>醃入特製老滷與檸檬汁</p>
+                                            <p>酸甜平衡、口感清脆</p>
+                                        </div>
+                                        
+                                        <!-- 底部購物區 -->
+                                        <div class="hover-cart-area">
+                                            
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div >
+                                                    <p class="card-title ">白桃薑汁高麗菜</p>
+                                                    <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                                    <p class="d-inline fs-md-6 fs-8">399</p>
+                                                </div>
+                                                <button class="btn btn-lg" style="z-index: 40;">
+                                                    <a href="https://www.youtube.com/">       
+                                                        <i class="bi bi-cart3 text-white"></i>
+                                                    </a> 
+                                                </button>
+                                            
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- stretched-link 保持在最後，讓整張卡片可點擊 -->
+                                    <a href="https://tw.yahoo.com/" class="stretched-link"></a>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 ">
+                                <div class="card mb-3 mb-md-4 border-0 product-hover-card">
+                                    <img src="/assets/images/第二階段更新/img/product/花椒紅油蓮藕片_cutout.png" alt="花椒紅油蓮藕片" class="">
+                                    <div class="card-body p-0 ps-md-3 pt-md-3 text-md-start text-center">
+                                        <p class="card-title mb--4">花椒紅油蓮藕片</p>
+                                        <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                        <p class="d-inline fs-md-6 fs-8">299</p>
+                                        <a href="#" class="stretched-link"></a>
+                                        <a class="btn btn-sm d-block bg-primary-50 d-md-none pb-12 mt-2 z" href="#">
+                                            <i class="bi bi-cart3 text-neutral-600 d-inline"></i>
+                                            <p class="text-neutral-600 fs-9 d-inline">加入購物車</p>
+                                        </a>
+                                    </div>
+                                    <!-- Hover 覆蓋層 -->
+                                    <div class="product-hover-content d-none d-md-flex">
+                                        <!-- 中間文字區 -->
+                                        <div class="hover-text-area">
+                                            <p>切片蓮藕以花椒與</p>
+                                            <p>自製紅油醃漬</p>
+                                            <p>脆嫩且微辣富層次</p>
+                                        </div>
+                                        
+                                        <!-- 底部購物區 -->
+                                        <div class="hover-cart-area">
+                                            
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div >
+                                                    <p class="card-title ">花椒紅油蓮藕片</p>
+                                                    <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                                    <p class="d-inline fs-md-6 fs-8">299</p>
+                                                </div>
+                                                <button class="btn btn-lg" style="z-index: 40;">
+                                                    <a href="https://www.youtube.com/">       
+                                                        <i class="bi bi-cart3 text-white"></i>
+                                                    </a> 
+                                                </button>
+                                            
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- stretched-link 保持在最後，讓整張卡片可點擊 -->
+                                    <a href="https://tw.yahoo.com/" class="stretched-link"></a>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 ">
+                                <div class="card mb-3 mb-md-4 border-0 position-relative product-hover-card">
+                                    <span class="badge position-absolute top-0 start-0 m-2 fs-md-8 fs-9 px-2 py-1" 
+                                        style="background-color: #DDD292; color: black; z-index: 5;">熱門
+                                    </span>
+                                    <img src="/assets/images/第二階段更新/img/product/醋醃紫洋蔥_cutout.png" alt="醋醃紫洋蔥" class="">
+                                    <div class="card-body p-0 ps-md-3 pt-md-3 text-md-start text-center">
+                                        <p class="card-title mb--4">醋醃紫洋蔥</p>
+                                        <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                        <p class="d-inline fs-md-6 fs-8">200</p>
+                                        <a href="#" class="stretched-link"></a>
+                                        <a class="btn btn-sm d-block bg-primary-50 d-md-none pb-12 mt-2 z" href="#">
+                                            <i class="bi bi-cart3 text-neutral-600 d-inline"></i>
+                                            <p class="text-neutral-600 fs-9 d-inline">加入購物車</p>
+                                        </a>
+                                    </div>
+                                    <!-- Hover 覆蓋層 -->
+                                    <div class="product-hover-content d-none d-md-flex">
+                                        <!-- 中間文字區 -->
+                                        <div class="hover-text-area">
+                                            <p>天然果醋醃漬紫洋蔥</p>
+                                            <p>去除辛辣、保留甜脆</p>
+                                            <p>清爽酸香</p>
+                                        </div>
+                                        
+                                        <!-- 底部購物區 -->
+                                        <div class="hover-cart-area">
+                                            
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div >
+                                                    <p class="card-title ">醋醃紫洋蔥</p>
+                                                    <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                                    <p class="d-inline fs-md-6 fs-8">200</p>
+                                                </div>
+                                                <button class="btn btn-lg" style="z-index: 40;">
+                                                    <a href="https://www.youtube.com/">       
+                                                        <i class="bi bi-cart3 text-white"></i>
+                                                    </a> 
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- stretched-link 保持在最後，讓整張卡片可點擊 -->
+                                    <a href="https://tw.yahoo.com/" class="stretched-link"></a>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 ">
+                                <div class="card mb-3 mb-md-4 border-0 product-hover-card">
+                                    <img src="/assets/images/第二階段更新/img/product/甘酒漬紅蘿蔔_cutout.png" alt="甘酒漬紅蘿蔔" class="">
+                                    <div class="card-body p-0 ps-md-3 pt-md-3 text-md-start text-center">
+                                        <p class="card-title mb--4">甘酒漬紅蘿蔔</p>
+                                        <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                        <p class="d-inline fs-md-6 fs-8">199</p>
+                                        <a href="#" class="stretched-link"></a>
+                                        <a class="btn btn-sm d-block bg-primary-50 d-md-none pb-12 mt-2 z" href="#">
+                                            <i class="bi bi-cart3 text-neutral-600 d-inline"></i>
+                                            <p class="text-neutral-600 fs-9 d-inline">加入購物車</p>
+                                        </a>
+                                    </div>
+                                    <!-- Hover 覆蓋層 -->
+                                    <div class="product-hover-content d-none d-md-flex">
+                                        <!-- 中間文字區 -->
+                                        <div class="hover-text-area">
+                                            <p>以米麴發酵甘酒</p>
+                                            <p>醃漬紅蘿蔔薄片</p>
+                                            <p>鮮甜脆口、清爽開胃</p>
+                                        </div>
+                                        
+                                        <!-- 底部購物區 -->
+                                        <div class="hover-cart-area">
+                                            
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div >
+                                                    <p class="card-title ">甘酒漬紅蘿蔔</p>
+                                                    <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                                    <p class="d-inline fs-md-6 fs-8">199</p>
+                                                </div>
+                                                <button class="btn btn-lg" style="z-index: 40;">
+                                                    <a href="https://www.youtube.com/">       
+                                                        <i class="bi bi-cart3 text-white"></i>
+                                                    </a> 
+                                                </button>
+                                            
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- stretched-link 保持在最後，讓整張卡片可點擊 -->
+                                    <a href="https://tw.yahoo.com/" class="stretched-link"></a>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 ">
+                                <div class="card mb-3 mb-md-4 border-0 product-hover-card">
+                                    <img src="/assets/images/第二階段更新/img/product/香茅檸檬漬白木耳_cutout.png" alt="香茅檸檬漬白木耳" class="">
+                                    <div class="card-body p-0 ps-md-3 pt-md-3 text-md-start text-center">
+                                        <p class="card-title mb--4">香茅檸檬漬白木耳</p>
+                                        <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                        <p class="d-inline fs-md-6 fs-8">350</p>
+                                        <a href="#" class="stretched-link"></a>
+                                        <a class="btn btn-sm d-block bg-primary-50 d-md-none pb-12 mt-2 z" href="#">
+                                            <i class="bi bi-cart3 text-neutral-600 d-inline"></i>
+                                            <p class="text-neutral-600 fs-9 d-inline">加入購物車</p>
+                                        </a>
+                                    </div>
+                                    <!-- Hover 覆蓋層 -->
+                                    <div class="product-hover-content d-none d-md-flex">
+                                        <!-- 中間文字區 -->
+                                        <div class="hover-text-area">
+                                            <p>新鮮白木耳</p>
+                                            <p>以香茅與檸檬汁輕醃</p>
+                                            <p>帶有柑橘與草本的清爽香氣</p>
+                                        </div>
+                                        
+                                        <!-- 底部購物區 -->
+                                        <div class="hover-cart-area">
+                                            
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div >
+                                                    <p class="card-title ">香茅檸檬漬白木耳</p>
+                                                    <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                                    <p class="d-inline fs-md-6 fs-8">350</p>
+                                                </div>
+                                                <button class="btn btn-lg" style="z-index: 40;">
+                                                    <a href="https://www.youtube.com/">       
+                                                        <i class="bi bi-cart3 text-white"></i>
+                                                    </a> 
+                                                </button>
+                                            
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- stretched-link 保持在最後，讓整張卡片可點擊 -->
+                                    <a href="https://tw.yahoo.com/" class="stretched-link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 熱門商品 Tab -->
+                    <div class="tab-pane fade" id="hot" role="tabpanel" aria-labelledby="hot-tab">
+                        <div class="row ">
+                            <div class="col-6 col-md-4 ">
+                                <div class="card mb-3 mb-md-4 border-0 position-relative product-hover-card">
+                                    <!-- 垂直排列兩個 Badge -->
+                                    <div class="position-absolute top-0 start-0 m-2 d-flex flex-column align-items-start" style="z-index: 5;">
+                                        <span class="badge mb-2 fs-md-8 fs-9 px-2 py-1" 
+                                            style="background-color: #DDD292; color: black;">新品</span>
+                                        <span class="badge fs-md-8 fs-9 px-2 py-1" 
+                                            style="background-color: #DDD292; color: black;">熱門</span>
+                                    </div>
+                                    <img src="/assets/images/第二階段更新/img/product/檸檬老醬蘿蔔_cutout.png" alt="檸檬老醬蘿蔔" class="">
+                                    <div class="card-body p-0 ps-md-3 pt-md-3  text-md-start text-center">
+                                        <p class="card-title mb--4">檸檬老醬蘿蔔</p>
+                                        <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                        <p class="d-inline fs-md-6 fs-8">300</p>
+                                        <a href="#" class="stretched-link"></a>
+                                        <a class="btn btn-sm d-block bg-primary-50 d-md-none pb-12 mt-2 z" href="https://www.youtube.com/">
+                                            <i class="bi bi-cart3 text-neutral-600 d-inline"></i>
+                                            <p class="text-neutral-600 fs-9 d-inline">加入購物車</p>
+                                        </a>
+                                    </div>
+                                     <!-- Hover 覆蓋層 -->
+                                    <div class="product-hover-content d-none d-md-flex">
+                                        <!-- 中間文字區 -->
+                                        <div class="hover-text-area">
+                                            <p>脆口白蘿蔔</p>
+                                            <p>醃入特製老滷與檸檬汁</p>
+                                            <p>清爽開胃超下飯</p>
+                                        </div>
+                                        
+                                        <!-- 底部購物區 -->
+                                        <div class="hover-cart-area">
+                                            
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div >
+                                                    <p class="card-title ">檸檬老醬蘿蔔</p>
+                                                    <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                                    <p class="d-inline fs-md-6 fs-8">300</p>
+                                                </div>
+                                                <button class="btn btn-lg" style="z-index: 40;">
+                                                    <a href="https://www.youtube.com/">       
+                                                        <i class="bi bi-cart3 text-white"></i>
+                                                    </a> 
+                                                </button>
+                                            
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- stretched-link 保持在最後，讓整張卡片可點擊 -->
+                                    <a href="/yenmade/pages/radish.html" class="stretched-link"></a>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 ">
+                                <div class="card mb-3 mb-md-4 border-0 card-hover position-relative product-hover-card  ">
+                                    <span class="badge position-absolute top-0 start-0 m-2 fs-md-8 fs-9 " 
+                                        style="background-color: #DDD292; color: black; z-index: 5;">熱門
+                                    </span>
+                                    <img src="/assets/images/第二階段更新/img/product/蘋果醋百香果甜椒_cutout.png" alt="蘋果醋百香果甜椒" class="">
+                                    <div class="card-body p-0 ps-md-3 pt-md-3 text-md-start text-center">
+                                        <p class="card-title mb--4">蘋果醋百香果甜椒</p>
+                                        <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                        <p class="d-inline fs-md-6 fs-8">299</p>
+                                        <a class="btn btn-sm d-block bg-primary-50 d-md-none pb-12 mt-2 z" href="#">
+                                            <i class="bi bi-cart3 text-neutral-600 d-inline"></i>
+                                            <p class="text-neutral-600 fs-9 d-inline">加入購物車</p>
+                                        </a>
+                                    </div>
+
+                                    <!-- Hover 覆蓋層 -->
+                                    <div class="product-hover-content d-none d-md-flex">
+                                        <!-- 中間文字區 -->
+                                        <div class="hover-text-area">
+                                            <p>彩色甜椒條浸泡在</p>
+                                            <p>蘋果醋與百香果汁中</p>
+                                            <p>酸甜濃郁，顏色明亮</p>
+                                        </div>
+                                        
+                                        <!-- 底部購物區 -->
+                                        <div class="hover-cart-area">
+                                            
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div >
+                                                    <p class="card-title ">蘋果醋百香果甜椒</p>
+                                                    <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                                    <p class="d-inline fs-md-6 fs-8">299</p>
+                                                </div>
+                                                <button class="btn btn-lg" style="z-index: 40;">
+                                                    <a href="https://www.youtube.com/">       
+                                                        <i class="bi bi-cart3 text-white"></i>
+                                                    </a> 
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- stretched-link 保持在最後，讓整張卡片可點擊 -->
+                                    <a href="https://tw.yahoo.com/" class="stretched-link"></a>
+                                </div>
+                            </div>
+
+                             <div class="col-6 col-md-4 ">
+                                <div class="card mb-3 mb-md-4 border-0 position-relative  product-hover-card">
+                                    <span class="badge position-absolute top-0 start-0 m-2 fs-md-8 fs-9 px-2 py-1" 
+                                        style="background-color: #DDD292; color: black; z-index: 5;">熱門
+                                    </span>
+                                    <img src="/assets/images/第二階段更新/img/product/醋醃紫洋蔥_cutout.png" alt="醋醃紫洋蔥" class="">
+                                    <div class="card-body p-0 ps-md-3 pt-md-3 text-md-start text-center">
+                                        <p class="card-title mb--4">醋醃紫洋蔥</p>
+                                        <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                        <p class="d-inline fs-md-6 fs-8">200</p>
+                                        <a href="#" class="stretched-link"></a>
+                                        <a class="btn btn-sm d-block bg-primary-50 d-md-none pb-12 mt-2 z" href="#">
+                                            <i class="bi bi-cart3 text-neutral-600 d-inline"></i>
+                                            <p class="text-neutral-600 fs-9 d-inline">加入購物車</p>
+                                        </a>
+                                    </div>
+                                    <!-- Hover 覆蓋層 -->
+                                    <div class="product-hover-content d-none d-md-flex">
+                                        <!-- 中間文字區 -->
+                                        <div class="hover-text-area">
+                                            <p>天然果醋醃漬紫洋蔥</p>
+                                            <p>去除辛辣、保留甜脆</p>
+                                            <p>清爽酸香</p>
+                                        </div>
+                                        
+                                        <!-- 底部購物區 -->
+                                        <div class="hover-cart-area">
+                                            
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div >
+                                                    <p class="card-title ">醋醃紫洋蔥</p>
+                                                    <p class="d-inline mb-1 fs-md-8 fs-9">NTD$</p>
+                                                    <p class="d-inline fs-md-6 fs-8">200</p>
+                                                </div>
+                                                <button class="btn btn-lg" style="z-index: 40;">
+                                                    <a href="https://www.youtube.com/">       
+                                                        <i class="bi bi-cart3 text-white"></i>
+                                                    </a> 
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- stretched-link 保持在最後，讓整張卡片可點擊 -->
+                                    <a href="https://tw.yahoo.com/" class="stretched-link"></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- 經典商品 Tab -->
+                    <div class="tab-pane fade" id="classic" role="tabpanel" aria-labelledby="classic-tab">
+                        敬請期待～～
+                    </div>
+
+                     <!-- 清爽商品 Tab -->
+                    <div class="tab-pane fade" id="cool" role="tabpanel" aria-labelledby="cool-tab">
+                        敬請期待～～
+                    </div>
+
+                     <!-- 勁辣商品 Tab -->
+                    <div class="tab-pane fade" id="spicy" role="tabpanel" aria-labelledby="spicy-tab">
+                        敬請期待～～
+                    </div>
+
+
+                </div>
+               
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <%- include('./layout/footer'); -%> <%- include('./layout/script'); -%>
+</body>
+</html>
