@@ -35,8 +35,14 @@
 }
 
 
-
-
+.breadcrumb-link {
+  color: #525252; // $neutral-600
+  &:hover,
+  &:active,
+  &:focus {
+    color: #beab3b; // $tertiary-700
+  }
+}
 
 
 
