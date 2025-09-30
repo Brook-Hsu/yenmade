@@ -2,8 +2,10 @@
   height: 40px;
 }
 
+// nav list 樣式
 .offcanvas.offcanvas-space {
   width: 100vw;
+  height: 100vh;
   border: 0;
 }
 .offcanvas.offcanvas-bg {
@@ -15,7 +17,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba($dark, 0.6); // 黑色 + 60% 透明度
+    background: rgba($dark, 0.8); // 黑色 + 60% 透明度
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px); // Safari 支援
     z-index: -1; // 保證不會蓋到文字
@@ -24,14 +26,34 @@
     }
   }
 }
+.offcanvas.offcanvas-bg-dark {
+  background: none;
+  inset: 0; // top:0, right:0, bottom:0, left:0
+  z-index: 1000;
+  // 用來做半透明+模糊的層
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba($neutral-100, 0.6); // 黑色 + 60% 透明度
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); // Safari 支援
+    z-index: -1; // 保證不會蓋到文字
+    @include rwd-lg {
+      display: none;
+    }
+  }
+}
+//  end-----------------
 
 .bg-white-alpha {
-  background: rgba($color: $white, $alpha: 0.15);
+  background: rgba($color: $white, $alpha: 0.85);
 }
 
 .form-control.form-search:focus {
-  background-color: rgba($color: $white, $alpha: 0.15);
+  background-color: rgba($color: $white, $alpha: 1);
 }
+
 .border-md-bottom {
   border-bottom: 1px solid $white;
   @include rwd-lg {
@@ -58,6 +80,16 @@
   }
 }
 
+.nav-link:hover,
+.nav-link:focus {
+  color: rgba($color: $tertiary-500, $alpha: 0.75);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: $tertiary-500;
+}
+
 .me-lg-45 {
   @include rwd-lg {
     margin-right: 45px;
@@ -73,17 +105,124 @@
   }
 }
 
-.nav-link:hover,
-.nav-link:focus {
-  color: rgba($color: $tertiary-500, $alpha: 0.75);
-}
-
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link.show {
-  color: $tertiary-500;
-}
-
 a .bi:hover,
 a .bi:focus {
   color: $tertiary-500;
+}
+
+.search-width {
+  width: 250px;
+}
+
+.z-1001 {
+  z-index: 1001;
+}
+
+.mt-105 {
+  margin-top: 105px;
+}
+
+// navbar 滾動動畫
+html {
+  /*   // 設定頁面可滾動，並為滾動條定義時間軸 */
+  scroll-timeline-name: --page-scroll;
+  /* 給這個時間軸一個名字 */
+  scroll-timeline-axis: block;
+  /* 監聽垂直滾動（Y軸） */
+}
+// navbar 的背景
+.navbar.pageScroll {
+  animation: navbar-background-change forwards; /*  @keyframes 動畫 */ /* forwards 用於動畫完成後維持樣式 */
+  animation-timeline: --page-scroll; /* 將動畫綁定到 --page-scroll 滾動時間軸 */
+  animation-range: 0px 667px; /* 動畫由頂部 0px 往下滾動 80px 後完成 */
+}
+
+@keyframes navbar-background-change {
+  from {
+    /* 0% 狀態 */
+    background-color: transparent;
+    /* 背景全透明，類似rgba (0,0,0,0)     */
+  }
+  to {
+    /* 100% 狀態 */
+    background-color: rgba($white, 0.8);
+    backdrop-filter: blur(4px);
+    /* 高斯模糊效果 */
+  }
+}
+// navbar 的文字
+.content-dark {
+  @include rwd-lg {
+    animation: navbar-content-change forwards; /*  @keyframes 動畫 */ /* forwards 用於動畫完成後維持樣式 */
+    animation-timeline: --page-scroll; /* 將動畫綁定到 --page-scroll 滾動時間軸 */
+    animation-range: 0px 667px; /* 動畫由頂部 0px 往下滾動 80px 後完成 */
+  }
+  &:hover,
+  &:focus {
+    color: $tertiary-700 !important;
+  }
+}
+//  navbar 的 三個 icon
+.icon-dark {
+  animation: navbar-content-change forwards; /*  @keyframes 動畫 */ /* forwards 用於動畫完成後維持樣式 */
+  animation-timeline: --page-scroll; /* 將動畫綁定到 --page-scroll 滾動時間軸 */
+  animation-range: 0px 667px; /* 動畫由頂部 0px 往下滾動 80px 後完成 */
+  &:hover,
+  &:focus {
+    color: $tertiary-700 !important;
+  }
+}
+
+@keyframes navbar-content-change {
+  from {
+    /* 0% 狀態 */
+    color: $white;
+  }
+  to {
+    /* 100% 狀態 */
+    color: $neutral-600;
+  }
+}
+// navbar 的 logo
+.svgColor {
+  animation: navbar-svgColor-change forwards; /*  @keyframes 動畫 */ /* forwards 用於動畫完成後維持樣式 */
+  animation-timeline: --page-scroll; /* 將動畫綁定到 --page-scroll 滾動時間軸 */
+  animation-range: 0px 667px; /* 動畫由頂部 0px 往下滾動 80px 後完成 */
+}
+@keyframes navbar-svgColor-change {
+  from {
+    /* 0% 狀態 */
+    fill: white;
+    filter: brightness(0) invert(1);
+  }
+  to {
+    /* 100% 狀態 */
+    filter: invert(34%) sepia(0%) saturate(0%) hue-rotate(180deg)
+      brightness(92%) contrast(92%);
+  }
+}
+//  navbar 的 border
+.navBorder-dark {
+  animation: navbar-borderColor-change forwards; /*  @keyframes 動畫 */ /* forwards 用於動畫完成後維持樣式 */
+  animation-timeline: --page-scroll; /* 將動畫綁定到 --page-scroll 滾動時間軸 */
+  animation-range: 0px 667px; /* 動畫由頂部 0px 往下滾動 80px 後完成 */
+}
+
+@keyframes navbar-borderColor-change {
+  from {
+    /* 0% 狀態 */
+    border-color: $white;
+  }
+  to {
+    /* 100% 狀態 */
+    border-color: $neutral-600;
+  }
+}
+// 購物車 互動視窗
+.carts-menu {
+  width: 30vw;
+  img {
+    width: 30%;
+    height: 30%;
+  }
 }

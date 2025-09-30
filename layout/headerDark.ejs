@@ -3,19 +3,19 @@
     <div class="container px-4">
       <a class="navbar-brand p-0 me-lg-45" href="index.html">
         <img
-          class="svgColor logo-size"
+          class="svg-dark logo-size"
           src="/assets/images/logo/Type=Logo_Horizontal.svg"
           alt="yenmade's logo"
         />
       </a>
       <button
-        class="navbar-toggler border-0 icon-dark py-2"
+        class="navbar-toggler border-0 py-2"
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar"
       >
-        <i class="bi bi-list fs-5"></i>
+        <i class="bi bi-list fs-5 text-neutral-600"></i>
       </button>
       <div
         class="offcanvas offcanvas-end offcanvas-space offcanvas-bg"
@@ -50,27 +50,47 @@
               </button>
             </form>
             <ul class="navbar-nav flex-grow-1 pe-3">
-              <li class="nav-item text-center border-md-bottom navBorder-dark">
+              <li class="nav-item text-center">
                 <a
-                  class="nav-link content-dark py-3 py-lg-0 px-lg-4 active"
+                  class="nav-link text-white text-lg-neutral-600 py-3 py-lg-0 px-lg-4 border-md-bottom border-neutral-600 active"
                   aria-current="page"
                   href="#"
                   ><span class="btn-font-lg">所有商品</span></a
                 >
               </li>
-              <li class="nav-item text-center border-md-bottom navBorder-dark">
-                <a class="nav-link content-dark py-3 py-lg-0 px-lg-4" href="#"
+              <li class="nav-item text-center">
+                <a
+                  class="nav-link text-white text-lg-neutral-600 py-3 py-lg-0 px-lg-4 border-md-bottom border-neutral-600"
+                  href="#"
                   ><span class="btn-font-lg">關於我們</span></a
                 >
               </li>
-              <li class="nav-item text-center border-md-bottom navBorder-dark">
-                <a class="nav-link content-dark py-3 py-lg-0 px-lg-4" href="#"
+              <li class="nav-item text-center">
+                <a
+                  class="nav-link text-white text-lg-neutral-600 py-3 py-lg-0 px-lg-4 border-md-bottom border-neutral-600"
+                  href="#"
                   ><span class="btn-font-lg">部落格</span></a
                 >
               </li>
-              <li class="nav-item text-center border-0">
-                <a class="nav-link content-dark py-3 py-lg-0 px-lg-4" href="#"
+              <li class="nav-item text-center">
+                <a
+                  class="nav-link text-white text-lg-neutral-600 py-3 py-lg-0 px-lg-4 border-md-bottom border-neutral-600"
+                  href="#"
                   ><span class="btn-font-lg">常見問題</span></a
+                >
+              </li>
+              <li class="nav-item text-center d-lg-none">
+                <a
+                  class="nav-link text-white text-lg-neutral-600 py-3 py-lg-0 px-lg-4 border-md-bottom border-neutral-600"
+                  href="#"
+                  ><span class="btn-font-lg">會員專區</span></a
+                >
+              </li>
+              <li class="nav-item text-center border-0 d-lg-none">
+                <a
+                  class="nav-link text-white text-lg-neutral-600 py-3 py-lg-0 px-lg-4"
+                  href="#"
+                  ><span class="btn-font-lg">訂單追蹤</span></a
                 >
               </li>
             </ul>
@@ -83,7 +103,7 @@
                 class="btn btn-outline-light border-0 border-end btn-font-lg w-50 px-3 py-2"
               >
                 <i class="bi bi-person-circle me-2"></i>
-                <span>登入/註冊</span>
+                <span>登出</span>
               </a>
               <a
                 class="btn btn-outline-light border-0 btn-font-lg w-50 px-3 py-2"
@@ -99,6 +119,7 @@
       <!-- 搜尋/帳號/購物車按鈕 -->
       <div class="d-none d-lg-block position-relative">
         <div class="d-lg-flex align-items-lg-center">
+          <!-- 搜尋欄位 -->
           <div class="collapse" id="collapseSearch">
             <form role="button">
               <input
@@ -110,7 +131,7 @@
             </form>
           </div>
           <button
-            class="btn content-dark"
+            class="btn text-neutral-600"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#collapseSearch"
@@ -127,17 +148,39 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i class="bi bi-person-circle fs-5 content-dark"></i>
+              <i class="bi bi-person-circle fs-5 text-neutral-600"></i>
             </button>
             <ul class="dropdown-menu dropdown-menu-end border-0 p-0">
               <li>
-                <a href="" class="dropdown-item btn-font-lg py-3" type="button">
-                  登入 / 註冊
-                </a>
+                <button
+                  class="dropdown-item btn-font-lg py-2"
+                  type="button"
+                  disabled
+                >
+                  歡迎,　顏小姐
+                </button>
+              </li>
+              <li><hr class="dropdown-divider m-auto" /></li>
+              <li>
+                <button class="dropdown-item btn-font-lg py-3" type="button">
+                  會員專區
+                </button>
+              </li>
+              <li><hr class="dropdown-divider m-auto" /></li>
+              <li>
+                <button class="dropdown-item btn-font-lg py-3" type="button">
+                  訂單追蹤
+                </button>
+              </li>
+              <li><hr class="dropdown-divider m-auto" /></li>
+              <li>
+                <button class="dropdown-item btn-font-lg py-3" type="button">
+                  登出
+                </button>
               </li>
             </ul>
           </div>
-          <!-- <a href="" class="d-none d-lg-inline content-dark p-2 ms-3">
+          <!-- <a href="" class="d-none d-lg-inline text-neutral-600 p-2 ms-3">
             <i class="bi bi-person-circle fs-5"></i>
           </a> -->
           <!-- 購物車 -->
@@ -148,7 +191,7 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i class="bi bi-cart3 fs-5 content-dark"></i>
+              <i class="bi bi-cart3 fs-5 text-neutral-600"></i>
             </button>
             <ul class="dropdown-menu dropdown-menu-end p-0 px-9 carts-menu">
               <h5 class="fw-semibold text-center mx-auto my-4">購物車</h5>
@@ -284,7 +327,7 @@
               </li>
             </ul>
           </div>
-          <!-- <a href="" class="d-none d-lg-inline content-dark p-2 ms-3">
+          <!-- <a href="" class="d-none d-lg-inline text-neutral-600 p-2 ms-3">
             <i class="bi bi-cart3 fs-5"></i>
           </a> -->
         </div>

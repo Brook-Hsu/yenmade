@@ -1,0 +1,73 @@
+.breadcrumb-item + .breadcrumb-item::before {
+  padding: 12px;
+}
+
+.text-decoration-no {
+  text-decoration: none;
+}
+
+.breadcrumb-link {
+  color: #525252; // $neutral-600
+  &:hover,
+  &:active,
+  &:focus {
+    color: #beab3b; // $tertiary-700
+  }
+}
+.product-mx-mobile {
+  margin-right: -12px;
+  margin-left: -12px;
+}
+
+.ls-10 {
+  letter-spacing: 0.1em;
+}
+
+// 手風琴的 icon
+.product-accordion.accordion-button::after {
+  content: "\f4fe"; /* plus-lg 的字碼 */
+  font-family: "Bootstrap-icons";
+  font-size: 1.25rem;
+  background-image: none !important;
+}
+
+.product-accordion.accordion-button:not(.collapsed)::after {
+  content: "\f2ea"; /* dash-lg 的字碼 */
+}
+
+// 商品卡片
+// .swiper {
+//   overflow: visible;
+//   overflow-x: clip;
+// }
+.img-turn {
+  transform: rotate(90deg);
+}
+.product-card {
+  max-width: 306px;
+}
+.product-card-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card-hover .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(#f2f3efcc, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card-hover:hover .overlay {
+  opacity: 1;
+}
+// .card-body-hover {
+//   height: 80px;
+// }
