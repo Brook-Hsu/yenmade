@@ -1,0 +1,106 @@
+/*樣式*/
+.font-size-sm {
+  font-size: $font-size-base * 0.875; // 14px
+}
+
+/*banner*/
+.about-banner {
+  width: 100%;
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    img {
+      content: url('../assets/images/about/Banner_about_mobile.png');
+    }
+  }
+}
+
+
+
+
+
+/* 桌面版：維持原本樣式 */
+.section2-text {
+  width: 416px;            
+  text-align: left;        
+  padding: 0 20px;          
+  max-height: 80%;          
+  overflow: visible;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+/* 裝飾圖 */
+.decor-img {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: -0.5em;
+  left: -1.1em;
+  opacity: 0.3;
+  z-index: 1;
+  filter: brightness(0) invert(1);
+}
+
+/* 手機版 RWD */
+@media (max-width: 768px) {
+  .section2 img.w-100 {
+    content: url('../assets/images/about/Brand_concept_bg_mobile.png');
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* 文字覆蓋整張圖片，靠底部 */
+  .section2-text {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 32px 24px 32px; /* 左右內距 32px，下方距離 24px */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* 文字靠底 */
+    align-items: center;       /* 水平置中 */
+    text-align: center;
+    transform: none;           /* 移除桌面版 translate */
+  }
+
+  /* 裝飾圖微調 */
+  .decor-img {
+    top: -1em;
+    left: -1em;
+  }
+}
+
+
+
+
+/*carousel*/
+.scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth; /* 平滑滾動 */
+    scrollbar-width: none; /* Firefox */
+}
+.scroll-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+.scroll-wrapper img {
+    flex: 0 0 auto;
+    width: 300px; /* 每張圖片寬度 */
+    height: 200px; /* 高度可調 */
+    object-fit: cover;
+    scroll-snap-align: start;
+    border-radius: 8px;
+}
