@@ -1,0 +1,106 @@
+/*樣式*/
+.font-size-sm {
+  font-size: $font-size-base * 0.875; // 14px
+}
+
+/*banner*/
+.about-banner {
+  width: 100%;
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    img {
+      content: url('../assets/images/about/Banner_about_mobile.png');
+    }
+  }
+}
+
+/*section1&3*/
+@media (max-width: 768px) {
+  .section1-3-row {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+/*------------------------------------------*/
+.section2 {
+  position: relative;
+
+  .section2-bg {
+    width: 100%;      
+    height: auto;
+    display: block;
+  }
+
+  .section2-text {
+    width: 416px;            
+    text-align: left;        
+    padding: 0 20px;          
+    max-height: 80%;          
+    overflow: visible;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+
+    .decor-img {
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      top: -0.5em;
+      left: -1.1em;
+      opacity: 0.3;
+      z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      /* 手機版文字靠圖片下半部 */
+      width: auto;
+      max-width: 90%;         // 滿寬限制
+      top: auto;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: left;
+      padding: 0 12px;         // 手機左右留白 12px，避免貼邊太緊
+    }
+  }
+
+  // 手機版圖片去掉容器可能的左右 margin/padding
+  @media (max-width: 768px) {
+    .section2-bg {
+      display: block;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+
+/*carousel*/
+.scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth; /* 平滑滾動 */
+    scrollbar-width: none; /* Firefox */
+}
+.scroll-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+.scroll-wrapper img {
+    flex: 0 0 auto;
+    width: 300px; /* 每張圖片寬度 */
+    height: 200px; /* 高度可調 */
+    object-fit: cover;
+    scroll-snap-align: start;
+    border-radius: 8px;
+}

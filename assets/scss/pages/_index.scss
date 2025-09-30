@@ -24,6 +24,28 @@
 }
 
 .section-title3 {
+.mb-80{
+    margin-bottom: 80px;
+}
+
+.mb-96{
+    margin-bottom: 96px;
+}
+
+.mb-184{
+    margin-bottom: 184px;
+}
+
+.col-7 img {
+    max-width: 746px;
+    height: auto;
+}
+
+.text-neutral-600 {
+  color: $neutral-600;
+}
+
+.section-title {
   .line {
     border-top: 1px solid $primary-500 !important;
   }
@@ -356,3 +378,10 @@
     }
   }
 }
+  width: 146px; 
+  height: 177px; 
+  position: absolute;
+  left: -400px;   
+  bottom: -70px; 
+}
+
