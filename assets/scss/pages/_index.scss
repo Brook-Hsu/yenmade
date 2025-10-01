@@ -897,11 +897,9 @@
   }
   .review-card .meta-box{ 
     margin-top: auto !important;           /* 仍然貼到底部 */
-
     align-self: center !important;         /* 在父層（column）中水平置中自己 */
     margin-left: auto !important;          /* 抵銷 .ms-auto 的只靠右 */
     margin-right: auto !important;
-
     display: flex !important;
     flex-direction: column;                /* 頭像在上、文字在下 */
     align-items: center;                   /* 內容置中對齊 */
@@ -909,7 +907,11 @@
     gap: 8px;                              /* 間距微調 */
 
   }
-
+.review-card .meta-box img{ 
+    width: 60px;
+    height: 60px;
+  }
+  
   /* 手機用手滑，不需要箭頭 */
   .carousel-control-prev,
   .carousel-control-next{ display: none !important; }
@@ -985,3 +987,6 @@
   .ms--200, 
   .me--200 { margin-left: 0 !important; margin-right: 0 !important; }
 }
+
+
+
