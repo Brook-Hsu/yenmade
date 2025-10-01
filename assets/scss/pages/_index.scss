@@ -90,13 +90,7 @@
   bottom: -70px;
 }
 
-<<<<<<< HEAD
-//  section 4 -start
-=======
-//  section4 -start
-
-
->>>>>>> feature/member-checkout
+// section 4 -start
 .index-title {
   font-size: 100px;
 }
@@ -401,16 +395,11 @@
     }
   }
 }
-<<<<<<< HEAD
-  width: 146px; 
-  height: 177px; 
-  position: absolute;
-  left: -400px;   
-  bottom: -70px; 
+
+
 }
 
-=======
-////////////////////////////////////////////////
+
 
 /* 手機版：≤ 576px */
 @media (max-width: 576px) {
@@ -993,10 +982,6 @@
   }
 
   /* 6) 箭頭原本已隱藏；再保險把負邊距清掉 */
-  .ms--200, .me--200 { margin-left: 0 !important; margin-right: 0 !important; }
+  .ms--200, 
+  .me--200 { margin-left: 0 !important; margin-right: 0 !important; }
 }
-
-
-
-
->>>>>>> feature/member-checkout
