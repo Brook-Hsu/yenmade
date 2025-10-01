@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>部落格</title>
+</head>
+<body>
+<%- include('./layout/headerdark'); -%>
+
+
+
+
+<main class="container-md py-5 blog-page">
+    <h2 class="text-center fw-semibold mb-4 mt-5">部落格</h2>
+
+    <!-- 3 欄（lg 以上）、2 欄（md）、1 欄（手機） -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <!-- 卡片 1 -->
+      <div class="col">
+        <article class="card blog-card h-100">
+          <div class="card-body">
+            <div class="blog-thumb ">
+            <img src="../assets/images/1.jpg" alt="小黃瓜"
+            class="w-100 h-100 object-fit-cover d-block">
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center small text-neutral-500 mt-2">
+              <span>王小明營養師</span>
+              <time datetime="2025-10-05">2025/10/05</time>
+            </div>
+
+            <p class="mt-2 mb-3">醃製小黃瓜可以放幾天？怎麼保存才不會爛？【新手必看】</p>
+
+            <div class="text-end">
+              <a href="#" class="link-brand">閱讀更多 &raquo;&raquo;&raquo;</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 卡片 2 -->
+      <div class="col">
+        <article class="card blog-card h-100">
+          <div class="card-body">
+            <div class="blog-thumb">
+              <img src="../assets/images/2.jpeg" alt="小黃瓜"
+            class="w-100 h-100 object-fit-cover d-block">
+            </div>
+            <div class="d-flex justify-content-between align-items-center small text-neutral-500 mt-2">
+              <span>陳美美主廚</span>
+              <time datetime="2025-09-20">2025/09/20</time>
+            </div>
+            <p class="mt-2 mb-3">夏日涼拌小菜靈感集：三款輕鬆上桌的醃製料理</p>
+            <div class="text-end"><a href="#" class="link-brand">閱讀更多 &raquo;&raquo;&raquo;</a></div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 卡片 3 -->
+      <div class="col">
+        <article class="card blog-card h-100">
+          <div class="card-body">
+            <div class="blog-thumb">
+              <img src="../assets/images/3.jpg" alt="小黃瓜"
+            class="w-100 h-100 object-fit-cover d-block">
+            </div>
+            <div class="d-flex justify-content-between align-items-center small text-neutral-500 mt-2">
+              <span>林小菜營養師</span>
+              <time datetime="2025-09-15">2025/09/15</time>
+            </div>
+            <p class="mt-2 mb-3">醃製蔬菜的營養差很多嗎？其實比你想的更有趣</p>
+            <div class="text-end"><a href="#" class="link-brand">閱讀更多 &raquo;&raquo;&raquo;</a></div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 卡片 4 -->
+      <div class="col">
+        <article class="card blog-card h-100">
+          <div class="card-body">
+            <div class="blog-thumb">
+              <img src="../assets/images/4.jpg" alt="小黃瓜"
+            class="w-100 h-100 object-fit-cover d-block">
+            </div>
+            <div class="d-flex justify-content-between align-items-center small text-neutral-500 mt-2">
+              <span>張鹽鹽食品研師</span>
+              <time datetime="2025-09-10">2025/09/10</time>
+            </div>
+            <p class="mt-2 mb-3">低鹽醃製可能嗎？減鹽不減味的 4 個關鍵技巧</p>
+            <div class="text-end"><a href="#" class="link-brand">閱讀更多 &raquo;&raquo;&raquo;</a></div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 卡片 5 -->
+      <div class="col">
+        <article class="card blog-card h-100">
+          <div class="card-body">
+            <div class="blog-thumb">
+              <img src="../assets/images/5.jpg" alt="小黃瓜"
+            class="w-100 h-100 object-fit-cover d-block">
+            </div>
+            <div class="d-flex justify-content-between align-items-center small text-neutral-500 mt-2">
+              <span>李大傑主廚</span>
+              <time datetime="2025-08-25">2025/08/25</time>
+            </div>
+            <p class="mt-2 mb-3">醃製時間過長會怎樣？風味變化與保存觀察</p>
+            <div class="text-end"><a href="#" class="link-brand">閱讀更多 &raquo;&raquo;&raquo;</a></div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 卡片 6 -->
+      <div class="col">
+        <article class="card blog-card h-100">
+          <div class="card-body">
+            <div class="blog-thumb ">
+              <img src="../assets/images/6.jpg" alt="小黃瓜"
+            class="w-100 h-100 object-fit-cover d-block">
+            </div>
+            <div class="d-flex justify-content-between align-items-center small text-neutral-500 mt-2">
+              <span>醃造所前端團隊</span>
+              <time datetime="2025-08-01">2025/08/01</time>
+            </div>
+            <p class="mt-2 mb-3">前端開發：團隊心得與感謝</p>
+            <div class="text-end"><a href="#" class="link-brand">閱讀更多 &raquo;&raquo;&raquo;</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <%- include('./layout/footer'); -%>
+  <script type="module" src="../main.js"></script>
+</body>
+</html>

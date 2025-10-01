@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>常見問題</title>
+</head>
+<body>
+ <%- include('./layout/headerdark'); -%>
+
+  <main class="container-md py-5 faq-page">
+    <!-- 麵包屑與搜尋 -->
+    <div class="d-flex align-items-center justify-content-between mb-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0 small">
+          <li class="breadcrumb-item"><a href="/" class="text-decoration-none">首頁</a></li>
+          <li class="breadcrumb-item"><a href="/faq" class="text-decoration-none">常見問題</a></li>
+          <li class="breadcrumb-item active" aria-current="page">所有問題</li>
+        </ol>
+      </nav>
+
+      <form class="d-none d-md-inline-block" role="search" action="/faq">
+        <button class="btn btn-brand-outline px-4" type="submit">搜尋</button>
+      </form>
+    </div>
+
+    <div class="row g-4">
+      <!-- 左：分類 -->
+      <aside class="col-md-3">
+  <div class="nav flex-column nav-pills faq-tabs" id="faqTab" role="tablist" aria-orientation="vertical">
+    <button class="nav-link active text-start" id="tab-all"
+            data-bs-toggle="pill" data-bs-target="#pane-all" type="button"
+            role="tab" aria-controls="pane-all" aria-selected="true">
+      所有問題
+    </button>
+    <button class="nav-link text-start" id="tab-product"
+            data-bs-toggle="pill" data-bs-target="#pane-product" type="button"
+            role="tab" aria-controls="pane-product" aria-selected="false">
+      商品資訊
+    </button>
+    <button class="nav-link text-start" id="tab-guide"
+            data-bs-toggle="pill" data-bs-target="#pane-guide" type="button"
+            role="tab" aria-controls="pane-guide" aria-selected="false">
+      購物說明
+    </button>
+    <button class="nav-link text-start" id="tab-member"
+            data-bs-toggle="pill" data-bs-target="#pane-member" type="button"
+            role="tab" aria-controls="pane-member" aria-selected="false">
+      會員專區
+    </button>
+  </div>
+</aside>
+
+
+      <!-- 右：問題列表 -->
+      <section class="col-md-9">
+        <div class="accordion faq-accordion" id="faqAccordion">
+          <!-- item -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q1">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#a1" aria-expanded="false" aria-controls="a1">
+                <span class="faq-q">Q</span> 要購買，一定要加入會員嗎？
+              </button>
+            </h2>
+            <div id="a1" class="accordion-collapse collapse" aria-labelledby="q1" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                不一定，您可以使用訪客結帳；加入會員可享訂單查詢、專屬優惠等服務。
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+                <span class="faq-q">Q</span> 請問是否有服務離島地區會員嗎？
+              </button>
+            </h2>
+            <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                有的，離島地區可配送；運費與到貨天數依物流公告為準。
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
+                <span class="faq-q">Q</span> 你們的產品都是手工製作嗎？
+              </button>
+            </h2>
+            <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                我們堅持小量生產，核心品項採手工流程，並搭配 HACCP 認證廠製程把關。
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q4">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#a4" aria-expanded="false" aria-controls="a4">
+                <span class="faq-q">Q</span> 我想取消訂單如何取消？
+              </button>
+            </h2>
+            <div id="a4" class="accordion-collapse collapse" aria-labelledby="q4" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                於出貨前可在「會員中心 → 訂單」申請取消；若已出貨請聯繫客服協助。
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#a5" aria-expanded="false" aria-controls="a5">
+                <span class="faq-q">Q</span> 有哪些付款方式呢？
+              </button>
+            </h2>
+            <div id="a5" class="accordion-collapse collapse" aria-labelledby="q5" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                支援信用卡、LINE Pay、銀行轉帳與貨到付款（部分商品／地區不適用）。
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q6">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#a6" aria-expanded="false" aria-controls="a6">
+                <span class="faq-q">Q</span> 出貨說明
+              </button>
+            </h2>
+            <div id="a6" class="accordion-collapse collapse" aria-labelledby="q6" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                平日下單 1–2 個工作天內出貨；特殊活動或節慶期間以頁面公告為準。
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q7">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#a7" aria-expanded="false" aria-controls="a7">
+                <span class="faq-q">Q</span> 請問是否有服務離島地區會員呢？
+              </button>
+            </h2>
+            <div id="a7" class="accordion-collapse collapse" aria-labelledby="q7" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                有的，我們提供離島配送方案，實際運費以結帳頁為準。
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 分頁 -->
+        <nav aria-label="FAQ pagination" class="mt-4">
+          <ul class="pagination justify-content-center pagination-brand">
+            <li class="page-item disabled"><span class="page-link">&lt;</span></li>
+            <li class="page-item active"><span class="page-link">1</span></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item disabled"><span class="page-link">…</span></li>
+            <li class="page-item"><a class="page-link" href="#">&gt;</a></li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+  </main>
+
+  <%- include('layout/footer') %>
+  <script type="module" src="../main.js"></script>
+</body>
+</html>

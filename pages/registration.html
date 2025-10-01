@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>註冊頁面</title>
+</head>
+<body>
+  <%- include('./layout/headerdark'); -%>
+
+  <main class="container-md py-4 mt-100 auth-page">
+    <img class="d-block mx-auto mb-4 " src="../assets/images/logo/Type=Logo_Horizontal.svg" alt="logo">
+    <h2 class="text-center text-neutral-500 font-weight-semibold mb-5 mt-5">加入 YenMade <br class="d-lg-none"> 醃造所
+</h2>
+
+    <div class="row g-4 auth-columns">
+      <!-- 一般註冊 -->
+      <section class="col-lg-6">
+        <div class="card brand-card h-100">
+          <div class="card-body">
+            <h3 class="h5 text-center font-weight-semibold mb-3">一般註冊</h3>
+            <form id="signupForm" class="row g-3" novalidate>
+              <div class="col-12">
+                <label for="fullname" class="form-label">姓名</label>
+                <input id="fullname" name="full_name" type="text" class="form-control" placeholder="請輸入姓名" autocomplete="name" required>
+                <div class="invalid-feedback">請填寫姓名</div>
+              </div>
+
+              <div class="col-12">
+                <label for="phone" class="form-label">手機號碼</label>
+                <input id="phone" name="phone" type="tel" class="form-control" placeholder="請輸入手機" autocomplete="tel" inputmode="tel" pattern="[0-9+\-\s]{8,}" required>
+                <div class="form-text">僅接受數字、+、-、空白；至少 8 碼</div>
+                <div class="invalid-feedback">請輸入有效手機號碼</div>
+              </div>
+
+              <div class="col-12">
+                <label for="email" class="form-label">電子郵件</label>
+                <input id="email" name="email" type="email" class="form-control" placeholder="請輸入 Email" autocomplete="email" required>
+                <div class="invalid-feedback">請輸入有效 Email</div>
+              </div>
+
+              <div class="col-12">
+                <label for="password" class="form-label">密碼</label>
+                <div class="input-group">
+                  <input id="password" name="password" type="password" class="form-control" placeholder="請輸入密碼" autocomplete="new-password" minlength="8" required>
+                  <button class="btn btn-outline-secondary" type="button" id="togglePwd" aria-label="顯示或隱藏密碼">顯示</button>
+                </div>
+                <div class="form-text">至少 8 碼，建議混合大小寫與數字</div>
+                <div class="invalid-feedback">請輸入至少 8 碼密碼</div>
+              </div>
+
+              <div class="col-12">
+                <label for="password2" class="form-label">再次輸入密碼</label>
+                <input id="password2" name="password_confirm" type="password" class="form-control" placeholder="請再次輸入密碼" autocomplete="new-password" required>
+                <div class="invalid-feedback">兩次密碼需一致</div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="yes" id="marketingOptIn" name="marketing_opt_in" />
+                  <label class="form-check-label" for="marketingOptIn">
+                    我願意接收醃造所的最新消息與服務推廣資訊
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <button class="btn btn-color btn-lg w-100" type="submit">註冊</button>
+              </div>
+
+              <div class="col-12">
+                <p class="small text-neutral-500 mb-0">
+                  註冊即代表你同意本網站之
+                  <a href="/terms" class="link-secondary">服務條款</a>與
+                  <a href="/privacy" class="link-secondary">隱私權政策</a>。
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- 社群註冊 -->
+<aside class="col-lg-6">
+  <div class="card brand-card h-100">
+    <div class="card-body">
+      <h3 class="h5 text-center font-weight-semibold mb-5">社群註冊</h3>
+
+      <div class="vstack social-list ">
+        <!-- 共用：btn + btn-brand-outline 會讓它白底＋品牌色字 -->
+        <button class="btn btn-brand-outline btn-social w-100" type="button" data-provider="facebook">
+          <span class="btn-social__left">
+            <!-- Facebook -->
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.9.16 1.9.16v2.1h-1.1c-1 0-1.3.63-1.3 1.3V12h2.3l-.37 3h-1.93v7A10 10 0 0 0 22 12"/>
+            </svg>
+            使用 Facebook 註冊
+          </span>
+          <span class="btn-social__chevron" aria-hidden="true">›</span>
+        </button>
+
+        <button class="btn btn-brand-outline btn-social w-100" type="button" data-provider="line">
+          <span class="btn-social__left">
+            <!-- LINE -->
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M19 3H5a4 4 0 0 0-4 4v6a7 7 0 0 0 7 7h1v1a1 1 0 0 0 1.6.8L14 20h5a4 4 0 0 0 4-4V7a4 4 0 0 0-4-4Z"/>
+            </svg>
+            使用 LINE 註冊
+          </span>
+          <span class="btn-social__chevron" aria-hidden="true">›</span>
+        </button>
+
+        <button class="btn btn-brand-outline btn-social w-100" type="button" data-provider="google">
+          <span class="btn-social__left">
+            <!-- Google -->
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M21.35 11.1h-9.18v2.96h5.28a4.53 4.53 0 0 1-1.96 2.96a6.5 6.5 0 1 1 0-10.04l2.09-2.05A9.5 9.5 0 1 0 12 21.5c5 0 9-3.5 9.35-8.4Z"/>
+            </svg>
+            使用 Google 註冊
+          </span>
+          <span class="btn-social__chevron" aria-hidden="true">›</span>
+        </button>
+
+        <button class="btn btn-brand-outline btn-social w-100" type="button" data-provider="apple">
+          <span class="btn-social__left">
+            <!-- Apple -->
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M16.36 1.64A5 5 0 0 1 14 6a5 5 0 0 1 2.36-4.36ZM12 7.5c1.42 0 2.7.82 3.29.82c.55 0 1.86-.88 3.47-.83a3.9 3.9 0 0 1 3.22 1.7c-2.82 1.74-2.36 6.12.45 7.38a9.1 9.1 0 0 1-2.3 3.58c-.93.99-2 2.06-3.5 2.08c-1.31.02-1.73-.62-3.23-.62c-1.5 0-1.96.6-3.22.64c-1.35.04-2.38-1.09-3.31-2.06C4.23 18.2 2.38 13.58 4.8 10.2A4.7 4.7 0 0 1 8.7 8c1.46 0 2.38.82 3.3.82Z"/>
+            </svg>
+            使用 Apple 註冊
+          </span>
+          <span class="btn-social__chevron" aria-hidden="true">›</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</aside>
+
+    </div>
+  </main>
+
+  <%- include('./layout/footer'); -%>
+
+  <script type="module" src="../main.js"></script>
+  <script>
+    // 顯示/隱藏密碼
+    const toggle = document.getElementById('togglePwd');
+    const pwd = document.getElementById('password');
+    const pwd2 = document.getElementById('password2');
+    if (toggle && pwd) {
+      toggle.addEventListener('click', () => {
+        const visible = pwd.type === 'text';
+        pwd.type = visible ? 'password' : 'text';
+        pwd2.type = visible ? 'password' : 'text';
+        toggle.textContent = visible ? '顯示' : '隱藏';
+      });
+    }
+
+    // 前端驗證（Bootstrap 5）
+    const form = document.getElementById('signupForm');
+    form?.addEventListener('submit', (e) => {
+      // 密碼二次確認
+      if (pwd && pwd2 && pwd.value !== pwd2.value) {
+        pwd2.setCustomValidity('mismatch');
+      } else {
+        pwd2.setCustomValidity('');
+      }
+
+      if (!form.checkValidity()) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      form.classList.add('was-validated');
+    });
+
+    // 社群註冊（占位事件）
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-provider]');
+      if (!btn) return;
+      const provider = btn.dataset.provider;
+      // TODO: 依你後端路由調整
+      window.location.href = `/auth/${provider}`;
+    });
+  </script>
+</body>
+</html>

@@ -6,16 +6,16 @@
     <title>member checkout</title>
 </head>
 <body>
-    <%- include('./layout/header'); -%>
-    <div class="container">
-        <img class="d-block mx-auto mb-4" src="../assets/images/logo/Type=Logo_Horizontal.svg" alt="logo">
+    <%- include('./layout/headerdark'); -%>
+    <div class="container-md member-checkout">
+        <img class="d-block mx-auto mb-4 mt-160" src="../assets/images/logo/Type=Logo_Horizontal.svg" alt="logo">
     <!-- 購物車卡片 -->
   <div class="cart-card border rounded-3 mb-4">
-    <div class="px-3 py-2 table-title border-bottom fw-semibold">購物車</div>
+    <div class="px-3 py-2 table-title border-bottom font-weight-semibold ">購物車</div>
 
     <div class="p-3">
       <!-- 表頭 -->
-      <div class="row fw-semibold text-secondary border-bottom pb-2">
+      <div class="row font-weight-semibold text-secondary border-bottom pb-2">
         <div class="col-4">商品明細</div>
         <div class="col-2 text-center">商品單價</div>
         <div class="col-3 text-center">商品數量</div>
@@ -28,7 +28,7 @@
           <div class="d-flex gap-3">
             <div class="bg-light border rounded" style="width:72px;height:72px;"></div>
             <div>
-              <div class="fw-semibold">棒棒老醬蘿葡</div>
+              <div class="font-weight-semibold ">棒棒老醬蘿葡</div>
               <div class="text-muted small">慢醃大罐 500ml</div>
             </div>
           </div>
@@ -41,7 +41,7 @@
             <button class="btn btn-outline-secondary" type="button" data-qty="plus">＋</button>
           </div>
         </div>
-        <div class="col-3 text-end fw-semibold">NT$500</div>
+        <div class="col-3 text-end font-weight-semibold ">NT$500</div>
       </div>
 
       <!-- 商品 2 -->
@@ -50,7 +50,7 @@
           <div class="d-flex gap-3">
             <div class="bg-light border rounded" style="width:72px;height:72px;"></div>
             <div>
-              <div class="fw-semibold">煙燻蒜香小黃瓜</div>
+              <div class="font-weight-semibold ">煙燻蒜香小黃瓜</div>
               <div class="text-muted small">慢醃迷你 200ml</div>
             </div>
           </div>
@@ -63,14 +63,14 @@
             <button class="btn btn-outline-secondary" type="button" data-qty="plus">＋</button>
           </div>
         </div>
-        <div class="col-3 text-end fw-semibold">NT$500</div>
+        <div class="col-3 text-end font-weight-semibold ">NT$500</div>
       </div>
     </div>
   </div>
 
   <!-- 優惠券卡片 -->
   <div class="border rounded-3 mb-4">
-    <div class="px-3 py-2 table-title border-bottom fw-semibold">優惠券</div>
+    <div class="px-3 py-2 table-title border-bottom font-weight-semibold ">優惠券</div>
     <div class="p-4 text-center">
       <div class="d-flex justify-content-center">
         <div class="input-group" style="max-width:520px;">
@@ -79,7 +79,7 @@
         </div>
       </div>
 
-      <div class="mt-4 text-success fw-semibold">已套用優惠券</div>
+      <div class="mt-4 text-success font-weight-semibold ">已套用優惠券</div>
       <div class="text-muted">享訂單滿$699免運折扣</div>
       <a href="#" class="d-inline-block mt-2 text-decoration-none">查看優惠券 ＞</a>
     </div>
@@ -88,29 +88,29 @@
 
 <!-- 配送及付款 -->
 <div class="border rounded-3 mb-4">
-  <div class="px-3 py-2 table-title border-bottom fw-semibold">配送及付款</div>
+  <div class="px-3 py-2 table-title border-bottom font-weight-semibold ">配送及付款</div>
 
   <div class="p-3">
 
     <!-- 配送方式 -->
-    <div class="badge bg-body-tertiary text-dark fw-semibold mb-3">配送方式</div>
+    <div class="badge bg-body-tertiary text-dark font-weight-semibold  mb-3">配送方式</div>
 
     <div class="row g-3">
       <div class="col-12 col-md-6 col-lg-3">
         <input class="btn-check" type="radio" name="shipping" id="ship1">
-        <label class="btn btn-outline-secondary w-100 text-start py-2" for="ship1">超商店到店</label>
+        <label class="btn btn-outline-secondary w-100  py-2" for="ship1">超商店到店</label>
       </div>
       <div class="col-12 col-md-6 col-lg-3">
         <input class="btn-check" type="radio" name="shipping" id="ship2" checked>
-        <label class="btn btn-outline-secondary w-100 text-start py-2" for="ship2">貨運物流</label>
+        <label class="btn btn-outline-secondary w-100 py-2" for="ship2">貨運物流</label>
       </div>
       <div class="col-12 col-md-6 col-lg-3">
         <input class="btn-check" type="radio" name="shipping" id="ship3">
-        <label class="btn btn-outline-secondary w-100 text-start py-2" for="ship3">白貓宅配</label>
+        <label class="btn btn-outline-secondary w-100  py-2" for="ship3">白貓宅配</label>
       </div>
       <div class="col-12 col-md-6 col-lg-3">
         <input class="btn-check" type="radio" name="shipping" id="ship4">
-        <label class="btn btn-outline-secondary w-100 text-start py-2" for="ship4">郵局宅配</label>
+        <label class="btn btn-outline-secondary w-100 py-2" for="ship4">郵局宅配</label>
       </div>
       </div>
     
@@ -118,7 +118,7 @@
     <hr class="my-4">
 
     <!-- 付款方式 -->
-    <div class="badge bg-body-tertiary text-dark fw-semibold mb-3">付款方式</div>
+    <div class="badge bg-body-tertiary text-dark font-weight-semibold  mb-3">付款方式</div>
 
     <div class="vstack gap-3">
       <div>
@@ -144,6 +144,116 @@
     </div>
   </div>
 </div>
+<!-- 訂購人及收件資訊 -->
+<div class="border rounded-3 mb-4">
+  <div class="px-3 py-2 table-title border-bottom font-weight-semibold ">訂購人及收件資訊</div>
+
+  <!-- 訂購人資訊 -->
+  <div class="border-bottom">
+    <div class="px-3 py-2 d-flex align-items-center justify-content-between">
+      <div class="badge bg-body-tertiary text-dark font-weight-semibold  mt-3">訂購人資訊</div>
+      <div class="form-check m-0">
+        <input class="form-check-input" type="checkbox" id="billSameAsMember">
+        <label class="form-check-label" for="billSameAsMember">同會員資料</label>
+      </div>
+    </div>
+
+    <div class="p-3">
+      <div class="mb-3">
+        <label for="billName" class="form-label">姓名</label>
+        <input id="billName" type="text" class="form-control" placeholder="請輸入姓名">
+      </div>
+      <div class="mb-3">
+        <label for="billPhone" class="form-label">手機號碼</label>
+        <input id="billPhone" type="tel" class="form-control" placeholder="請輸入手機號碼">
+      </div>
+      <div class="mb-3">
+        <label for="billEmail" class="form-label">電子信箱</label>
+        <input id="billEmail" type="email" class="form-control" placeholder="請輸入電子信箱">
+      </div>
+      <div class="mb-3">
+        <label for="billNote" class="form-label">訂單備註</label>
+        <textarea id="billNote" class="form-control" rows="4" placeholder="請輸入文字"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- 收件人資訊 -->
+  <div>
+    <div class="px-3 py-2 d-flex align-items-center justify-content-between">
+      <div class="badge bg-body-tertiary text-dark font-weight-semibold  mt-3">收件人資訊</div>
+      <div class="d-flex gap-3">
+        <div class="form-check m-0">
+          <input class="form-check-input" type="checkbox" id="recvSameAsMember">
+          <label class="form-check-label" for="recvSameAsMember">同會員資料</label>
+        </div>
+        <div class="form-check m-0">
+          <input class="form-check-input" type="checkbox" id="recvSameAsBuyer">
+          <label class="form-check-label" for="recvSameAsBuyer">同訂購人資訊</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-3">
+      <div class="mb-3">
+        <label for="recvName" class="form-label">姓名</label>
+        <input id="recvName" type="text" class="form-control" placeholder="請輸入姓名">
+      </div>
+      <div class="mb-3">
+        <label for="recvPhone" class="form-label">手機號碼</label>
+        <input id="recvPhone" type="tel" class="form-control" placeholder="請輸入手機號碼">
+      </div>
+      <div class="mb-3">
+        <label for="recvAddr" class="form-label">收件地址</label>
+        <input id="recvAddr" type="text" class="form-control" placeholder="請輸入收件地址">
+      </div>
+      <div class="mb-1">
+        <label for="recvStore" class="form-label">取件門市</label>
+        <select id="recvStore" class="form-select">
+          <option selected disabled>請選擇超商取件門市（下拉式選單）</option>
+          <option>好六門市</option>
+          <option>好讚門市</option>
+          <option>好腳門市</option>
+          <option>好學門市</option>
+          <option>好院門市</option>
+        
+        </select>
+      </div>
+      <div class="text-muted small">＊若選擇超商取件，請填寫門市資訊</div>
+    </div>
+  </div>
+</div>
+
+<!-- 訂單總計 -->
+<div class="border rounded-3 mb-4">
+  <div class="px-3 py-2 table-title border-bottom font-weight-semibold ">訂單總計</div>
+  <div class="p-3">
+    <div class="table-responsive">
+      <table class="table align-middle mb-0">
+        <thead class="table-light">
+          <tr>
+            <th>商品總金額</th>
+            <th>運費</th>
+            <th>優惠券折扣</th>
+            <th class="text-end">合計</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>NT$1000</td>
+            <td>NT$150</td>
+            <td>NT$-150</td>
+            <td class="text-end font-weight-semibold ">NT$1000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- 送出 -->
+<button class="btn btn-color btn-lg  px-5 d-block mx-auto mb-5">送出訂單</button>
+<!-- 若沒有 .btn-color，改成：btn btn-dark -->
 </div>
 
 <!-- 簡單的加減數量 JS（可放到頁尾） -->

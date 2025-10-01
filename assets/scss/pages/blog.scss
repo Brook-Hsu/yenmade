@@ -1,0 +1,60 @@
+/* Blog List */
+.blog-page {
+
+  /* 卡片外框：品牌色半透明 */
+  .blog-card{
+    border: 1px solid rgba($secondary-500, .35);
+  }
+
+ .blog-thumb{
+  position: relative;
+  aspect-ratio: 4 / 3;          // 外框比例；想別的比例改這裡
+
+  border: 1px solid rgba($secondary-500, .35);
+  overflow: hidden;              // 關鍵：超出就裁掉
+ 
+}
+
+/* 讓 img 填滿外框並裁切 */
+.blog-thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;             // 塞滿且維持比例，溢出會裁切
+  display: block;
+  border-radius: inherit;        // 和外框同圓角
+}
+
+/* 如果你的專案沒有 Bootstrap 的 object-fit 工具類，就加上 */
+.object-fit-cover { object-fit: cover !important; }
+
+
+    /* 置中的暫存字樣 */
+    .thumb-ph{ font-weight: 700; color: rgba(255,255,255,.8); letter-spacing: .1em; }
+
+    /* 左上角米駝色標籤（primary-500 色系） */
+    .thumb-label{
+      position: absolute;
+      left: .75rem; top: .75rem;
+      background: rgba($primary-500, .18);
+      border: 1px solid rgba($primary-500, .45);
+      color: $secondary-800;
+      padding: .5rem .75rem;
+      border-radius: .8rem;
+      font-weight: 600;
+      backdrop-filter: blur(2px);
+    }
+
+  /* Meta + 連結 */
+  .link-brand{
+    color: $secondary-500;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .link-brand:hover,
+  .link-brand:focus{
+    color: darken($secondary-500, 8%);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+}
