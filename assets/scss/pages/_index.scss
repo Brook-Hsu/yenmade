@@ -18,10 +18,10 @@
   margin-bottom: 184px;
 }
 
-.col-7 img {
-  max-width: 746px;
-  height: auto;
-}
+//.col-7 img {
+  //max-width: 746px;
+ // height: auto;
+//}
 
 .section-title3 {
 .mb-80{
@@ -90,14 +90,17 @@
   bottom: -70px;
 }
 
+<<<<<<< HEAD
 //  section 4 -start
+=======
+//  section4 -start
+
+
+>>>>>>> feature/member-checkout
 .index-title {
   font-size: 100px;
 }
 
-.container4 {
-  width: 1920px;
-}
 .px-208 {
   padding-left: 208px;
   padding-right: 208px;
@@ -136,6 +139,10 @@
 .mt-160 {
   margin-top: 160px;
 }
+.mt-100 {
+  margin-top: 100px;
+}
+
 .mb-160 {
   margin-bottom: 160px;
 }
@@ -187,6 +194,9 @@
 }
 .mt--90 {
   margin-top: -90px;
+}
+.ms-120{
+  margin-right: 120px;
 }
 
 .section-title4 {
@@ -265,9 +275,22 @@
   background-position: center;
   @include background-image;
   // min-height: 100vh;
-  padding-top: 384px;
-  padding-bottom: 72px;
+  padding-top: 300px;
+  padding-bottom: 600px;
+  max-width: 100%;
 }
+.hero { position: relative; } /* 確保可做絕對定位 */
+
+.scroll-indicator{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: clamp(12px, 4vh, 32px); /* 不同裝置保持在底部上方一點點 */
+}
+
+/* 小技巧：把按鈕過大的下邊距縮小，避免把內容擠出畫面 */
+.btn.mb-224 { margin-bottom: 1.5rem !important; } /* 或直接改用 mb-4 */
+
 
 // .py-12 {
 //   padding-top: 12px;
@@ -282,7 +305,7 @@
   margin-bottom: 224px;
 }
 
-/* 新味登場區塊*/
+
 /* 新味登場區塊 - 搭配 Bootstrap 5 */
 .new-flavors {
   // position: relative;
@@ -378,6 +401,7 @@
     }
   }
 }
+<<<<<<< HEAD
   width: 146px; 
   height: 177px; 
   position: absolute;
@@ -385,3 +409,594 @@
   bottom: -70px; 
 }
 
+=======
+////////////////////////////////////////////////
+
+/* 手機版：≤ 576px */
+@media (max-width: 576px) {
+
+
+  /* H1 */
+  .hero h1,
+  .hero h1.fs-1 {           /* 如果你用的是 fs-1 就一起鎖 */
+    font-size: 40px !important;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+  /* H3 */
+  .hero h3,
+  .hero h3.fs-3 {
+    font-size: 16px !important;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  /* CTA 按鈕（可選） */
+  .hero a.btn {
+    font-size: 14px;
+    line-height: 1.2;
+    display: inline-block;
+    margin-left: auto;        /* 置中 */
+    margin-right: auto;       /* 置中 */
+    margin-top: 20px;
+  }
+}
+/* === 共用：不影響點擊、絕對定位 === */
+.illustration-salt,
+.illustration-glass{
+  position: absolute;
+  height: auto;
+  pointer-events: none;
+}
+
+/* 桌機：各自的原始尺寸/位置 */
+.illustration-salt  { width: 160px; aspect-ratio: 160 / 190; bottom: -200px; right: -102px; }
+.illustration-glass { width: 200px; aspect-ratio: 250 / 153; bottom: -160px; right: -102px; }
+
+/* 平板（≤992px）：縮小、減少外探 */
+@media (max-width: 991.98px) {
+  .illustration-salt  { width: 110px; bottom: -120px; right: -60px; }
+  .illustration-glass { width: 200px; bottom: -110px; right: -40px; }
+}
+
+/* 手機（≤576px）：取消負 right，改用 transform 視覺外探，不會撐出右邊白邊 */
+@media (max-width: 576.98px) {
+  .illustration-salt,
+  .illustration-glass {
+   // right: 0;                 /* 以右側為定位基準 */
+    transform: translateX(-33%); /* 往左 8%（原本是 +16% 往右）*/
+  }
+  .illustration-salt  { width: 88px;  bottom: -100px; }
+  .illustration-glass { width: 120px; bottom: -80px; }
+
+  /* 父層保險：請換成實際區塊，如 .hero 或 .new-flavors */
+  .hero, .new-flavors { position: relative; overflow-x: clip; }
+}
+/* 左側插圖（刀具） */
+.illustration-cut{
+  position: absolute;
+  width: 140px;
+  aspect-ratio: 140 / 187;
+  height: auto;
+  left: -105px;          /* 桌機才用負值 */
+  bottom: -200px;
+  pointer-events: none;
+}
+/* 左側插圖（盤子） */
+.illustration-plate{
+  position: absolute;
+  width: 140px;
+  aspect-ratio: 140 / 187;
+  height: auto;
+  left: 20px;          /* 桌機才用負值 */
+  bottom: -120px;
+  pointer-events: none;
+}
+
+/* 平板（≤992px）：縮小、減少外探 */
+@media (max-width: 991.98px){
+  .illustration-cut{
+    width: 110px;
+    left: -60px;
+    bottom: -140px;
+  }
+}
+
+/* 手機（≤576px）：取消負 left，改用 transform 視覺外探 */
+@media (max-width: 576.98px){
+  .illustration-cut
+  {
+    width: 84px;         /* 可依視覺調 80–96px */
+    left: 0;             /* 關鍵：不使用負值，避免撐寬 */
+    bottom: -100px;
+    transform: translateX(-16%);  /* 微微探出，不影響版面寬度 */
+  }
+
+  /* 父層保險：替換成實際容器，例如 .hero 或 .new-flavors */
+  .hero, .new-flavors { position: relative; overflow-x: clip; }
+}
+
+
+@media (max-width: 992px){
+  .new-flavors .flavors-heading{
+    position: absolute;
+    top: -100px;                /* ↑ 距離頂端，可調 40–72 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 48px); /* 兩側各留 24px 安全邊 */
+    text-align: center;
+    margin: 0 !important;
+    z-index: 2;
+  }
+  .new-flavors{
+    position: relative;
+    height: 800px;            /* 固定高度 */
+    min-height: 800px;
+    overflow: hidden;         /* 避免裝飾圖/卡片外溢 */
+    //padding-top: 140px !important;   /* 給標題區留空間 */
+    //padding-bottom: -196px !important; /* 給底部按鈕留空間 */
+  }
+    /* 卡片列：橫向滑動，留出底部按鈕空間 */
+  .new-flavors-cards{
+    margin: 0 !important;
+    display: flex; flex-wrap: nowrap;
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    //padding: 40px 16px;           /* bottom 要留 96 給按鈕 */
+    //scroll-snap-type: x mandatory;
+  }
+  .new-flavors .col-12.col-lg-2 > .btn{
+    position: absolute;
+    left: 50%; bottom: -80px;
+    transform: translateX(-50%);
+    z-index: 3;
+    margin: 0 !important;
+  }
+}
+
+
+
+
+
+
+
+/* 手機：新味登場 = 375 × 765 視覺 */
+@media (max-width:780px){
+  .new-flavors{
+    position: relative;
+    height: 765px;            /* 固定高度 */
+    min-height: 765px;
+    overflow: hidden;         /* 避免裝飾圖/卡片外溢 */
+    padding-top: 140px !important;   /* 給標題區留空間 */
+    padding-bottom: 96px !important; /* 給底部按鈕留空間 */
+  }
+  /* 容器寬度上限 375，置中 */
+  .new-flavors > .container{
+    max-width: 375px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  /* 背景圖上半部區（可依視覺微調 50–60%） */
+  .new-flavors::before{ height: 56%; }
+
+  /* 標題放在上方中央 */
+  .new-flavors .flavors-heading{
+    position: absolute;
+    top: -50px;                /* ↑ 距離頂端，可調 40–72 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 48px); /* 兩側各留 24px 安全邊 */
+    text-align: center;
+    margin: 0 !important;
+    z-index: 2;
+  }
+  .new-flavors .flavors-heading h2{
+    font-size: 40px; line-height: 1.2; letter-spacing: .1em; margin-bottom: 8px;
+  }
+  .new-flavors .flavors-heading p{
+    font-size: 16px; line-height: 1.5; letter-spacing: .05em; margin-bottom: 0;
+  }
+
+  /* 卡片列：橫向滑動，留出底部按鈕空間 */
+  .new-flavors-cards{
+    margin: 0 !important;
+    display: flex; flex-wrap: nowrap;
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding: 40px 16px 50px;           /* bottom 要留 96 給按鈕 */
+    scroll-snap-type: x mandatory;
+  }
+  .new-flavors-cards > .col{
+    flex: 0 0 110%;                    /* 一次看一張（可 78–85% 調整） */
+    max-width: 110%;
+    scroll-snap-align: center;
+  }
+  .new-flavors .card{ transform: scale(.9); transform-origin: top center; }
+  .new-flavors .card-body{ padding: 1rem; }
+  .new-flavors .card-title{ font-size: 18px; }
+  .new-flavors .card-text { font-size: 14px; line-height: 1.6; }
+  .new-flavors-cards::-webkit-scrollbar{ display: none; }
+
+  /* 底部「看更多商品」固定在區塊底部中央 */
+  .new-flavors .col-12.col-lg-2 > .btn{
+    position: absolute;
+    left: 50%; bottom: 24px;
+    transform: translateX(-50%);
+    z-index: 3;
+    margin: 0 !important;
+  }
+}
+
+
+
+/* 共用：讓標題組垂直堆疊、水平置中 */
+.step-copy{
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* 水平置中 */
+  text-align: center;       /* 文字置中 */
+  gap: .75rem;              /* 文字與 X 的間距 */
+}
+
+.step-desc{
+  display: flex !important;     /* 蓋過 d-inline-block */
+  flex-direction: column;       /* 直排 */
+  align-items: center;          /* 水平置中 */
+  text-align: center;           /* 文本置中 */
+  white-space: normal;          /* 允許換行，避免撐寬 */
+  margin-top: .5rem;
+  margin-inline: auto;          /* 與上方一樣置中 */
+  width: fit-content;           /* 寬度跟內容走，視覺更貼齊上方 */
+  max-width: 100%;
+}
+
+/* X 的大小與對齊（用字高 1，避免上下偏移） */
+.step-x{
+  font-size: 24px;          /* 視覺可調 20–28px */
+  line-height: 1;
+  display: inline-block;
+  color: var(--bs-secondary);   /* 或你自家的顏色變數 */
+}
+
+/* 手機細節微調（可依稿調整字級與間距） */
+@media (max-width: 576.98px){
+  .step-copy { gap: .5rem; }
+  .step-x { font-size: 22px; }
+}
+
+
+
+/* 桌機維持原狀 */
+.carrot-img { width:100%; height:auto; display:block; }
+
+/* 手機：固定一個可視高度 + cover 裁切，對準右側紅蘿蔔 */
+@media (max-width: 992px){
+  .carrot-img-wrap{
+    overflow:hidden;             /* 不讓超出 */
+    height: clamp(350px, 48vw, 400px); /* 375 寬時約 230~260px 高，可調 */
+    width:clamp(220px, 60vw, 300px);
+    
+  }
+  .carrot-img{
+    width:100%;
+    height:100%;                 /* 讓 object-fit 生效 */
+    object-fit: cover;           /* 等比填滿並裁切 */
+    object-position: 45% center; /* 取畫面右邊，讓紅蘿蔔當主體 */
+    position: absolute;
+    left: 17%; bottom: 24px;
+  }
+  .pickled-img{
+    width:100%;
+    height:100%;                 /* 讓 object-fit 生效 */
+    object-fit: cover;           /* 等比填滿並裁切 */
+    object-position: 45% center; /* 取畫面右邊，讓紅蘿蔔當主體 */
+    position: absolute;
+    right: 17%; bottom: 24px;
+  }
+  .pickled-img-wrap{
+    overflow:hidden;             /* 不讓超出 */
+    height: clamp(350px, 48vw, 400px); /* 375 寬時約 230~260px 高，可調 */
+    width: clamp(200px, 60vw, 300px); 
+  }
+  .cut-img-wrap{
+    overflow:hidden;             /* 不讓超出 */
+    height: clamp(350px, 48vw, 400px); /* 375 寬時約 230~260px 高，可調 */
+    width:clamp(200px, 60vw, 300px);
+    
+  }
+  .cut-img{
+    width:100%;
+    height:100%;                 /* 讓 object-fit 生效 */
+    object-fit: cover;           /* 等比填滿並裁切 */
+    object-position: 45% center; /* 取畫面右邊，讓紅蘿蔔當主體 */
+    position: absolute;
+    left: 2%; bottom: 24px;
+  }
+  .can-img-wrap{
+    overflow:hidden;             /* 不讓超出 */
+    height: clamp(350px, 48vw, 400px); /* 375 寬時約 230~260px 高，可調 */
+    width:clamp(200px, 60vw, 300px);
+    
+  }
+  .can-img{
+    width:100%;
+    height:100%;                 /* 讓 object-fit 生效 */
+    object-fit: cover;           /* 等比填滿並裁切 */
+    object-position: 40% center; /* 取畫面右邊，讓紅蘿蔔當主體 */
+    position: absolute;
+    right: 17%; bottom: 24px;
+  }
+  .rice-img-wrap{
+    overflow:hidden;             /* 不讓超出 */
+    height: clamp(350px, 48vw, 400px); /* 375 寬時約 230~260px 高，可調 */
+    width:clamp(220px, 60vw, 300px);
+  }
+  .rice-img{
+    width:100%;
+    height:100%;                 /* 讓 object-fit 生效 */
+    object-fit: cover;           /* 等比填滿並裁切 */
+    object-position: 50% center; /* 取畫面右邊，讓紅蘿蔔當主體 */
+    position: absolute;
+    left: 3%; bottom: 24px;
+  }
+}
+
+.section-title3 {
+  gap: 16px;                           /* 標題與線條的距離 */
+  .title{
+    line-height: 1.2;
+    letter-spacing: .1em;
+    /* 流體字級：手機 ~ 桌機自動縮放 */
+    font-size: clamp(24px, 6vw, 40px);
+    white-space: normal;               /* 讓上面的 d-block 能換行 */
+  }
+  //.line { border-top: 1px solid $primary-500 !important; }
+}
+
+/* 手機：線條縮短或乾脆隱藏（上面已 d-none） */
+@media (max-width: 998px){
+  
+  .section-title3{ justify-content:center; }
+  .section-title3 .title{ 
+    text-align:center; 
+    margin-inline:auto;   /* 保險：在 flex 中水平置中 */
+    display:block;
+}
+}
+
+
+.step-desc{
+  display: inline-flex;          /* 讓三個子項目排成一列 */
+  align-items: center;
+  gap: .5rem;                    /* 三句之間的間距 */
+  white-space: nowrap;           /* 不換行 */
+  margin-inline: auto;           /* 在欄內置中 */
+  text-align: center;            /* 內容仍置中 */
+  width: fit-content;            /* 收成內容寬，才好置中 */
+  line-height: 1.7;
+  font-size: clamp(8px, 3.6vw, 12px); /* 避免在手機太擠時溢出 */
+}
+
+/* 若想手機再緊一點 */
+@media (max-width: 998px){
+  .step-desc{ 
+  line-height: 1.7; 
+  margin-inline: auto; 
+  text-align: center;
+  
+  //font-size: clamp(12px, 3.6vw, 14px); /* 避免在手機太擠時溢出 */
+}
+  .step-copy .h4{
+    font-size: 20px !important;
+    line-height: 1.3;         /* 可依視覺調整 */
+    letter-spacing: .08em;    /* 可選 */
+    
+  }
+
+}
+
+
+
+
+
+
+
+/* 手機：一次一張，寬度固定一致 */
+@media (max-width: 1200px){
+
+  /* 外層左右留 16px 安全邊界 */
+  .review-scroller{
+    display:flex; flex-wrap:nowrap; overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    padding:0 16px 24px;
+    margin:0 !important;
+    gap:0;
+    scroll-snap-type:x mandatory;
+    scroll-padding-left:16px;
+  }
+  .px-150{ padding-left: 0 !important; padding-right: 0 !important; }
+
+  /* 每張卡片 = 視窗寬 - 兩側 16px（= 32px） */
+  /* 每張卡片寬度（像輪播一樣一張張看） */
+  .review-scroller > [class*="col-"]{
+    flex: 0 0 85%;
+    max-width: 40%;
+    padding: 8px !important;          /* 移除 col 的左右 padding，讓間距由 gap 控制 */
+    scroll-snap-align: center;       /* 停在中間更好看 */
+     width: calc(100% - 32px) !important;  /* 一屏一張的關鍵 */
+  }
+
+  /* 讓邊框與內距也算在寬度內，避免 1~2px 的差異 */
+  .review-card{ box-sizing:border-box; width:100%; }
+
+  /* 若想高度也一致（選用）：統一最小高度 */
+  /* .review-card{ min-height: 420px; } */
+
+  /* 文字很長時強制換行，避免撐寬 */
+  .review-card .card-text{ word-break: break-word; }
+  
+  /* 手機隱藏左右箭頭，用手滑動 */
+  .carousel-control-prev,
+  .carousel-control-next{ display:none !important; }
+
+  /* 選用：隱藏水平捲軸 */
+  .review-scroller::-webkit-scrollbar{ display:none; }
+}
+
+
+
+@media (max-width: 998px){
+.review-scroller > [class*="col-"]{
+    flex: 0 0 85%;
+    max-width: 60%;
+    padding: 8px !important;          /* 移除 col 的左右 padding，讓間距由 gap 控制 */
+    scroll-snap-align: center;       /* 停在中間更好看 */
+     width: calc(100% - 32px) !important;  /* 一屏一張的關鍵 */
+  }
+
+}
+
+
+/* ≤576px：一屏一張，左右不露邊角 */
+@media (max-width: 576.98px){
+
+  /* 橫向滑、吸附置中 */
+  .row.review-scroller{
+    display: flex;
+    flex-wrap: nowrap !important;         /* 不換行 */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding-inline: 16px;                 /* 左右安全邊 */
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 16px;          /* 吸附時保留安全邊 */
+    margin: 0 !important;
+  }
+  .row.review-scroller::-webkit-scrollbar{ display: none; }
+  .px-150{ padding-left: 0 !important; padding-right: 0 !important; }
+
+  /* 每張卡 = 容器寬度 - 左右 16px 安全邊（只會看到一張） */
+  .row.review-scroller > [class*="col-"]{
+    flex: 0 0 auto !important;
+    width: calc(100% - 32px) !important;  /* 一屏一張的關鍵 */
+    max-width: none !important;
+    padding: 0 !important;                 /* 移除 .col 的左右 gutter */
+    scroll-snap-align: center;
+    scroll-snap-stop: always;              /* 每次都吸附到卡中心 */
+  }
+
+  /* 卡片本身填滿欄位寬度 */
+  .review-card{
+    width: 100%;
+    min-width: 100%;
+    height: 300px;                         /* 想要固定高度就留著；要自適應就改 auto */
+    box-sizing: border-box;
+  }
+
+  /* 內容直排、作者資訊貼底（可留可調） */
+  .review-card .card-body{
+    display: flex !important;
+    flex-direction: column;
+    height: 100%;
+    padding: 16px !important;
+    gap: 12px;
+  }
+  .review-card .meta-box{ 
+    margin-top: auto !important;           /* 仍然貼到底部 */
+
+    align-self: center !important;         /* 在父層（column）中水平置中自己 */
+    margin-left: auto !important;          /* 抵銷 .ms-auto 的只靠右 */
+    margin-right: auto !important;
+
+    display: flex !important;
+    flex-direction: column;                /* 頭像在上、文字在下 */
+    align-items: center;                   /* 內容置中對齊 */
+    text-align: center;                    /* 文字置中 */
+    gap: 8px;                              /* 間距微調 */
+
+  }
+
+  /* 手機用手滑，不需要箭頭 */
+  .carousel-control-prev,
+  .carousel-control-next{ display: none !important; }
+}
+
+
+
+
+
+/* 區塊標題：那些被點頭的瞬間（h2.section-title4）*/
+.section-title4{
+  /* 手機到桌機自動縮放 */
+  font-size: clamp(24px, 6vw, 40px);
+  line-height: 1.25;
+  letter-spacing: .08em;
+  font-weight: 700;
+}
+
+/* 副標段落（緊接在標題下那行）*/
+.section-title4 + p.text-center{
+  font-size: clamp(12px, 3.6vw, 16px);
+  line-height: 1.6;
+  letter-spacing: .04em;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+/* 平板再微調（≤992px）*/
+@media (max-width: 992px){
+  .section-title4{ letter-spacing: .06em; }
+  .section-title4 + p.text-center{ line-height: 1.7; }
+  .d-flex.align-items-center{
+    justify-content: center;           /* 水平置中子項 */
+  }
+}
+
+/* 手機細節（≤576px）*/
+@media (max-width: 576.98px){
+  .section-title4{ font-size: clamp(24px, 8vw, 34px); }
+  .section-title4 + p.text-center{ font-size: clamp(12px, 4vw, 15px); }
+}
+@media (max-width: 998px){
+  .d-flex.align-items-center > .border-top{
+    display: none !important;
+  }
+}
+
+
+/* 375px 手機：整頁不要出現水平卷軸，但卡片區仍可左右滑 */
+@media (max-width: 1200px){
+  /* 1) 整頁禁止 X 軸 */
+  html, body { overflow-x: hidden; }
+
+  /* 2) 區塊本身也截斷裝飾圖外溢（不影響內層 review-scroller） */
+  section, .hero, .new-flavors { overflow-x: clip; }
+
+  /* 3) 移除可能造成外溢的大左右內距 */
+  .px-150 { padding-left: 0 !important; padding-right: 0 !important; }
+
+  /* 4) 解除會撐寬的 nowrap（避免文字把版面撐出 X 軸） */
+  .hero h3.text-nowrap { white-space: normal !important; }
+  .section-title4 { white-space: normal !important; }
+
+  /* 5) 絕對定位插圖在手機不要用負位移，避免撐出頁面寬度 */
+  .illustration-plate{
+    left: 0;
+    transform: translateX(-16%);   /* 視覺略探出但不撐寬 */
+    width: 84px;
+    bottom: -80px;
+  }
+
+  /* 6) 箭頭原本已隱藏；再保險把負邊距清掉 */
+  .ms--200, .me--200 { margin-left: 0 !important; margin-right: 0 !important; }
+}
+
+
+
+
+>>>>>>> feature/member-checkout

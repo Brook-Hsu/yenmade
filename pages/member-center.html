@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>member center</title>
+</head>
+<body>
+    <%- include('./layout/headerdark'); -%>
+
+<main class="container-md  py-4 mt-100">
+<!-- 分頁標籤 -->
+<div class="card brand-card mb-4 member-center">
+<!-- Tabs：等寬 + 置中，寬度=整個外框 -->
+<ul class="nav nav-tabs nav-justified text-center brand-tabs" id="memberTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-profile" type="button">個人資訊</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-orders" type="button">訂單追蹤</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-coupons" type="button">優惠券</button>
+    </li>
+</ul>
+
+<div class="tab-content">
+
+    <!-- 個人資訊 -->
+    <div class="tab-pane fade show active" id="tab-profile" role="tabpanel">
+    <div class="card brand-card mb-3">
+        <div class="card-body">
+            <h5 class="font-weight-semibold  text-center mt-5 mb-3">Hi，王小姐　會員等級：LV.1 新鮮手</h5>
+        <div class="brand-banner mx-auto text-center mb-4">
+        <div class="fs-5 text-secondary-500">再差一點點，你就是「LV.2 醃日常」！</div>
+        <div class="fs-7 text-neutral-500">再消費 $850，即可解鎖更多會員專屬優惠。</div>
+    </div>
+
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label">姓名</label>
+                <input type="text" class="form-control" placeholder="請輸入姓名">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">性別</label>
+                <select class="form-select">
+                    <option>女性</option><option>男性</option><option>不透露</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">手機號碼</label>
+                <input type="tel" class="form-control" placeholder="請輸入手機號碼">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">生日</label>
+                <input type="date" class="form-control">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">電子信箱</label>
+                <input type="email" class="form-control" placeholder="請輸入電子信箱">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">綁定帳號</label>
+                <div class="d-flex gap-2">
+                <span class="badge bg-body-tertiary text-dark font-weight-semibold  mb-3">Facebook</span>
+                <span class="badge bg-body-tertiary text-dark font-weight-semibold  mb-3">LINE</span>
+                <span class="badge bg-body-tertiary text-dark font-weight-semibold  mb-3">Google</span>
+            </div>
+            </div>
+            <div class="col-12">
+                <label class="form-label">地址</label>
+                <input type="text" class="form-control" placeholder="請輸入地址">
+            </div>
+
+            <div class="col-12 d-flex justify-content-end gap-2 my-5">
+                <button class="btn btn-color btn-lg  px-5 d-block " type="button">修改密碼</button>
+                <button class="btn btn-color btn-lg  px-5 d-block " type="button">儲存變更</button>
+                <button class="btn btn-color btn-lg  px-5 d-block " type="button">登出會員</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    </div>
+
+    <!-- 訂單追蹤（無訂單狀態） -->
+<div class="tab-pane fade" id="tab-orders" role="tabpanel">
+    <div class="card brand-card">
+        <div class="card-body">
+            <div class="brand-banner mx-auto text-center my-5 p-5">
+                <h5 class="font-weight-semibold  mb-2">目前沒有訂單</h5>
+                <p class=" fs-7 text-neutral-500 mb-4">不如先去逛逛，看看有沒有心動的滋味</p>
+                <a href="/products" class="btn btn-color btn-lg  px-5 mb-2">逛一逛</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- 優惠券 -->
+    <div class="tab-pane fade" id="tab-coupons" role="tabpanel">
+    <div class="vstack gap-3">
+    <div class="card brand-card">
+        <div class="card-body d-flex justify-content-between align-items-start">
+            <div>
+                <div class=" fs-5 font-weight-semibold ">新會員限定｜開張好滋味</div>
+                <div class="small  fs-7 text-neutral-500">新朋友專屬禮，消費滿399折抵99元｜使用期限：2025 / 10 / 31</div>
+                    <button class="btn btn-brand-outline btn-sm btn-coupon my-2" type="button" 
+                        data-copy-code="醃好醃滿" data-label="結帳折扣碼：​開張​好​滋味" data-copied-label="已複製折扣碼">
+                        結帳折扣碼：​開張​好​滋味
+                    </button>
+            </div>
+            <button class="btn btn-brand-outline">立即使用</button>
+        </div>
+    </div>
+
+    <div class="card brand-card">
+        <div class="card-body d-flex justify-content-between align-items-start">
+            <div>
+                <div class=" fs-5 font-weight-semibold ">全館免運｜層層醞滿</div>
+                <div class="small  fs-7 text-neutral-500">單筆滿 $699，宅配免運費｜有效期限：2025/12/25</div>
+                    <button class="btn btn-brand-outline btn-sm btn-coupon my-2" type="button" 
+                        data-copy-code="醃好醃滿" data-label="結帳折扣碼：醃好醃滿" data-copied-label="已複製折扣碼">
+                        結帳折扣碼：醃好醃滿
+                    </button>
+            </div>
+            <button class="btn btn-brand-outline">立即使用</button>
+        </div>
+    </div>
+
+        <div class="card brand-card">
+            <div class="card-body d-flex justify-content-between align-items-start">
+                <div>
+                <div class="fs-5 font-weight-semibold ">生日限定｜專屬一味</div>
+                <div class="small  fs-7 text-neutral-500">本月壽星限定禮，下單即享 $100 折扣｜有效期限：2025/10/31</div>
+                    <button class="btn btn-brand-outline btn-sm btn-coupon my-2" type="button" 
+                        data-copy-code="醃好醃滿" data-label="結帳折扣碼：專屬​一​味" data-copied-label="已複製折扣碼">
+                        結帳折扣碼：專屬​一​味
+                    </button>
+            </div>
+            <button class="btn btn-brand-outline">立即使用</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</main>
+
+
+
+
+
+    <%- include('./layout/footer'); -%>
+<script type="module" src="../main.js"></script>
+<script>
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.btn-coupon[data-copy-code]');
+  if (!btn) return;
+
+  const code = btn.dataset.copyCode || '';
+  const copied = btn.dataset.copiedLabel || '已複製折扣碼';
+
+  // 複製到剪貼簿（HTTPS/localhost 可用），失敗就走 fallback
+  const applyCopiedState = () => {
+    btn.textContent = copied;
+    btn.classList.add('is-copied');
+    btn.disabled = true; // 變灰且不可再點（若要可再次點，移除這行）
+  };
+
+  const fallbackCopy = () => {
+    const ta = document.createElement('textarea');
+    ta.value = code;
+    ta.style.position = 'fixed';
+    ta.style.opacity = 0;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } finally { document.body.removeChild(ta); }
+    applyCopiedState();
+  };
+
+  if (navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(code).then(applyCopiedState).catch(fallbackCopy);
+  } else {
+    fallbackCopy();
+  }
+});
+</script>
+
+
+
+
+</body>
+</html>

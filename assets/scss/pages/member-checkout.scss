@@ -1,0 +1,38 @@
+
+.cart-card{
+
+    color: $neutral-700;
+}
+.table-title{
+  background-color:$secondary-400;   // 換成你的色碼
+  color: white;              // 文字色
+}
+.btn-color{
+    background-color:$secondary-600;
+    color: white; 
+}
+/* 基本：讓 outline 在 hover 也維持白底 */
+.member-checkout .btn-outline-secondary {
+  background-color: #fff;
+  color: $secondary-500;
+  border-color: $secondary-500;
+
+  &:hover,
+  &:focus {
+    background-color: #fff;
+    color: $secondary-500;
+    border-color: $secondary-500;
+    box-shadow: 0 0 0 .2rem rgba($secondary-500, .15);
+  }
+}
+
+/* 被選取（點了）或按下去的狀態 */
+.member-checkout .btn-check:checked + .btn-outline-secondary,
+.member-checkout .btn-outline-secondary.active,
+.member-checkout .btn-outline-secondary:active,
+.member-checkout .btn-check:active + .btn-outline-secondary {
+  background-color: $secondary-600;         
+  color: #fff; 
+  border-color: $secondary-600;
+  box-shadow: 0 0 0 .2rem rgba($secondary-600, .15);
+}
