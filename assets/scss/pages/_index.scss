@@ -1,10 +1,142 @@
+.card-bg-no {
+  background-color: unset;
+}
+
+/* -------------------section 1 ------------------- */
+
+.mb-100 {
+  margin-bottom: 100px;
+}
+
+.mb-224 {
+  margin-bottom: 224px;
+}
+
+/* hero區塊 */
+.hero {
+  background-image: url(/assets/images/Hero_bg_pc.png);
+  background-position: center;
+  @include background-image;
+  // min-height: 100vh;
+  padding-top: 300px;
+  padding-bottom: 600px;
+  max-width: 100%;
+}
+
+.scroll-indicator {
+  // position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: clamp(12px, 4vh, 32px); /* 不同裝置保持在底部上方一點點 */
+}
+
+/* 小技巧：把按鈕過大的下邊距縮小，避免把內容擠出畫面 */
+.btn.mb-224 {
+  margin-bottom: 1.5rem !important;
+} /* 或直接改用 mb-4 */
+/* -------------------section 1 ------------------- */
+
+/* -------------------section 2 ------------------- */
+/* 新味登場區塊 - 搭配 Bootstrap 5 */
+.new-flavors {
+  // position: relative;
+  // min-height: 100vh;
+  // background-color: $primary-600; /* 底部35%的背景顏色 */
+  // display: flex;
+  // align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 65%;
+    background-image: url("/assets/images/New_bg_img.jpg");
+    @include background-image;
+    z-index: 0;
+  }
+
+  // 確保容器內容在背景之上
+  // .container {
+  //   position: relative;
+  //   z-index: 1;
+  // }
+
+  // 卡片特殊樣式
+  // .card {
+  //   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  //   overflow: visible; // 允許圖片溢出
+
+  //   &:hover {
+  //     transform: translateY(-5px);
+  //     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+  //   }
+
+  //   // 卡片內容區域
+  //   .card-body {
+  //     position: relative;
+  //     z-index: 1;
+  //   }
+  // }
+
+  //間距
+  .mt-184 {
+    margin-top: 184px;
+  }
+
+  // .mb-48 {
+  //   margin-bottom: 48px;
+  // }
+
+  .mb-288 {
+    margin-bottom: 288px;
+  }
+
+  .my-120 {
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+
+  // .pb-12 {
+  //   padding-bottom: 12px;
+  // }
+
+  // .p1 {
+  //   font-size: 18px;
+  //   font-weight: 400;
+  //   letter-spacing: 3em;
+  // }
+
+  // .p2 {
+  //   font-size: 16px;
+  //   font-weight: 400;
+  //   letter-spacing: 5%;
+  // }
+
+  // .p3 {
+  //   font-size: 14px;
+  //   font-weight: 400;
+  //   letter-spacing: 5%;
+  // }
+
+  // 響應式調整
+  @media (max-width: 768px) {
+    min-height: auto;
+    padding: 60px 0;
+
+    &::before {
+      height: 50%;
+    }
+  }
+}
+/* -------------------section 2 ------------------- */
+
+/* -------------------section 3 ------------------- */
 .container-1076 {
   max-width: 1076px;
   // margin-left: auto;
   // margin-right: auto;
-}
-.card-bg-no {
-  background-color: unset;
 }
 .mt-120 {
   margin-top: 120px !important;
@@ -22,22 +154,6 @@
 //max-width: 746px;
 // height: auto;
 //}
-
-/* hero區塊 */
-
-.hero {
-  background-image: url(/assets/images/Hero_bg_pc.png);
-  background-position: center;
-  @include background-image;
-  // min-height: 100vh;
-  padding-top: 300px;
-  padding-bottom: 600px;
-  max-width: 100%;
-}
-.hero {
-  position: relative;
-} /* 確保可做絕對定位 */
-
 .section-title3 {
   .mb-80 {
     margin-bottom: 80px;
@@ -60,13 +176,11 @@
     color: $neutral-600;
   }
 
-  .section-title {
-    .line {
-      border-top: 1px solid $primary-500 !important;
-    }
-    .title {
-      margin: 0 24px;
-    }
+  .line {
+    border-top: 1px solid $primary-500 !important;
+  }
+  .title {
+    margin: 0 24px;
   }
 
   .icon-24 {
@@ -104,314 +218,183 @@
     left: -400px;
     bottom: -70px;
   }
-
-  // section 4 -start
-  .index-title {
-    font-size: 100px;
-  }
-
-  .px-208 {
-    padding-left: 208px;
-    padding-right: 208px;
-  }
-  .px-15 {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .px-150 {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-  .px-312 {
-    padding-left: 312px;
-    padding-right: 312px;
-  }
-  // .ps-32 {
-  //   padding-left: 32px;
-  // }
-  // .pe-32 {
-  //   padding-right: 32px;
-  // }
-  .pe-120 {
-    padding-right: 120px;
-  }
-  .py-160 {
-    padding-top: 160px;
-    padding-bottom: 160px;
-  }
-  .pt-160 {
-    padding-top: 160px;
-  }
-  .pt--90 {
-    padding-top: -90px;
-  }
-  .mt-160 {
-    margin-top: 160px;
-  }
-  .mt-100 {
-    margin-top: 100px;
-  }
-
-  .mb-160 {
-    margin-bottom: 160px;
-  }
-
-  .card1 {
-    height: 416px;
-    width: 300px;
-  }
-
-  // .text-14 {
-  //   font-size: 14px;
-  // }
-  .ms--200 {
-    margin-left: -200px;
-  }
-  .me--200 {
-    margin-right: -200px;
-  }
-
-  .ms--100 {
-    margin-left: -100px;
-  }
-  .me--100 {
-    margin-right: -100px;
-  }
-  .mt--80 {
-    margin-top: -80px;
-  }
-  // .me-1690 {
-  //   margin-right: 1690px;
-  // }
-  .ms-200 {
-    margin-left: 200px;
-  }
-  .mt--200 {
-    margin-top: -200px;
-  }
-  .mt--170 {
-    margin-top: -170px;
-  }
-  .mt--150 {
-    margin-top: -150px;
-  }
-  .mt--120 {
-    margin-top: -120px;
-  }
-  .mt--100 {
-    margin-top: -100px;
-  }
-  .mt--90 {
-    margin-top: -90px;
-  }
-  .ms-120 {
-    margin-right: 120px;
-  }
-
-  .section-title4 {
-    // text-align: center;
-    // color: #bb9a88;
-    // font-weight: 500; /* 500 */
-    // font-size: 40px; /* 40px */
-    // line-height: 1.2; /* 120% */
-    // letter-spacing: 0.1em; /* 10% */
-    // margin: 0 0 8px;
-    white-space: nowrap; /* 避免被自動斷成兩行 */
-  }
-
-  .review-text .card-text {
-    text-align: justify; /* 兩端對齊 */
-    text-justify: inter-ideograph; /* CJK 更均勻（支援度一般） */
-  }
-
-  /* 上面那行「外食族」 */
-  .meta-name .role {
-    white-space: nowrap;
-    font-weight: 500;
-    // font-size: 12px; /* Size: 12px */
-    line-height: 1; /* Line height: 100% */
-    letter-spacing: 0.09em; /* Letter spacing: 9% */
-    // color: #bb9a88; /* Secondary/500 */
-    // padding-top: 8px;
-    padding-left: 2px; /* 依視覺微調 */
-    // display: inline-block; /* 保險：讓它當成一塊 */
-  }
-
-  /* 下面那行「阿傑」 */
-  .meta-name .name {
-    // display: block;
-    font-weight: 500;
-    // font-size: 16px;
-    line-height: 1;
-    letter-spacing: 0.09em; /* 同 9% */
-    // color: #bb9a88; /* 若也要同色，改成 #BB9A88 即可 */
-  }
-
-  .carousel-dark {
-    --bs-carousel-control-icon-filter: invert(0) grayscale(0);
-  }
-
-  #reviewCarousel .carousel-control-prev .bi,
-  #reviewCarousel .carousel-control-next .bi {
-    color: $secondary-500;
-    opacity: 1;
-    transition: opacity 0.25s ease, color 0.25s ease, transform 0.15s ease;
-  }
-
-  #reviewCarousel .carousel-control-prev .bi:hover,
-  #reviewCarousel .carousel-control-next .bi:hover {
-    opacity: 1;
-    transform: scale(1.08);
-  }
-
-  .review-card {
-    // border: 1px solid #bb9a88; /* 外框顏色 */
-    border-bottom-width: 8px; /* 底邊加粗 */
-    border-radius: 0.25rem; /* 需要圓角可調 */
-  }
-  .rounded-circle {
-    width: 42px;
-    height: 42px;
-    object-fit: cover;
-  }
-  //  section4 end
-
-  /* hero區塊 */
-
-  .hero {
-    background-image: url(/assets/images/Hero_bg_pc.png);
-    background-position: center;
-    @include background-image;
-    // min-height: 100vh;
-    padding-top: 300px;
-    padding-bottom: 600px;
-    max-width: 100%;
-  }
-  .hero {
-    position: relative;
-  } /* 確保可做絕對定位 */
-
-  .scroll-indicator {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: clamp(12px, 4vh, 32px); /* 不同裝置保持在底部上方一點點 */
-  }
-
-  /* 小技巧：把按鈕過大的下邊距縮小，避免把內容擠出畫面 */
-  .btn.mb-224 {
-    margin-bottom: 1.5rem !important;
-  } /* 或直接改用 mb-4 */
-
-  // .py-12 {
-  //   padding-top: 12px;
-  //   padding-bottom: 12px;
-  // }
-
-  .mb-100 {
-    margin-bottom: 100px;
-  }
-
-  .mb-224 {
-    margin-bottom: 224px;
-  }
-
-  /* 新味登場區塊 - 搭配 Bootstrap 5 */
-  .new-flavors {
-    // position: relative;
-    // min-height: 100vh;
-    // background-color: $primary-600; /* 底部35%的背景顏色 */
-    // display: flex;
-    // align-items: center;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 65%;
-      background-image: url("/yenmade/assets/images/New_bg_img.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      z-index: 0;
-    }
-
-    // 確保容器內容在背景之上
-    // .container {
-    //   position: relative;
-    //   z-index: 1;
-    // }
-
-    // 卡片特殊樣式
-    // .card {
-    //   transition: transform 0.3s ease, box-shadow 0.3s ease;
-    //   overflow: visible; // 允許圖片溢出
-
-    //   &:hover {
-    //     transform: translateY(-5px);
-    //     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
-    //   }
-
-    //   // 卡片內容區域
-    //   .card-body {
-    //     position: relative;
-    //     z-index: 1;
-    //   }
-    // }
-
-    //間距
-    .mt-184 {
-      margin-top: 184px;
-    }
-
-    // .mb-48 {
-    //   margin-bottom: 48px;
-    // }
-
-    .mb-288 {
-      margin-bottom: 288px;
-    }
-
-    .my-120 {
-      margin-top: 120px;
-      margin-bottom: 120px;
-    }
-
-    // .pb-12 {
-    //   padding-bottom: 12px;
-    // }
-
-    // .p1 {
-    //   font-size: 18px;
-    //   font-weight: 400;
-    //   letter-spacing: 3em;
-    // }
-
-    // .p2 {
-    //   font-size: 16px;
-    //   font-weight: 400;
-    //   letter-spacing: 5%;
-    // }
-
-    // .p3 {
-    //   font-size: 14px;
-    //   font-weight: 400;
-    //   letter-spacing: 5%;
-    // }
-
-    // 響應式調整
-    @media (max-width: 768px) {
-      min-height: auto;
-      padding: 60px 0;
-
-      &::before {
-        height: 50%;
-      }
-    }
-  }
 }
+
+/* -------------------section 3 ------------------- */
+
+/* -------------------section 4 ------------------- */
+
+// section 4 -start
+.index-title {
+  font-size: 100px;
+}
+
+.px-208 {
+  padding-left: 208px;
+  padding-right: 208px;
+}
+.px-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.px-150 {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.px-312 {
+  padding-left: 312px;
+  padding-right: 312px;
+}
+// .ps-32 {
+//   padding-left: 32px;
+// }
+// .pe-32 {
+//   padding-right: 32px;
+// }
+.pe-120 {
+  padding-right: 120px;
+}
+.py-160 {
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+.pt-160 {
+  padding-top: 160px;
+}
+.pt--90 {
+  padding-top: -90px;
+}
+.mt-160 {
+  margin-top: 160px;
+}
+.mt-100 {
+  margin-top: 100px;
+}
+
+.mb-160 {
+  margin-bottom: 160px;
+}
+
+.card1 {
+  height: 416px;
+  width: 300px;
+}
+
+// .text-14 {
+//   font-size: 14px;
+// }
+.ms--200 {
+  margin-left: -200px;
+}
+.me--200 {
+  margin-right: -200px;
+}
+
+.ms--100 {
+  margin-left: -100px;
+}
+.me--100 {
+  margin-right: -100px;
+}
+.mt--80 {
+  margin-top: -80px;
+}
+// .me-1690 {
+//   margin-right: 1690px;
+// }
+.ms-200 {
+  margin-left: 200px;
+}
+.mt--200 {
+  margin-top: -200px;
+}
+.mt--170 {
+  margin-top: -170px;
+}
+.mt--150 {
+  margin-top: -150px;
+}
+.mt--120 {
+  margin-top: -120px;
+}
+.mt--100 {
+  margin-top: -100px;
+}
+.mt--90 {
+  margin-top: -90px;
+}
+.ms-120 {
+  margin-right: 120px;
+}
+
+.section-title4 {
+  // text-align: center;
+  // color: #bb9a88;
+  // font-weight: 500; /* 500 */
+  // font-size: 40px; /* 40px */
+  // line-height: 1.2; /* 120% */
+  // letter-spacing: 0.1em; /* 10% */
+  // margin: 0 0 8px;
+  white-space: nowrap; /* 避免被自動斷成兩行 */
+}
+
+.review-text .card-text {
+  text-align: justify; /* 兩端對齊 */
+  text-justify: inter-ideograph; /* CJK 更均勻（支援度一般） */
+}
+
+/* 上面那行「外食族」 */
+.meta-name .role {
+  white-space: nowrap;
+  font-weight: 500;
+  // font-size: 12px; /* Size: 12px */
+  line-height: 1; /* Line height: 100% */
+  letter-spacing: 0.09em; /* Letter spacing: 9% */
+  // color: #bb9a88; /* Secondary/500 */
+  // padding-top: 8px;
+  padding-left: 2px; /* 依視覺微調 */
+  // display: inline-block; /* 保險：讓它當成一塊 */
+}
+
+/* 下面那行「阿傑」 */
+.meta-name .name {
+  // display: block;
+  font-weight: 500;
+  // font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.09em; /* 同 9% */
+  // color: #bb9a88; /* 若也要同色，改成 #BB9A88 即可 */
+}
+
+.carousel-dark {
+  --bs-carousel-control-icon-filter: invert(0) grayscale(0);
+}
+
+#reviewCarousel .carousel-control-prev .bi,
+#reviewCarousel .carousel-control-next .bi {
+  color: $secondary-500;
+  opacity: 1;
+  transition: opacity 0.25s ease, color 0.25s ease, transform 0.15s ease;
+}
+
+#reviewCarousel .carousel-control-prev .bi:hover,
+#reviewCarousel .carousel-control-next .bi:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.review-card {
+  // border: 1px solid #bb9a88; /* 外框顏色 */
+  border-bottom-width: 8px; /* 底邊加粗 */
+  border-radius: 0.25rem; /* 需要圓角可調 */
+}
+.rounded-circle {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+}
+//  section4 end
+/* -------------------section 4 ------------------- */
 
 /* 手機版：≤ 576px */
 @media (max-width: 576px) {
