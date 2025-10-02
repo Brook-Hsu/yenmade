@@ -7,12 +7,12 @@
   <title>YENMADE醃造所 | 登入</title>
 </head>
 <body>
-  <%- include('./layout/headerdark'); -%>
+  <%- include('./layout/header'); -%>
 
   <main class="container-md py-4 mt-100 auth-page login-page">
     <nav aria-label="breadcrumb" class="mb-3">
       <ol class="breadcrumb small">
-        <li class="breadcrumb-item"><a href="/">首頁</a></li>
+        <li class="breadcrumb-item"><a href="./index.html">首頁</a></li>
         <li class="breadcrumb-item active" aria-current="page">登入</li>
       </ol>
     </nav>
@@ -53,12 +53,12 @@
                   <input class="form-check-input" type="checkbox" value="yes" id="rememberMe" name="remember_me">
                   <label class="form-check-label" for="rememberMe">記住帳號</label>
                 </div>
-                <a href="/forgot" class="link-secondary small">忘記密碼？</a>
+                <a href="#" class="link-secondary small">忘記密碼？</a>
               </div>
 
               <div class="col-12 d-flex gap-2">
                 <button class="btn btn-color w-50" type="submit">登入</button>
-                <a class="btn btn-outline-secondary w-50" href="/signup">註冊</a>
+                <a class="btn btn-outline-secondary w-50" href="#">註冊</a>
               </div>
             </form>
           </div>
