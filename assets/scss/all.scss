@@ -32,6 +32,7 @@
 @import "./layout/header.scss";
 @import "./layout/footer.scss";
 @import "./layout/shopping.scss";
+@import "./layout/header2.scss";
 
 //  pages
 @import "./pages/index.scss";
@@ -42,3 +43,8 @@
 // body  { font-family: var(--bs-body-font-family); }
 @import "./pages/radish.scss";
 
+@import "./pages/member-checkout.scss";
+@import "./pages/member-center.scss";
+@import "./pages/registration.scss";
+@import "./pages/blog.scss";
+@import "./pages/faq.scss";

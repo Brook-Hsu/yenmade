@@ -1,0 +1,98 @@
+.faq-page {
+  /* 左側分類 */
+  .faq-tabs {
+  .nav-link{
+    border: 1px solid rgba($secondary-500, .35);
+    color: $neutral-700;
+    padding: .75rem 1rem;
+    margin-bottom: .5rem;
+    background: #fff;
+    &:hover, &:focus{
+      background: rgba($secondary-500, .06);
+      border-color: rgba($secondary-500, .55);
+      color: $neutral-900;
+    }
+    &.active{
+      background: $secondary-500;
+      border-color: $secondary-500;
+      color: #fff;
+      font-weight: 600;
+    }
+  }
+}
+
+
+  /* 問題列表 */
+  .faq-accordion {
+    .accordion-item {
+      border: 1px solid rgba($secondary-500, .35);
+      border-radius: .5rem;
+      overflow: hidden;
+      + .accordion-item { margin-top: 1rem; }
+    }
+
+    .accordion-button {
+      gap: .75rem;
+      padding: 1rem 1rem;
+      background: #fff;
+      color: $neutral-900;
+      box-shadow: none;
+      &::after { /* 改成 + / – 符號 */
+        flex: 0 0 auto;
+        width: auto; height: auto;
+        background-image: none;
+        content: "+";
+        font-weight: 700;
+        color: $neutral-800;
+        margin-left: auto;
+      }
+      &:not(.collapsed)::after { content: "–"; color: #fff; }
+      &:not(.collapsed) {
+        color: #fff;
+        background: $secondary-500;
+      }
+    }
+
+    .accordion-body {
+      background: #fff;
+      color: $neutral-800;
+      padding: 1rem 1.25rem;
+      border-top: 1px solid rgba($secondary-500, .25);
+    }
+
+    /* 開頭的 Q 圓點 */
+    .faq-q {
+      display: inline-grid;
+      place-items: center;
+      width: 1.5rem; height: 1.5rem;
+      border-radius: 50%;
+      font-weight: 700; font-size: .9rem;
+      color: $secondary-700;
+      border: 1px solid rgba($secondary-500, .55);
+      background: rgba($primary-500, .12);
+    }
+  }
+
+  /* 分頁：品牌色 */
+  .pagination-brand .page-item .page-link {
+    color: $secondary-700;
+    border: 1px solid rgba($secondary-500, .35);
+  }
+  .pagination-brand .page-item.active .page-link {
+    background: $secondary-500;
+    border-color: $secondary-500;
+    color: #fff;
+  }
+  .pagination-brand .page-item .page-link:hover {
+    background: rgba($secondary-500, .06);
+    border-color: rgba($secondary-500, .55);
+  }
+}
+
+/* RWD：手機把分類放到上面橫向捲動（可選） */
+@media (max-width: 767.98px) {
+  .faq-page .faq-categories {
+    display: flex; overflow-x: auto; gap: .5rem; padding-bottom: .25rem;
+    .list-group-item { white-space: nowrap; margin-bottom: 0; min-width: 7rem; }
+  }
+}

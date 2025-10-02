@@ -35,6 +35,8 @@
 }
 
 
+
+
 .breadcrumb-link {
   color: #525252; // $neutral-600
   &:hover,
@@ -147,7 +149,7 @@
 
 /* RWD */
 /* 媒體查詢：針對寬度小於或等於 768px（Bootstrap 的 $breakpoint-md-min - 1） */
-@media (max-width: 767.98px) {
+@media (max-width: 767px) {
     /* 讓 ul 標籤列表可以水平滾動 */
     #productsTab {
         /* 取消在非手機版的垂直間距 */
@@ -225,12 +227,18 @@
     padding-left: 68px;
 }
 
-.pe--3{
-    padding-right: -16px;
-}
 
 
 @media(max-width: 767px){
+
+
+
+    .ms--10{
+    margin-left: -25px;
+    margin-right: -25px;
+    padding-right: 0px;
+    padding-left: 0px;
+    }
 
     .nav-tabs .nav-link{
         color: $neutral-400 !important;
