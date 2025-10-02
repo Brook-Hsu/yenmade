@@ -9,17 +9,9 @@
 <body>
   <%- include('./layout/header'); -%>
 
-  <main class="container-md py-4 mt-100 auth-page login-page">
-    <nav aria-label="breadcrumb" class="mb-3">
-      <ol class="breadcrumb small">
-        <li class="breadcrumb-item"><a href="./index.html">首頁</a></li>
-        <li class="breadcrumb-item active" aria-current="page">登入</li>
-      </ol>
-    </nav>
-
-    <h2 class="text-center fw-semibold mb-4">登入 YenMade<br class="d-lg-none"> 醃造所
-</h2>
-
+  <main class="#">
+  <div class="container-md py-4 mt-100 auth-page login-page mb-80">
+    <h2 class="text-center fw-semibold mb-4">登入 YenMade<br class="d-lg-none"> 醃造所</h2>
 
     <div class="row g-4 auth-columns">
       <!-- 左：一般登入 -->
@@ -116,6 +108,7 @@
         </div>
       </aside>
     </div>
+  </div>
   </main>
 
   <%- include('./layout/footer'); -%>
