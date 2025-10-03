@@ -38,3 +38,53 @@
   border-color: $secondary-600;
   box-shadow: 0 0 0 .2rem rgba($secondary-600, .15);
 }
+
+
+/* =========================
+   ≤ 575px（一般手機）
+   ========================= */
+@media (max-width: 575.98px){
+
+  /* 上方 logo 與區塊留白縮小一點 */
+  .mt-160{ margin-top: 96px; }
+
+  /* 購物車表頭太擠—隱藏 */
+  .member-checkout .cart-card .row.font-weight-semibold{ display:none; }
+
+  /* 每個商品列改直向堆疊 */
+  .member-checkout .cart-card .row.align-items-center > [class^="col-"]{
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    text-align: left !important;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+  }
+  /* 小計維持靠右 */
+  .member-checkout .cart-card .row.align-items-center > .col-3:last-child{
+    text-align: right !important;
+  }
+
+  /* 縮小商品縮圖、讓數量輸入組滿版 */
+  .member-checkout .cart-card .bg-light{ width:64px; height:64px; }
+  .member-checkout .cart-card .input-group{ width:100% !important; max-width:none; }
+
+  /* 優惠券輸入也改滿版 */
+  .member-checkout .d-flex.justify-content-center .input-group{ max-width:none; width:100%; }
+  .member-checkout .p-4{ padding: 1rem !important; }  /* 優惠券卡片內距收斂 */
+
+  /* 送出訂單鈕滿版 */
+  .member-checkout .btn-color.btn-lg{ width:100%; }
+}
+
+/* =========================
+   ≤ 375px（小手機微調）
+   ========================= */
+@media (max-width: 375.98px){
+
+  .mt-160{ margin-top: 72px; }                /* 再縮一點上方留白 */
+  .member-checkout .cart-card .bg-light{
+    width:56px; height:56px;                  /* 縮圖再小一級 */
+  }
+  .member-checkout .table-title{ font-size:.95rem; }
+  .member-checkout .input-group .btn{ padding:.25rem .5rem; }  /* 加/減鈕不要太大 */
+}
