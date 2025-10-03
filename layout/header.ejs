@@ -78,15 +78,24 @@
         </div>
         <div class="offcanvas-footer d-lg-none">
           <div class="container mb-6">
-            <div class="d-flex justify-content-between mt-auto nav-btn">
+            <div class="d-flex justify-content-center mt-auto nav-btn text-nowrap">
               <a
                 class="btn btn-outline-light border-0 border-end btn-font-lg w-50 px-3 py-2"
+                href="/yenmade/pages/sign-in.html"
               >
                 <i class="bi bi-person-circle me-2"></i>
-                <span>登入/註冊</span>
+                <span>登入</span>
+              </a>
+              <a
+                class="btn btn-outline-light border-0 border-end btn-font-lg w-50 px-3 py-2"
+                href="/yenmade/pages/registration.html"
+              >
+                <i class="bi bi-r-circle me-2"></i>
+                <span>註冊</span>
               </a>
               <a
                 class="btn btn-outline-light border-0 btn-font-lg w-50 px-3 py-2"
+                href="/yenmade/pages/member-checkout.html"
               >
                 <i class="bi bi-cart3 me-2"></i>
                 <span>購物車</span>
@@ -131,8 +140,13 @@
             </button>
             <ul class="dropdown-menu dropdown-menu-end border-0 p-0">
               <li>
+                <a href="../pages/sign-in.html" class="dropdown-item btn-font-lg py-3" type="button">
+                  登入
+                </a>
+              </li>
+              <li>
                 <a href="../pages/registration.html" class="dropdown-item btn-font-lg py-3" type="button">
-                  登入 / 註冊
+                  註冊
                 </a>
               </li>
             </ul>
@@ -278,6 +292,7 @@
                 <button
                   class="dropdown-item btn-font-lg text-center py-3"
                   type="button"
+                  onclick="location.href='../pages/member-checkout.html'"
                 >
                   前往結帳
                 </button>

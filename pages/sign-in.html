@@ -3,22 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>登入｜YenMade 醃造所</title>
+  <link rel="icon" href="../assets/images/logo/Type=Logo.svg" sizes="32x32" />    
+  <title>YENMADE醃造所 | 登入</title>
 </head>
 <body>
   <%- include('./layout/headerdark'); -%>
 
-  <main class="container-md py-4 mt-100 auth-page login-page">
-    <nav aria-label="breadcrumb" class="mb-3">
-      <ol class="breadcrumb small">
-        <li class="breadcrumb-item"><a href="/">首頁</a></li>
-        <li class="breadcrumb-item active" aria-current="page">登入</li>
-      </ol>
-    </nav>
-
-    <h2 class="text-center fw-semibold mb-4">登入 YenMade<br class="d-lg-none"> 醃造所
-</h2>
-
+  <main class="#">
+  <div class="container-md py-4 mt-100 auth-page login-page mb-80">
+    <h2 class="text-center fw-semibold mb-4">登入 YenMade<br class="d-lg-none"> 醃造所</h2>
 
     <div class="row g-4 auth-columns">
       <!-- 左：一般登入 -->
@@ -31,8 +24,8 @@
               <div class="col-12">
                 <label for="loginId" class="form-label">電子郵件／手機號碼</label>
                 <input id="loginId" name="login_id" type="text" class="form-control"
-                       placeholder="請輸入 Email／手機號碼" autocomplete="username"
-                       inputmode="email" required>
+                      placeholder="請輸入 Email／手機號碼" autocomplete="username"
+                      inputmode="email" required>
                 <div class="form-text">可輸入 Email 或手機號碼</div>
                 <div class="invalid-feedback">請輸入有效的帳號</div>
               </div>
@@ -41,7 +34,7 @@
                 <label for="loginPwd" class="form-label">密碼</label>
                 <div class="input-group">
                   <input id="loginPwd" name="password" type="password" class="form-control"
-                         placeholder="請輸入密碼" autocomplete="current-password" required>
+                        placeholder="請輸入密碼" autocomplete="current-password" required>
                   <button class="btn btn-outline-secondary" type="button" id="toggleLoginPwd" aria-label="顯示或隱藏密碼">顯示</button>
                 </div>
                 <div class="invalid-feedback">請輸入密碼</div>
@@ -52,12 +45,12 @@
                   <input class="form-check-input" type="checkbox" value="yes" id="rememberMe" name="remember_me">
                   <label class="form-check-label" for="rememberMe">記住帳號</label>
                 </div>
-                <a href="/forgot" class="link-secondary small">忘記密碼？</a>
+                <a href="#" class="link-secondary small">忘記密碼？</a>
               </div>
 
               <div class="col-12 d-flex gap-2">
                 <button class="btn btn-color w-50" type="submit">登入</button>
-                <a class="btn btn-outline-secondary w-50" href="/signup">註冊</a>
+                <a class="btn btn-outline-secondary w-50" href="#">註冊</a>
               </div>
             </form>
           </div>
@@ -115,6 +108,7 @@
         </div>
       </aside>
     </div>
+  </div>
   </main>
 
   <%- include('./layout/footer'); -%>
