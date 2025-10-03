@@ -24,6 +24,22 @@
     border-color: rgba($secondary-500, .35) rgba($secondary-500, .35) #fff;
     border-bottom-color: #fff; /* 與內容區銜接 */
   }
+    .brand-tabs .nav-link.active,
+    .brand-tabs .nav-link.active:hover,
+    .brand-tabs .nav-link.active:focus,
+    .brand-tabs .nav-link:active,
+    .brand-tabs .nav-link:focus {
+    color: #fff !important;
+    border-color:$secondary-500
+}
+    .brand-tabs .nav-link:focus,
+    .brand-tabs .nav-link:active,
+    .brand-tabs .nav-link.active:focus {
+  outline: 0; /* 移除預設 outline */
+  border-color: $secondary-500 !important;
+  box-shadow: 0 0 0 .25rem rgba($secondary-500, .25);
+}
+
 
   /* 卡片與空狀態框線用品牌色 */
   .brand-card { border: 1px solid rgba($secondary-500, .35); }

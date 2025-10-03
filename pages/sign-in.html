@@ -7,7 +7,7 @@
   <title>YENMADE醃造所 | 登入</title>
 </head>
 <body>
-  <%- include('./layout/header'); -%>
+  <%- include('./layout/headerdark'); -%>
 
   <main class="#">
   <div class="container-md py-4 mt-100 auth-page login-page mb-80">
@@ -24,8 +24,8 @@
               <div class="col-12">
                 <label for="loginId" class="form-label">電子郵件／手機號碼</label>
                 <input id="loginId" name="login_id" type="text" class="form-control"
-                       placeholder="請輸入 Email／手機號碼" autocomplete="username"
-                       inputmode="email" required>
+                      placeholder="請輸入 Email／手機號碼" autocomplete="username"
+                      inputmode="email" required>
                 <div class="form-text">可輸入 Email 或手機號碼</div>
                 <div class="invalid-feedback">請輸入有效的帳號</div>
               </div>
@@ -34,7 +34,7 @@
                 <label for="loginPwd" class="form-label">密碼</label>
                 <div class="input-group">
                   <input id="loginPwd" name="password" type="password" class="form-control"
-                         placeholder="請輸入密碼" autocomplete="current-password" required>
+                        placeholder="請輸入密碼" autocomplete="current-password" required>
                   <button class="btn btn-outline-secondary" type="button" id="toggleLoginPwd" aria-label="顯示或隱藏密碼">顯示</button>
                 </div>
                 <div class="invalid-feedback">請輸入密碼</div>
