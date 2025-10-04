@@ -4,3 +4,4 @@ console.log("Hello world");
 
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
+import "./assets/js/swiper"
