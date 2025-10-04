@@ -13,6 +13,13 @@
     background-color:$secondary-600;
     color: white; 
 }
+
+最後補上scss    /* 桌機預設尺寸（與原本 72×72 一樣） */
+.member-checkout .product-thumb { width: 72px; height: 72px; }
+
+/* 圖片填滿方框並裁切 */
+.member-checkout .product-thumb img { object-fit: cover; }
+
 /* 基本：讓 outline 在 hover 也維持白底 */
 .member-checkout .btn-outline-secondary {
   background-color: #fff;
