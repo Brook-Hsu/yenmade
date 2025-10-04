@@ -20,9 +20,34 @@
         </ol>
       </nav>
 
-      <form class="d-none d-md-inline-block" role="search" action="/faq">
-        <button class="btn btn-brand-outline px-4" type="submit">搜尋</button>
-      </form>
+      <div class="d-none d-md-flex align-items-center">
+  <!-- 折疊輸入框 -->
+  <div class="collapse" id="collapseSearchInput">
+    <form class="d-flex align-items-center me-2" role="search">
+      <input
+        type="search"
+        class="form-control border-0 border-bottom bg-transparent"
+        placeholder="找問題"
+        name="q"
+        style="width: 200px;"
+      />
+    </form>
+  </div>
+
+  <!-- 搜尋按鈕 -->
+  <button
+    class="btn btn-brand-outline px-4"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#collapseSearchInput"
+    aria-expanded="false"
+    aria-controls="collapseSearchInput"
+    href="#"
+  >
+    搜尋
+  </button>
+</div>
+
     </div>
 
     <div class="row g-4">
