@@ -19,20 +19,7 @@
 }
 
 
-/*banner*/
-.about-banner {
-  width: 100%;
-  img {
-    width: 100%;
-    display: block;
-  }
 
-  @media (max-width: 768px) {
-    img {
-      content: url('../assets/images/about/Banner_about_mobile.png');
-    }
-  }
-}
 
 /*section1&3*/
 @media (max-width: 768px) {

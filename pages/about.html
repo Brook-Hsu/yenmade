@@ -10,10 +10,13 @@
   <body>
     <%- include('./layout/header'); -%>
 
-    <!--banner-->
-    <div class="mb-5 about-banner">
+    <!--bannerPC-->
+    <div class="mb-5 d-none d-md-block">
       <img src="../assets/images/about/Banner_about.png" alt="廚房圖片" class="w-100">
-    </div>  
+    </div>
+    <div class="mb-5 d-block d-md-none">
+      <img src="../assets/images/about/Banner_about_mobile.png" alt="廚房圖片" class="w-100">
+    </div>
     <div class="container-sm">
       <!--麵包屑導覽-->
       <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="mb-80 ms-5 d-none d-md-block">
