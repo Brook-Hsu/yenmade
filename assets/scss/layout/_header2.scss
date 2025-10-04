@@ -14,3 +14,9 @@
   .offcanvas-nav .nav-link { color: $neutral-700; padding: .75rem 0; border-bottom: 1px solid $neutral-200; }
   .offcanvas-nav .nav-link:last-child { border-bottom: 0; }
 }
+// border 斷點
+.border-lg-0 {
+  @include rwd-lg {
+    border-right: none;
+  }
+}
