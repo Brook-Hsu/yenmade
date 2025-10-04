@@ -64,7 +64,8 @@
             <h3 class="h5 fw-semibold mb-3">社群登入</h3>
 
             <div class="vstack social-list">
-              <button class="btn btn-brand-outline btn-social w-100" type="button" data-provider="facebook">
+              <!--FB登入-->
+              <a class="btn btn-brand-outline btn-social w-100" href="#" role="button">
                 <span class="btn-social__left">
                   <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
                     <path fill="currentColor" d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.9.16 1.9.16v2.1h-1.1c-1 0-1.3.63-1.3 1.3V12h2.3l-.37 3h-1.93v7A10 10 0 0 0 22 12"/>
@@ -72,9 +73,9 @@
                   使用 Facebook 登入
                 </span>
                 <span class="btn-social__chevron" aria-hidden="true">›</span>
-              </button>
-
-              <button class="btn btn-brand-outline btn-social w-100" type="button" data-provider="line">
+              </a>
+              <!--line登入-->
+              <a class="btn btn-brand-outline btn-social w-100" href="#" role="button" onclick="event.preventDefault(); location.hash='#';">
                 <span class="btn-social__left">
                   <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
                     <path fill="currentColor" d="M19 3H5a4 4 0 0 0-4 4v6a7 7 0 0 0 7 7h1v1a1 1 0 0 0 1.6.8L14 20h5a4 4 0 0 0 4-4V7a4 4 0 0 0-4-4Z"/>
@@ -82,9 +83,9 @@
                   使用 LINE 登入
                 </span>
                 <span class="btn-social__chevron" aria-hidden="true">›</span>
-              </button>
-
-              <button class="btn btn-brand-outline btn-social w-100" type="button" data-provider="google">
+              </a>
+              <!-- Google登入 -->
+              <a class="btn btn-brand-outline btn-social w-100" href="#" role="button" onclick="event.preventDefault(); location.hash='#';">
                 <span class="btn-social__left">
                   <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
                     <path fill="currentColor" d="M21.35 11.1h-9.18v2.96h5.28a4.53 4.53 0 0 1-1.96 2.96a6.5 6.5 0 1 1 0-10.04l2.09-2.05A9.5 9.5 0 1 0 12 21.5c5 0 9-3.5 9.35-8.4Z"/>
@@ -92,9 +93,9 @@
                   使用 Google 登入
                 </span>
                 <span class="btn-social__chevron" aria-hidden="true">›</span>
-              </button>
-
-              <button class="btn btn-brand-outline btn-social w-100" type="button" data-provider="apple">
+              </a>
+              <!-- Apple登入 -->
+              <a class="btn btn-brand-outline btn-social w-100" href="#" role="button" onclick="event.preventDefault(); location.hash='#';">
                 <span class="btn-social__left">
                   <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
                     <path fill="currentColor" d="M16.36 1.64A5 5 0 0 1 14 6a5 5 0 0 1 2.36-4.36ZM12 7.5c1.42 0 2.7.82 3.29.82c.55 0 1.86-.88 3.47-.83a3.9 3.9 0 0 1 3.22 1.7c-2.82 1.74-2.36 6.12.45 7.38a9.1 9.1 0 0 1-2.3 3.58c-.93.99-2 2.06-3.5 2.08c-1.31.02-1.73-.62-3.23-.62c-1.5 0-1.96.6-3.22.64c-1.35.04-2.38-1.09-3.31-2.06C4.23 18.2 2.38 13.58 4.8 10.2A4.7 4.7 0 0 1 8.7 8c1.46 0 2.38.82 3.3.82Z"/>
@@ -102,7 +103,7 @@
                   使用 Apple 登入
                 </span>
                 <span class="btn-social__chevron" aria-hidden="true">›</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
