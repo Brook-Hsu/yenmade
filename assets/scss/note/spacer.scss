@@ -1,0 +1,23 @@
+//以下 僅供 切版過程 參考使用
+//請勿加入到 all.css 檔案中做引入！
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  // 4
+  2: $spacer * 0.5,
+  // 8
+  3: $spacer,
+  // 16
+  4: $spacer * 1.5,
+  // 24
+  5: $spacer * 2,
+  // 32
+  6: $spacer * 3,
+  // 48
+  8: $spacer * 5,
+  // 80
+  9: $spacer * 0.75,
+  // 12
+);

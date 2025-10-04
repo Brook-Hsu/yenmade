@@ -1,0 +1,226 @@
+/* 會員中心（全部用 $secondary-500） */
+.member-center {
+  /* 柔和背景與徽章（原灰色→品牌淡色） */
+  .text-bg-brand-subtle {
+    color: $secondary-500;
+    background: rgba($secondary-500, .12);
+    border: 1px solid rgba($secondary-500, .24);
+  }
+
+  /* Tabs 換品牌色 */
+  .brand-tabs { border-bottom: 1px solid rgba($secondary-500, .35); }
+  .brand-tabs .nav-link {
+    color:$secondary-500;
+    background-color: #fff;
+    border: 1px solid transparent;
+  }
+  .brand-tabs .nav-link:hover {
+    border-color: rgba($secondary-500, .25) rgba($secondary-500, .25) transparent;
+    background: rgba($secondary-500, .06);
+  }
+  .brand-tabs .nav-link.active {
+    color: #fff;
+    background-color: $secondary-500;
+    border-color: rgba($secondary-500, .35) rgba($secondary-500, .35) #fff;
+    border-bottom-color: #fff; /* 與內容區銜接 */
+  }
+    .brand-tabs .nav-link.active,
+    .brand-tabs .nav-link.active:hover,
+    .brand-tabs .nav-link.active:focus,
+    .brand-tabs .nav-link:active,
+    .brand-tabs .nav-link:focus {
+    color: #fff !important;
+    border-color:$secondary-500
+}
+    .brand-tabs .nav-link:focus,
+    .brand-tabs .nav-link:active,
+    .brand-tabs .nav-link.active:focus {
+  outline: 0; /* 移除預設 outline */
+  border-color: $secondary-500 !important;
+  box-shadow: 0 0 0 .25rem rgba($secondary-500, .25);
+}
+
+
+  /* 卡片與空狀態框線用品牌色 */
+  .brand-card { border: 1px solid rgba($secondary-500, .35); }
+  .empty-box {
+    border: 2px dashed rgba($secondary-500, .6);
+    background: rgba($secondary-500, .05);
+    border-radius: .5rem;
+  }
+
+  .btn-brand-outline {
+    background: #fff;
+    color: $secondary-500;
+    border: 1px solid $secondary-500;
+  }
+  .btn-brand-outline:hover,
+  .btn-brand-outline:focus {
+    background: $secondary-500;
+    color: #fff;
+    box-shadow: 0 0 0 .25rem rgba($secondary-500, .18);
+  }
+
+  /* 提示條（品牌色背景區塊） */
+    .brand-banner{
+        background: rgba($secondary-500, .12);
+        border: 1px solid rgba($secondary-500, .28);
+        border-radius: .5rem;
+        padding: .75rem 1rem;
+      
+    }
+
+  /* 實心版提示條（整塊品牌色） */
+    .brand-banner--solid{
+        background: $secondary-500;
+        border-color: $secondary-500;
+        color: #fff;}
+
+    .title{ 
+        color: #fff; }
+
+    .subtitle{ 
+        color: rgba(255,255,255,.9); }
+
+
+/* 已沿用你的 .btn-brand-outline 做為初始樣式 */
+/* 按下後（已複製狀態）改為灰底＋白字 */
+    .btn-coupon.is-copied,
+    .btn-coupon:disabled {
+        background: $neutral-700;  /* 淺灰 */
+        color: #fff;          /* 白字 */
+        cursor: default;
+        transition: all .2s ease;
+}
+}
+
+
+
+
+/* --- Member Center RWD --- */
+/* Member Center 統一版：brand-banner 不超出父層 */
+.member-center {
+  .brand-banner {
+    background: rgba($secondary-500, .12);
+    border: 1px solid rgba($secondary-500, .28);
+    border-radius: .5rem;
+
+    /* 關鍵：以父層內容寬度為準，桌機最多 700px */
+    width: 100%;
+    max-width: 700px;              /* 或改用：inline-size: min(100%, 700px); */
+    box-sizing: border-box;        /* 邊框/內距算在寬度內，避免溢出 */
+    margin-inline: auto;           /* 水平置中 */
+    padding: clamp(.75rem, 3vw, 1.5rem);
+    overflow-wrap: anywhere;       /* 文字太長也不會撐破 */
+  }
+}
+
+
+  /* Tabs：小螢幕可水平捲動避免擠壓 */
+  /* Tabs：無捲動、可換行、等寬 */
+.brand-tabs{
+  overflow: visible;      /* 不要捲動 */
+  flex-wrap: wrap;        /* 允許換行 */
+  white-space: normal;    /* 允許文字換行 */
+  border-bottom: 1px solid rgba($secondary-500, .35); // 你的品牌色
+}
+
+/* 讓按鈕撐滿各自的格子、文字置中 */
+.brand-tabs .nav-link{
+  width: 100%;
+  text-align: center;
+}
+
+/* 手機預設：每個 tab 各占一行（100%） */
+.brand-tabs .nav-item{
+  flex: 1 1 100%;
+}
+
+/* md 以上(≥768px)：一排三個等寬（你現在是 3 個 tab，剛好一行） */
+@include rwd-md{
+  .brand-tabs .nav-item{
+    flex: 1 1 0;     /* 等寬 */
+  }
+}
+
+    /* 捲動時讓按鈕不被撐壞 */
+    .nav-link{ display: inline-block; }
+
+   /* -------- Member Center: Tabs（無捲動、可換行、RWD 等寬） -------- */
+.member-center {
+  .brand-tabs {
+    border-bottom: 1px solid rgba($secondary-500, .35);
+    /* 預設（< md）：可換行、無捲動 */
+    overflow: visible;
+    flex-wrap: wrap;
+    white-space: normal;
+
+    /* 每個 tab 佔滿一行、文字置中 */
+    .nav-item { flex: 1 1 100%; }
+    .nav-link { width: 100%; text-align: center; display: block; }
+
+    /* >= md：三個 tab 一排等寬 */
+    @include rwd-md {
+      .nav-item { flex: 1 1 0; }   // 等寬鋪滿一行
+    }
+  }
+}
+
+  /* 表單底部三顆按鈕：手機直向滿版、桌機靠右橫排 */
+  form .col-12.d-flex{
+    flex-wrap: wrap;
+    gap: .5rem;
+
+    .btn{
+      flex: 1 1 100%;   /* 手機：一顆一行 */
+    }
+
+    @include rwd-md{
+      justify-content: end;
+      gap: .5rem;
+      .btn{
+        flex: 0 0 auto; /* 桌機：回復原本寬度 */
+        min-width: 10rem;
+      }
+    }
+  }
+
+  /* 訂單空狀態：內距在手機收斂一點 */
+  #tab-orders .brand-banner{
+    padding: clamp(1rem, 4vw, 2.5rem);
+  }
+
+  /* 優惠券卡片：手機上下堆疊；桌機左右排 */
+  #tab-coupons .card .card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: .5rem;
+
+    /* 文字區塊與「結帳折扣碼」複製鈕 */
+    > div:first-child .btn-coupon{ width: 100%; }
+
+    /* 右側「立即使用」鈕：手機滿版 */
+    > .btn-brand-outline{ width: 100%; }
+
+    /* >= md：回到左右兩側排列 */
+    @include rwd-md{
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+
+      > div:first-child{ flex: 1 1 auto; }
+      > .btn-brand-outline{ width: auto; align-self: center; }
+      > div:first-child .btn-coupon{ width: auto; }
+    }
+  }
+
+  /* 文字大小微調（標題在手機別太大） */
+  h5{ font-size: clamp(1.125rem, 2.2vw, 1.5rem); }
+
+
+/* 讓 .btn-brand-outline 在小螢幕點擊區更大（可選） */
+.member-center .btn-brand-outline{
+  padding: .6rem 1rem;
+}

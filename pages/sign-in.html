@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="../assets/images/logo/Type=Logo.svg" sizes="32x32" />    
+  <title>YENMADE醃造所 | 登入</title>
+</head>
+<body>
+  <%- include('./layout/headerdark'); -%>
+
+  <main class="#">
+  <div class="container-md py-4 mt-100 auth-page login-page mb-80">
+    <h2 class="text-center fw-semibold mb-4">登入 YenMade<br class="d-lg-none"> 醃造所</h2>
+
+    <div class="row g-4 auth-columns">
+      <!-- 左：一般登入 -->
+      <section class="col-lg-6">
+        <div class="card brand-card h-100">
+          <div class="card-body">
+            <h3 class="h5 fw-semibold mb-3">一般登入</h3>
+
+            <form id="loginForm" class="row g-3" novalidate>
+              <div class="col-12">
+                <label for="loginId" class="form-label">電子郵件／手機號碼</label>
+                <input id="loginId" name="login_id" type="text" class="form-control"
+                      placeholder="請輸入 Email／手機號碼" autocomplete="username"
+                      inputmode="email" required>
+                <div class="form-text">可輸入 Email 或手機號碼</div>
+                <div class="invalid-feedback">請輸入有效的帳號</div>
+              </div>
+
+              <div class="col-12">
+                <label for="loginPwd" class="form-label">密碼</label>
+                <div class="input-group">
+                  <input id="loginPwd" name="password" type="password" class="form-control"
+                        placeholder="請輸入密碼" autocomplete="current-password" required>
+                  <button class="btn btn-outline-secondary" type="button" id="toggleLoginPwd" aria-label="顯示或隱藏密碼">顯示</button>
+                </div>
+                <div class="invalid-feedback">請輸入密碼</div>
+              </div>
+
+              <div class="col-12 d-flex align-items-center justify-content-between">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="yes" id="rememberMe" name="remember_me">
+                  <label class="form-check-label" for="rememberMe">記住帳號</label>
+                </div>
+                <a href="#" class="link-secondary small">忘記密碼？</a>
+              </div>
+
+              <div class="col-12 d-flex gap-2">
+                <button class="btn btn-color w-50" type="submit">登入</button>
+                <a class="btn btn-outline-secondary w-50" href="#">註冊</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- 右：社群登入（白底品牌色字） -->
+      <aside class="col-lg-6">
+        <div class="card brand-card h-100">
+          <div class="card-body">
+            <h3 class="h5 fw-semibold mb-3">社群登入</h3>
+
+            <div class="vstack social-list">
+              <button class="btn btn-brand-outline btn-social w-100" type="button" data-provider="facebook">
+                <span class="btn-social__left">
+                  <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.9.16 1.9.16v2.1h-1.1c-1 0-1.3.63-1.3 1.3V12h2.3l-.37 3h-1.93v7A10 10 0 0 0 22 12"/>
+                  </svg>
+                  使用 Facebook 登入
+                </span>
+                <span class="btn-social__chevron" aria-hidden="true">›</span>
+              </button>
+
+              <button class="btn btn-brand-outline btn-social w-100" type="button" data-provider="line">
+                <span class="btn-social__left">
+                  <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" d="M19 3H5a4 4 0 0 0-4 4v6a7 7 0 0 0 7 7h1v1a1 1 0 0 0 1.6.8L14 20h5a4 4 0 0 0 4-4V7a4 4 0 0 0-4-4Z"/>
+                  </svg>
+                  使用 LINE 登入
+                </span>
+                <span class="btn-social__chevron" aria-hidden="true">›</span>
+              </button>
+
+              <button class="btn btn-brand-outline btn-social w-100" type="button" data-provider="google">
+                <span class="btn-social__left">
+                  <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" d="M21.35 11.1h-9.18v2.96h5.28a4.53 4.53 0 0 1-1.96 2.96a6.5 6.5 0 1 1 0-10.04l2.09-2.05A9.5 9.5 0 1 0 12 21.5c5 0 9-3.5 9.35-8.4Z"/>
+                  </svg>
+                  使用 Google 登入
+                </span>
+                <span class="btn-social__chevron" aria-hidden="true">›</span>
+              </button>
+
+              <button class="btn btn-brand-outline btn-social w-100" type="button" data-provider="apple">
+                <span class="btn-social__left">
+                  <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" d="M16.36 1.64A5 5 0 0 1 14 6a5 5 0 0 1 2.36-4.36ZM12 7.5c1.42 0 2.7.82 3.29.82c.55 0 1.86-.88 3.47-.83a3.9 3.9 0 0 1 3.22 1.7c-2.82 1.74-2.36 6.12.45 7.38a9.1 9.1 0 0 1-2.3 3.58c-.93.99-2 2.06-3.5 2.08c-1.31.02-1.73-.62-3.23-.62c-1.5 0-1.96.6-3.22.64c-1.35.04-2.38-1.09-3.31-2.06C4.23 18.2 2.38 13.58 4.8 10.2A4.7 4.7 0 0 1 8.7 8c1.46 0 2.38.82 3.3.82Z"/>
+                  </svg>
+                  使用 Apple 登入
+                </span>
+                <span class="btn-social__chevron" aria-hidden="true">›</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  </main>
+
+  <%- include('./layout/footer'); -%>
+
+  <script type="module" src="../main.js"></script>
+  <script>
+    // 顯示/隱藏密碼
+    const t = document.getElementById('toggleLoginPwd');
+    const p = document.getElementById('loginPwd');
+    t?.addEventListener('click', () => {
+      const visible = p.type === 'text';
+      p.type = visible ? 'password' : 'text';
+      t.textContent = visible ? '顯示' : '隱藏';
+    });
+
+    // 表單驗證
+    const f = document.getElementById('loginForm');
+    f?.addEventListener('submit', (e) => {
+      if (!f.checkValidity()) {
+        e.preventDefault(); e.stopPropagation();
+      }
+      f.classList.add('was-validated');
+    });
+
+    // 社群登入導向（依你的後端路由調整）
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-provider]');
+      if (!btn) return;
+      const provider = btn.dataset.provider;
+      window.location.href = `/auth/${provider}`;
+    });
+  </script>
+</body>
+</html>

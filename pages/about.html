@@ -4,11 +4,134 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>about</title>
+    <link rel="icon" href="../assets/images/logo/Type=Logo.svg" sizes="32x32" />
+    <title>YENMADE醃造所 | 品牌故事</title>
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <h1>我是about</h1>
+
+    <!--banner-->
+    <div class="mb-5 about-banner">
+      <img src="../assets/images/about/Banner_about.png" alt="廚房圖片" class="w-100">
+    </div>  
+    <div class="container-sm">
+      <!--麵包屑導覽-->
+      <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="mb-80 ms-5 d-none d-md-block">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="./index.html"><i class="bi bi-house-door"></i></a></li>
+        <li class="breadcrumb-item active" aria-current="page">關於我們</li>
+        </ol>
+      </nav>
+      <!--section1-->
+      <div class="row mb-80 align-items-center section1-3-row">
+        <div class="col-12 col-md-5 offset-md-1 position-relative d-inline-block mb-3 mb-md-0 order-1 order-md-1">
+          <p class="p1 mb-3 position-relative" style="z-index:2">品牌故事</p>
+          <img src="../assets/images/Vector-green.svg" alt="裝飾圖" class="position-absolute" style="width:32px; height:32px; top: -0.4em; left:-0.2em; opacity:0.5; z-index:1;">
+          <h6 class="h6 mb-4">阿嬤留下來的，不只是食譜</h6>
+          <p class="font-size-sm">
+            YENMADE 起點，是阿嬤廚房裡的幾罐玻璃瓶。小時候每次家人團聚，餐桌上總有她醃的小黄瓜、木耳、海帶芽，每道都簡單，卻讓人一直想再添一碗飯。
+            長大後才發現，這些味道，其實是家的溫度。<br>
+            我們希望把這份「熟悉卻被遺忘的好味道」保留下來，也讓它在更多人的生活中發光。
+          </p>
+        </div>
+        <div class="col-12 col-md-5 offset-md-0 order-2 order-md-2">
+          <img src="../assets/images/about/Brand_story.png" alt="#" class="img-fluid">
+        </div>
+      </div>
+      <!--section2PC-->
+      <div class="position-relative mb-80 section2 d-none d-md-block">
+          <img src="../assets/images/about/Brand_concept_bg.png" alt="切菜圖" class="w-100 section2-bg">
+          <div class="section2-text position-absolute top-50 start-50 translate-middle-y text-white">
+            <div class="position-relative d-inline-block">
+              <p class="p1 mb-3 position-relative" style="z-index:2">品牌理念</p>
+              <img src="../assets/images/Vector-green.svg" alt="裝飾圖" class="decor-img">
+            </div>
+            <h6 class="h6 mb-4">我們相信，好味道<br>應該慢慢做，也要吃得安心</h6>
+            <p class="font-size-sm">
+            YENMADE 醃造所堅持少量製造，不是追求快速，而是重視每一道工序的用心。<br>
+            選用天然食材，不添加防腐劑與化學調味，只用最簡單、最乾淨的方式，保留食物原本的風味。<br>
+            因為我們知道，健康的飲食，不需要複雜，只需要真實。每一罐，都像家人親手做的那樣安心，是你日常裡也可以信任的好味道。
+            </p>       
+          </div>  
+      </div>
+      <!--section2rwd-->
+      <div class="position-relative mb-80 section2 d-block d-md-none">
+        <img src="../assets/images/about/Brand_concept_bg_mobile.png" alt="切菜圖" class="w-100 section2-bg">
+        <div class="section2-text position-absolute top-50 start-50 text-white" style="transform: translate(-45%, -15%);">
+          <div class="position-relative d-inline-block">
+            <p class="p1 mb-3 position-relative" style="z-index:2">品牌理念</p>
+            <img src="../assets/images/Vector-green.svg" alt="裝飾圖" class="decor-img">
+          </div>
+          <h6 class="h6 mb-3 text-nowrap">我們相信，好味道<br>應該慢慢做，也要吃得安心</h6>
+          <p class="font-size-sm font-size-375">
+          YENMADE 醃造所堅持少量製造，不是追求快速，而是重視每一道工序的用心。<br>
+          選用天然食材，不添加防腐劑與化學調味，只用最簡單、最乾淨的方式，保留食物原本的風味。<br>
+          健康的飲食，不需要複雜，只需要真實。每一罐，都像家人親手做的那樣安心，是你日常裡也可以信任的好味道。
+          </p>       
+        </div>  
+      </div>
+      <!--section3-->
+      <div class="row mb-80 align-items-center section1-3-row">
+        <div class="col-12 col-md-4 offset-md-1 position-relative d-inline-block mb-3 mb-md-0 order-1 order-md-1">
+          <p class="p1 mb-3 position-relative" style="z-index:2">我們的團隊</p>
+          <img src="../assets/images/Vector-orange.svg" alt="裝飾圖" class="position-absolute" style="width:32px; height:32px; top: -0.4em; left:-0.2em; opacity:0.5; z-index:1;">
+          <h6 class="h6 mb-4">一口家的味道，一份傳承的心意</h6>
+          <p class="font-size-sm">
+          YENMADE 醃造所不是一間大公司，而是一群家人一起完成的夢。我們的團隊成員，全部都是親戚，從阿嬤、姑姑到我們這一代，一起把家裡流傳下來的味道整理、改良、分享出去。
+          我們希望把這份屬於家庭的好味道，好好保存下來，也慢慢傳承出去。每一罐醃製物，不只是產品，更是我們一家人一起做出來的心意與溫度。
+          </p>
+        </div>
+        <div class="col-12 col-md-5 offset-md-1 order-2 order-md-2">
+          <img src="../assets/images/about/Brand_team.png" alt="#" class="img-fluid d-none d-md-block">
+        </div>
+      </div>
+    </div>
+    <!--carousel-->
+    <div>
+      <section class="scroll-carousel py-5">
+        <div class="scroll-wrapper">
+          <img src="../assets/images/about/About_carousel_1.png" alt="照片1">
+          <img src="../assets/images/about/About_carousel_2.png" alt="照片2">
+          <img src="../assets/images/about/About_carousel_3.png" alt="照片3">
+          <img src="../assets/images/about/About_carousel_4.png" alt="照片4">
+          <img src="../assets/images/about/About_carousel_5.png" alt="照片5"> 
+          <img src="../assets/images/about/About_carousel_6.png" alt="照片6">
+        </div>
+      </section>
+    </div>
+
+  <!--  JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const scrollWrapper = document.querySelector('.scroll-wrapper');
+    const images = Array.from(scrollWrapper.children);
+  
+    // 複製圖片放到尾端，製作無縫效果
+    images.forEach(img => scrollWrapper.appendChild(img.cloneNode(true)));
+
+    let scrollAmount = 0;
+    const speed = 2; // 滾動速度，可調整 1~5
+  
+    function animate() {
+      scrollAmount += speed;
+    
+      if(scrollAmount >= scrollWrapper.scrollWidth / 2){
+        // 回到起點
+        scrollAmount = 0;
+      }
+
+      scrollWrapper.scrollLeft = scrollAmount;
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    // 滑鼠懸停暫停
+    scrollWrapper.addEventListener('mouseenter', () => speed = 0);
+    scrollWrapper.addEventListener('mouseleave', () => speed = 1);
+    });
+  </script>
+
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>

@@ -1,0 +1,63 @@
+
+.mt-100{
+  margin-top: 100px;
+}
+/* Register Page (auth-page) */
+.auth-page {
+  /* 兩欄等高 */
+  .auth-columns { align-items: stretch; }
+
+  /* 卡片邊框 */
+  .brand-card { border: 1px solid rgba($secondary-500, .35); }
+
+  /* 讓 card-body 變成彈性容器，內部才能做垂直分配 */
+  .brand-card .card-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 社群按鈕：白底＋品牌色字／外框 */
+  .btn-brand-outline {
+    display: flex;                /* 確保左右元素能排開 */
+    align-items: center;
+    justify-content: space-between;
+    padding: .75rem 1rem;
+    border: 1px solid $secondary-500;
+    color: $secondary-500;
+    background: #fff;
+
+    svg { color: currentColor; }  /* icon 跟字同步顏色 */
+
+    &:hover,
+    &:focus {
+      background: $secondary-500;
+      color: #fff;
+      box-shadow: 0 0 0 .25rem rgba($secondary-500, .18);
+    }
+  }
+
+  /* 社群按鈕容器：撐滿剩餘高度，垂直平均分散 */
+  .social-list {
+    flex: 1;                         /* 撐滿 card-body 的可用高度 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;   /* 上下也有等距空白；要貼齊改 space-between */
+  }
+
+.auth-page {
+  // 手機 / 平板：正常堆疊、有固定間距
+  .social-list {
+    justify-content: flex-start;
+    gap: .75rem; // 小螢幕要固定間距
+  }
+  
+  // 桌機(≥992px)：平均分散、間距歸零
+  @include rwd-lg {
+    .social-list {
+      justify-content: space-evenly; // 或改 space-between
+      gap: 0;                        // 若 HTML 還有 gap-3，可加 !important 蓋掉
+    }
+  }
+}
+
+}

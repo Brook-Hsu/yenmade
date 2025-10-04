@@ -1,0 +1,274 @@
+.mt-104{
+    margin-top: 104px;
+}
+
+.mt-148{
+    margin-top: 148px;
+}
+
+.p-12{
+    padding: 12px;
+}
+
+.px-12{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.py-12{
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.px-68{
+    padding-right: 68px;
+    padding-left: 68px;
+}
+
+.pb-40{
+    
+    padding-bottom: 40px;
+}
+
+.pb-12{
+    padding-bottom: 12px;
+}
+
+
+
+
+.breadcrumb-link {
+  color: #525252; // $neutral-600
+  &:hover,
+  &:active,
+  &:focus {
+    color: #beab3b; // $tertiary-700
+  }
+}
+
+
+
+.me-48{
+    margin-right: 48px;
+}
+
+.my-12{
+    margin-top: 12px;
+    margin-bottom: -12px;
+}
+
+.mb-160{
+    margin-bottom: 160px;
+}
+
+.list-style-none{
+    list-style: none;
+}
+
+.text-decoration-none{
+    text-decoration: none;
+}
+
+.mb--4{
+    margin-bottom: -4px;
+}
+
+
+/* Hover */
+/* 產品卡片容器 */
+.product-hover-card {
+    overflow: hidden;
+    
+}
+
+/* Hover 內容預設隱藏 */
+.product-hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*.  display: flex; */
+   
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* 重要：讓連結可以穿透 */
+
+}
+
+/* 中間文字區 */
+.hover-text-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #F2F3EFCC;
+    color: $secondary-800;
+    
+}
+
+/* 底部購物區 */
+.hover-cart-area {
+    padding: 15px;
+    background-color: $primary-500;
+    color: white;
+    pointer-events: auto; /* 只有這區可以點擊 */
+}
+
+/* Hover 效果 */
+.product-hover-card:hover .product-img {
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+
+.product-hover-card:hover .product-hover-content {
+    opacity: 1;
+}
+
+/* stretched-link 層級設定 */
+.stretched-link::after {
+    z-index: 30;
+}
+
+/* 購物車按鈕要能點擊 */
+.hover-cart-area .button {
+    position: relative;
+    z-index: 40;
+}
+
+/* Badge 也要能顯示 */
+.product-hover-content .badge {
+    z-index: 35;
+}
+/*            Hover              end       */
+
+/* RWD */
+/* 媒體查詢：針對寬度小於或等於 768px（Bootstrap 的 $breakpoint-md-min - 1） */
+@media (max-width: 767px) {
+    /* 讓 ul 標籤列表可以水平滾動 */
+    #productsTab {
+        /* 取消在非手機版的垂直間距 */
+        margin-bottom: 0 !important; 
+        
+        /* 讓所有 nav-item 強制在一行內 */
+        flex-wrap: nowrap;
+        
+        /* 啟用水平滾動（overflow-x: auto; 讓列表在空間不足時出現滾動條） */
+        overflow-x: auto;
+        
+        /* 隱藏滾動條（可選，讓畫面更清爽，但要確保使用者知道可以滑動） */
+        -webkit-overflow-scrolling: touch; /* 為了 iOS 順暢滾動 */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;  /* IE and Edge */
+    }
+    #productsTab::-webkit-scrollbar {
+        display: none; /* Chrome, Safari and Opera */
+    }
+
+    /* 調整 nav-item 和 nav-link 的樣式 */
+    #productsTab .nav-item {
+        margin-left: 0 !important;
+        /* 在手機上取消原本的垂直間距 */
+        margin-bottom: 0 !important;
+        /* 確保 nav-item 不會被擠壓變形 */
+        flex-shrink: 0; 
+    }
+
+    #productsTab .nav-link {
+        /* 在手機上使用較小的 padding 讓更多標籤能顯示 */
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+
+        /* 在手機上，border-bottom 可以改成 border-top/bottom 都可以 */
+        border-bottom: 3px solid transparent !important; /* 確保邊框高度一致 */
+        
+        /* 保持文字大小適中 */
+        font-size: 1rem; /* 或您希望的手機字體大小 */
+    }
+    
+    /* 調整 active 標籤的底線 */
+    #productsTab .nav-link.active {
+        /* 使用綠色底線來標示當前選中的分類 */
+        border-bottom-color: #799a5e !important; /* 請替換成您設計中的綠色 */
+    }
+}
+
+
+.z{
+    position: relative;
+    z-index: 50;
+}
+
+.nav-scroll-mobile{
+    align-items: center;
+}
+
+.nav-tabs .nav-link{
+    color: $neutral-600;
+}
+
+.nav-tabs .nav-link.active {
+    color: $primary-500 !important;
+    border-bottom: 1px solid $primary-500 !important;
+    
+}
+
+.nav-item-base{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 68px;
+    padding-left: 68px;
+}
+
+
+
+@media(max-width: 767px){
+
+
+
+    .ms--10{
+    margin-left: -25px;
+    margin-right: -25px;
+    padding-right: 0px;
+    padding-left: 0px;
+    }
+
+    .nav-tabs .nav-link{
+        color: $neutral-400 !important;
+    }
+
+    .nav-scroll-mobile{
+        margin-left: 0;
+        margin-right: 0;
+        color: $neutral-400 !important;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .nav-item-base {
+        padding-right: 16px;
+        padding-left: 16px;
+        
+        border-bottom: 1px solid $neutral-400  !important;
+    }
+
+    .nav-item-base .active{
+        
+        border-bottom: 1px solid $primary-500 ;
+    }
+      
+    .spicy-bottom{
+        border-bottom: 1px solid $neutral-200 !important;
+        z-index: 50;
+    }
+    
+        
+    
+}

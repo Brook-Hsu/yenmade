@@ -1,0 +1,340 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark pageScroll fixed-top py-5">
+    <div class="container px-4">
+      <a class="navbar-brand p-0 me-lg-45" href="index.html">
+        <img
+          class="svg-dark logo-size"
+          src="/assets/images/logo/Type=Logo_Horizontal.svg"
+          alt="yenmade's logo"
+        />
+      </a>
+      <button
+        class="navbar-toggler border-0 py-2"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+      >
+        <i class="bi bi-list fs-5 text-neutral-600"></i>
+      </button>
+      <div
+        class="offcanvas offcanvas-end offcanvas-space offcanvas-bg"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+        data-bs-scroll="true"
+        data-bs-backdrop="false"
+      >
+        <div class="offcanvas-header px-4 py-5 mb-2">
+          <button
+            type="button"
+            class="btn-close svg-white"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body px-6 px-md-8 px-lg-0">
+          <div class="d-flex flex-column">
+            <form class="mb-4 position-relative d-lg-none" role="search">
+              <input
+                class="form-control form-search bg-white-alpha border-0 p-3 text-neutral-600 fs-lg-7"
+                type="search"
+                placeholder="找商品"
+                aria-label="Search"
+              />
+              <button
+                class="btn text-white position-absolute top-50 end-0 translate-middle-y me-3"
+                type="submit"
+              >
+                <i class="bi bi-search fs-5 align-bottom"></i>
+              </button>
+            </form>
+            <ul class="navbar-nav flex-grow-1 pe-3">
+              <li class="nav-item text-center">
+                <a
+                  class="nav-link text-white text-lg-neutral-600 py-3 py-lg-0 px-lg-4 border-md-bottom border-neutral-600 active"
+                  aria-current="page"
+                  href="../pages/allproducts.html"
+                  ><span class="btn-font-lg">所有商品</span></a
+                >
+              </li>
+              <li class="nav-item text-center">
+                <a
+                  class="nav-link text-white text-lg-neutral-600 py-3 py-lg-0 px-lg-4 border-md-bottom border-neutral-600"
+                  href="../pages/about.html"
+                  ><span class="btn-font-lg">關於我們</span></a
+                >
+              </li>
+              <li class="nav-item text-center">
+                <a
+                  class="nav-link text-white text-lg-neutral-600 py-3 py-lg-0 px-lg-4 border-md-bottom border-neutral-600"
+                  href="../pages/blog.html"
+                  ><span class="btn-font-lg">部落格</span></a
+                >
+              </li>
+              <li class="nav-item text-center">
+                <a
+                  class="nav-link text-white text-lg-neutral-600 py-3 py-lg-0 px-lg-4 border-md-bottom border-neutral-600"
+                  href="../pages/faq.html"
+                  ><span class="btn-font-lg">常見問題</span></a
+                >
+              </li>
+              <li class="nav-item text-center d-lg-none">
+                <a
+                  class="nav-link text-white text-lg-neutral-600 py-3 py-lg-0 px-lg-4 border-md-bottom border-neutral-600"
+                  href="../pages/member-center.html"
+                  ><span class="btn-font-lg">會員專區</span></a
+                >
+              </li>
+              <li class="nav-item text-center border-0 d-lg-none">
+                <a
+                  class="nav-link text-white text-lg-neutral-600 py-3 py-lg-0 px-lg-4"
+                  href="../pages/member-center.html"
+                  ><span class="btn-font-lg">訂單追蹤</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="offcanvas-footer d-lg-none">
+          <div class="container mb-6">
+            <div class="d-flex justify-content-between mt-auto nav-btn">
+              <a
+                class="btn btn-outline-light border-0 border-end btn-font-lg w-50 px-3 py-2"
+                href="/yenmade/pages/finished-checkout.html"
+              >
+                <i class="bi bi-person-circle me-2"></i>
+                <span>登出</span>
+              </a>
+              <a
+                class="btn btn-outline-light border-0 btn-font-lg w-50 px-3 py-2"
+                href="/yenmade/pages/member-checkout.html"
+              >
+                <i class="bi bi-cart3 me-2"></i>
+                <span>購物車</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 搜尋/帳號/購物車按鈕 -->
+      <div class="d-none d-lg-block position-relative">
+        <div class="d-lg-flex align-items-lg-center">
+          <!-- 搜尋欄位 -->
+          <div class="collapse" id="collapseSearch">
+            <form role="button">
+              <input
+                type="search"
+                class="form-control border-0 border-bottom bg-white-alpha"
+                id="exampleFormControlInput1"
+                placeholder="找商品"
+              />
+            </form>
+          </div>
+          <button
+            class="btn text-neutral-600"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseSearch"
+            aria-expanded="false"
+            aria-controls="collapseSearch"
+          >
+            <i class="bi bi-search fs-6 align-bottom"></i>
+          </button>
+          <!-- 會員頭像 -->
+          <div class="btn-group ms-3">
+            <button
+              type="button"
+              class="d-none d-lg-inline dropdown-toggle bg-transparent border-0 p-2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="bi bi-person-circle fs-5 text-neutral-600"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end border-0 p-0">
+              <li>
+                <button
+                  class="dropdown-item btn-font-lg py-2"
+                  type="button"
+                  disabled
+                >
+                  歡迎,　王小姐
+                </button>
+              </li>
+              <li><hr class="dropdown-divider m-auto" /></li>
+              <li>
+                <button class="dropdown-item btn-font-lg py-3" type="button" onclick="location.href='../pages/member-center.html'">
+                  會員專區
+                </button>
+              </li>
+              <li><hr class="dropdown-divider m-auto" /></li>
+              <li>
+                <button class="dropdown-item btn-font-lg py-3" type="button" onclick="location.href='../pages/member-center.html'">
+                  訂單追蹤
+                </button>
+              </li>
+              <li><hr class="dropdown-divider m-auto" /></li>
+              <li>
+                <button class="dropdown-item btn-font-lg py-3" type="button" onclick="location.href='../pages/index.html'">
+                  登出
+                </button>
+              </li>
+            </ul>
+          </div>
+          <!-- <a href="" class="d-none d-lg-inline text-neutral-600 p-2 ms-3">
+            <i class="bi bi-person-circle fs-5"></i>
+          </a> -->
+          <!-- 購物車 -->
+          <div class="btn-group ms-3 d-none d-lg-block">
+            <button
+              type="button"
+              class="d-none d-lg-inline dropdown-toggle bg-transparent border-0 p-2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="bi bi-cart3 fs-5 text-neutral-600"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end p-0 px-9 carts-menu">
+              <h5 class="fw-semibold text-center mx-auto my-4">購物車</h5>
+              <li><hr class="dropdown-divider m-auto" /></li>
+              <!-- 購物 1  -->
+              <li class="row align-items-center">
+                <img
+                  src="/assets/images/product/檸檬九層塔番茄_cutout.png"
+                  alt="檸檬九層塔番茄"
+                  class="col-4"
+                />
+                <div class="col-7 p-3">
+                  <h6 class="fs-7">檸檬九層塔番茄</h6>
+                  <p class="fs-8 m-0">500ml 慢醃大罐</p>
+                  <div
+                    class="input-group btn border-0 border-primary-600 bg-white px-0 py-2 w-75"
+                  >
+                    <div class="d-flex justify-content-between">
+                      <button type="button" class="btn border-0 p-9">
+                        <i class="bi bi-dash-lg fs-6"></i>
+                      </button>
+                      <input
+                        type="text"
+                        class="form-control border-0 text-center text-dark fw-semibold p-0"
+                        value="1"
+                        id="buyNumber"
+                      />
+                      <button type="button" class="btn border-0 p-9">
+                        <i class="bi bi-plus-lg fs-6"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <h5 class="fs-8 fw-bold m-0">
+                    NTD$<span class="fs-6 ms-1">550</span>
+                  </h5>
+                </div>
+
+                <button class="col-1 btn btn-font-lg" type="button">
+                  <i class="bi bi-x fs-5"></i>
+                </button>
+              </li>
+              <li><hr class="dropdown-divider m-auto" /></li>
+              <!-- 購物 2  -->
+              <li class="row align-items-center">
+                <img
+                  src="/assets/images/product/檸檬老醬蘿蔔_cutout.png"
+                  alt="檸檬老醬蘿蔔"
+                  class="col-4"
+                />
+                <div class="col-7 p-3">
+                  <h6 class="fs-7">檸檬老醬蘿蔔</h6>
+                  <p class="fs-8 m-0">500ml 慢醃大罐</p>
+                  <div
+                    class="input-group btn border-0 border-primary-600 bg-white px-0 py-2 w-75"
+                  >
+                    <div class="d-flex justify-content-between">
+                      <button type="button" class="btn border-0 p-9">
+                        <i class="bi bi-dash-lg fs-6"></i>
+                      </button>
+                      <input
+                        type="text"
+                        class="form-control border-0 text-center text-dark fw-semibold p-0"
+                        value="1"
+                        id="buyNumber"
+                      />
+                      <button type="button" class="btn border-0 p-9">
+                        <i class="bi bi-plus-lg fs-6"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <h5 class="fs-8 fw-bold m-0">
+                    NTD$<span class="fs-6 ms-1">500</span>
+                  </h5>
+                </div>
+
+                <button class="col-1 btn btn-font-lg" type="button">
+                  <i class="bi bi-x fs-5"></i>
+                </button>
+              </li>
+              <li><hr class="dropdown-divider m-auto" /></li>
+              <!-- 購物 3  -->
+              <li class="row align-items-center">
+                <img
+                  src="/assets/images/product/煙燻蒜香小黃瓜_cutout.png"
+                  alt="煙燻蒜香小黃瓜"
+                  class="col-4"
+                />
+                <div class="col-7 p-3">
+                  <h6 class="fs-7">煙燻蒜香小黃瓜</h6>
+                  <p class="fs-8 m-0">200ml 慢醃迷你</p>
+                  <div
+                    class="input-group btn border-0 border-primary-600 bg-white px-0 py-2 w-75"
+                  >
+                    <div class="d-flex justify-content-between">
+                      <button type="button" class="btn border-0 p-9">
+                        <i class="bi bi-dash-lg fs-6"></i>
+                      </button>
+                      <input
+                        type="text"
+                        class="form-control border-0 text-center text-dark fw-semibold p-0"
+                        value="2"
+                        id="buyNumber"
+                      />
+                      <button type="button" class="btn border-0 p-9">
+                        <i class="bi bi-plus-lg fs-6"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <h5 class="fs-8 fw-bold m-0">
+                    NTD$<span class="fs-6 ms-1">250</span>
+                  </h5>
+                </div>
+
+                <button class="col-1 btn btn-font-lg" type="button">
+                  <i class="bi bi-x fs-5"></i>
+                </button>
+              </li>
+              <li><hr class="dropdown-divider m-auto" /></li>
+              <li>
+                <div class="d-flex justify-content-between px-3 py-5">
+                  <h5>總計：</h5>
+                  <h5>NTD$ <span class="fw-semibold">1300</span></h5>
+                </div>
+              </li>
+              <li><hr class="dropdown-divider m-auto" /></li>
+              <li>
+                <button
+                  class="dropdown-item btn-font-lg text-center py-3"
+                  type="button"
+                  onclick="location.href='../pages/member-checkout.html'"
+                >
+                  前往結帳
+                </button>
+              </li>
+            </ul>
+          </div>
+          <!-- <a href="" class="d-none d-lg-inline text-neutral-600 p-2 ms-3">
+            <i class="bi bi-cart3 fs-5"></i>
+          </a> -->
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

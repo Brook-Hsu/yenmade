@@ -1,0 +1,27 @@
+@mixin rwd-sm {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+@mixin rwd-md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin rwd-lg {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+@mixin rwd-xl {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+// bg-image
+@mixin background-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
