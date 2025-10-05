@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/yenmade/assets/Type_Logo-rueL1Ws0.svg" sizes="32x32" />
     <title>YENMADE醃造所 | 品牌故事</title>
-    <script type="module" crossorigin src="/yenmade/assets/main-BdVxEArW.js"></script>
-    <link rel="stylesheet" crossorigin href="/yenmade/assets/main-B1_OnAWU.css">
+    <script type="module" crossorigin src="/yenmade/assets/main-BpsVY8lr.js"></script>
+    <link rel="stylesheet" crossorigin href="/yenmade/assets/main-eVR_z3t9.css">
   </head>
   <body>
     <header>
@@ -15,19 +15,19 @@
     <div class="container px-4">
       <a class="navbar-brand p-0 me-lg-45" href="index.html">
         <img
-          class="svgColor logo-size"
+          class="svg-dark logo-size"
           src="/yenmade/assets/Type_Logo_Horizontal-BVTsCoZc.svg"
           alt="yenmade's logo"
         />
       </a>
       <button
-        class="navbar-toggler border-0 icon-dark py-2"
+        class="navbar-toggler border-0 py-2"
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasNavbar"
         aria-controls="offcanvasNavbar"
       >
-        <i class="bi bi-list fs-5"></i>
+        <i class="bi bi-list fs-5 text-neutral-600"></i>
       </button>
       <div
         class="offcanvas offcanvas-end offcanvas-space offcanvas-bg"
@@ -62,27 +62,47 @@
               </button>
             </form>
             <ul class="navbar-nav flex-grow-1 pe-3">
-              <li class="nav-item text-center border-md-bottom navBorder-dark">
+              <li class="nav-item text-center">
                 <a
-                  class="nav-link content-dark py-3 py-lg-0 px-lg-4 active"
+                  class="nav-link text-white text-lg-neutral-600 py-3 py-lg-0 px-lg-4 border-md-bottom border-neutral-600 active"
                   aria-current="page"
                   href="allproducts.html"
                   ><span class="btn-font-lg">所有商品</span></a
                 >
               </li>
-              <li class="nav-item text-center border-md-bottom navBorder-dark">
-                <a class="nav-link content-dark py-3 py-lg-0 px-lg-4" href="about.html"
+              <li class="nav-item text-center">
+                <a
+                  class="nav-link text-white text-lg-neutral-600 py-3 py-lg-0 px-lg-4 border-md-bottom border-neutral-600"
+                  href="about.html"
                   ><span class="btn-font-lg">關於我們</span></a
                 >
               </li>
-              <li class="nav-item text-center border-md-bottom navBorder-dark">
-                <a class="nav-link content-dark py-3 py-lg-0 px-lg-4" href="blog.html"
+              <li class="nav-item text-center">
+                <a
+                  class="nav-link text-white text-lg-neutral-600 py-3 py-lg-0 px-lg-4 border-md-bottom border-neutral-600"
+                  href="blog.html"
                   ><span class="btn-font-lg">部落格</span></a
                 >
               </li>
-              <li class="nav-item text-center border-0">
-                <a class="nav-link content-dark py-3 py-lg-0 px-lg-4" href="faq.html"
+              <li class="nav-item text-center">
+                <a
+                  class="nav-link text-white text-lg-neutral-600 py-3 py-lg-0 px-lg-4 border-lg-0 border-md-bottom border-neutral-600"
+                  href="faq.html"
                   ><span class="btn-font-lg">常見問題</span></a
+                >
+              </li>
+              <li class="nav-item text-center d-lg-none">
+                <a
+                  class="nav-link text-white text-lg-neutral-600 py-3 py-lg-0 px-lg-4 border-md-bottom border-neutral-600"
+                  href="member-center.html"
+                  ><span class="btn-font-lg">會員專區</span></a
+                >
+              </li>
+              <li class="nav-item text-center border-0 d-lg-none">
+                <a
+                  class="nav-link text-white text-lg-neutral-600 py-3 py-lg-0 px-lg-4"
+                  href="member-center.html"
+                  ><span class="btn-font-lg">訂單追蹤</span></a
                 >
               </li>
             </ul>
@@ -90,20 +110,13 @@
         </div>
         <div class="offcanvas-footer d-lg-none">
           <div class="container mb-6">
-            <div class="d-flex justify-content-center mt-auto nav-btn text-nowrap">
+            <div class="d-flex justify-content-between mt-auto nav-btn">
               <a
                 class="btn btn-outline-light border-0 border-end btn-font-lg w-50 px-3 py-2"
-                href="sign-in.html"
+                href="index.html"
               >
                 <i class="bi bi-person-circle me-2"></i>
-                <span>登入</span>
-              </a>
-              <a
-                class="btn btn-outline-light border-0 border-end btn-font-lg w-50 px-3 py-2"
-                href="registration.html"
-              >
-                <i class="bi bi-r-circle me-2"></i>
-                <span>註冊</span>
+                <span>登出</span>
               </a>
               <a
                 class="btn btn-outline-light border-0 btn-font-lg w-50 px-3 py-2"
@@ -120,6 +133,7 @@
       <!-- 搜尋/帳號/購物車按鈕 -->
       <div class="d-none d-lg-block position-relative">
         <div class="d-lg-flex align-items-lg-center">
+          <!-- 搜尋欄位 -->
           <div class="collapse" id="collapseSearch">
             <form role="button">
               <input
@@ -131,7 +145,7 @@
             </form>
           </div>
           <button
-            class="btn content-dark"
+            class="btn text-neutral-600"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#collapseSearch"
@@ -148,22 +162,39 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i class="bi bi-person-circle fs-5 content-dark"></i>
+              <i class="bi bi-person-circle fs-5 text-neutral-600"></i>
             </button>
             <ul class="dropdown-menu dropdown-menu-end border-0 p-0">
               <li>
-                <a href="sign-in.html" class="dropdown-item btn-font-lg py-3" type="button">
-                  登入
-                </a>
+                <button
+                  class="dropdown-item btn-font-lg py-2"
+                  type="button"
+                  disabled
+                >
+                  歡迎,　王小姐
+                </button>
               </li>
+              <li><hr class="dropdown-divider m-auto" /></li>
               <li>
-                <a href="registration.html" class="dropdown-item btn-font-lg py-3" type="button">
-                  註冊
-                </a>
+                <button class="dropdown-item btn-font-lg py-3" type="button" onclick="location.href='member-center.html'">
+                  會員專區
+                </button>
+              </li>
+              <li><hr class="dropdown-divider m-auto" /></li>
+              <li>
+                <button class="dropdown-item btn-font-lg py-3" type="button" onclick="location.href='member-center.html'">
+                  訂單追蹤
+                </button>
+              </li>
+              <li><hr class="dropdown-divider m-auto" /></li>
+              <li>
+                <button class="dropdown-item btn-font-lg py-3" type="button" onclick="location.href='index.html'">
+                  登出
+                </button>
               </li>
             </ul>
           </div>
-          <!-- <a href="" class="d-none d-lg-inline content-dark p-2 ms-3">
+          <!-- <a href="" class="d-none d-lg-inline text-neutral-600 p-2 ms-3">
             <i class="bi bi-person-circle fs-5"></i>
           </a> -->
           <!-- 購物車 -->
@@ -174,7 +205,7 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i class="bi bi-cart3 fs-5 content-dark"></i>
+              <i class="bi bi-cart3 fs-5 text-neutral-600"></i>
             </button>
             <ul class="dropdown-menu dropdown-menu-end p-0 px-9 carts-menu">
               <h5 class="fw-semibold text-center mx-auto my-4">購物車</h5>
@@ -304,14 +335,14 @@
                 <button
                   class="dropdown-item btn-font-lg text-center py-3"
                   type="button"
-                  onclick="location.href='../pages/member-checkout.html'"
+                  onclick="location.href='member-checkout.html'"
                 >
                   前往結帳
                 </button>
               </li>
             </ul>
           </div>
-          <!-- <a href="" class="d-none d-lg-inline content-dark p-2 ms-3">
+          <!-- <a href="" class="d-none d-lg-inline text-neutral-600 p-2 ms-3">
             <i class="bi bi-cart3 fs-5"></i>
           </a> -->
         </div>
@@ -321,10 +352,10 @@
 </header>
 
     <!--bannerPC-->
-    <div class="mb-5 d-none d-md-block">
+    <div class="mb-5 d-none d-md-block mt-105">
       <img src="/yenmade/assets/Banner_about-BKxrPHPr.png" alt="廚房圖片" class="w-100">
     </div>
-    <div class="mb-5 d-block d-md-none">
+    <div class="mb-5 d-block d-md-none mt-105">
       <img src="/yenmade/assets/Banner_about_mobile-wBvlRgf1.png" alt="廚房圖片" class="w-100">
     </div>
     <div class="container-sm">
